@@ -9,13 +9,24 @@
 <body>
     <form action="" method="get">
         <div>
-            <label>이름:<input type="text" placeholder="Name"></label>
+            <input type="hidden" name="hdVal" value="ie">
         </div>
         <div>
-            <label>남긴말:<textarea></textarea></label>
+            <label>이름:<input type="text" name="nm" placeholder="Name"></label>
+        </div>
+        <div>
+            <label>남긴말:<textarea name="cmt" placeholder="Comment"></textarea></label>
+        </div>
+        <div>
+            <select>
+                <option>서울</option>
+                <option>대전</option>
+                <option>대구</option>
+            </select>
         </div>
         <div>
             <input type="submit" value="전송">
+            <input type="reset" value="리셋">
         </div>
     </form>
 </body>
