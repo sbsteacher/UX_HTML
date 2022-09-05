@@ -6,12 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>테이블</title>
     <style>
-        table { border-collapse: collapse; }
-        table, th, td { border: 1px solid #000; }
+        table { border-collapse: collapse; caption-side: bottom; }
+        table, th, td { border: 1px solid #000; }        
         th, td { padding: 10px; }
+        .red { color: rgb(242, 4, 4); }        
     </style>
 </head>
 <body>
+    
     <table>
         <tr>
             <th>번호</th>
@@ -39,14 +41,50 @@
         </tr>
         <tr>
             <td rowspan="2">4</td>
-            <td>5</td>
-            <td>6</td>
+            <td class="red">5</td>
+            <td class="red">6</td>
         </tr>
         <tr>
-            <td>8</td>
+            <td id="red">8</td>
             <td>9</td>
         </tr>
     </table>
 
+    <hr>
+    <p class="abc">
+        dkdkdkdkkd
+    </p>
+    <p id="summary" class="abc red">
+        아래 테이블은 어쩌고 저쩌고 ~~~
+    </p>
+    <!--
+        table, caption, thead, tbody, tfoot,
+        tr, th, td
+    -->    
+    <table aria-describedby="summary">
+        <caption>
+            <strong>Modern Browser</strong>
+            <p>국내에서 자주 사용하는 모던 브라우저</p>
+        </caption>
+        <thead>
+            <tr>
+                <th>브라우저</th>
+                <th>제조업체</th>
+                <th>다운로드</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>크롬(Chrome)</td>
+                <td>Google</td>
+                <td>https://www.google.com/chrome</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <hr>
+    <span>인라인태그</span>
+    <div>블록태그</div>
+   
 </body>
 </html>
