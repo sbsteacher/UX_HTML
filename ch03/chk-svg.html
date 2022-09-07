@@ -11,10 +11,12 @@
     <img id="img" src="images/muffin.svg">
     
     <script src="js/modernizr-custom.min.js"></script>
-    <script>
-        if(!Modernizr.svg) {
-            var img = document.getElementById('img');
-            img.setAttribute('src', 'images/muffin.png');
+    <script>        
+        if(Modernizr.svgasimg) {
+            
+        } else {
+            var ddd = document.getElementById('img');
+            ddd.setAttribute('src', 'images/muffin.png');
         }
     </script>
     
