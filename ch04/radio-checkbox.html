@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body { background-color:#fff; }
+        form fieldset { margin-bottom:25px; }	 
+        form legend { font-size:15px; font-weight:600; }
+        form label.reg { font-size:14px; color:#390; font-weight:bold; width:110px; float:left; text-align:right; margin-right:10px; }
+        form ul li { list-style:none; margin: 15px 0; font-size:14px; }
+        #member, #stuffs { width:50px; }
+        #pre { margin-left:15px; }
+    </style>
+</head>
+<body>
+    <form>
+        <div>
+            취미:
+            <label><input type="checkbox" name="hobby" value="basketball" checked>농구</label>
+            <label><input type="checkbox" name="hobby" value="football">축구</label>
+            <label><input type="checkbox" name="hobby" value="volleyball">배구</label>
+        </div>
+        <div>
+            학년:
+            <label><input type="radio" name="cls" value="1" id="" checked>1학년</label>
+            <label><input type="radio" name="cls" value="2" id="">2학년</label>
+            <label><input type="radio" name="cls" value="3" id="">3학년</label>
+            성별: 
+            <label><input type="radio" name="gender" value="0" id="" checked>여성</label>
+            <label><input type="radio" name="gender" value="1" id="">남성</label>
+        </div>
+        <div>
+            <input type="submit" value="저장">
+        </div>
+    </form>
+
+    <hr>
+
+    <form>
+        <fieldset>
+			<legend>신청 과목</legend>
+			<p>이 달에 신청할 과목을 선택하세요 (1과목만 가능)</p>
+			<label><input type="radio" name="subject" value="speaking">회화</label>
+			<label><input type="radio" name="subject" value="grammar">문법</label>
+			<label><input type="radio" name="subject" value="writing">작문</label>       
+		</fieldset>
+		<fieldset>
+			<legend>메일링</legend>
+			<p>메일로 받고 싶은 뉴스 주제를 선택해 주세요 (복수 선택 가능)</p>
+			<label><input type="checkbox" name="mailing1" value="news">해외 단신</label>
+			<label><input type="checkbox" name="mailing2" value="dialog">5분 회화</label>
+			<label><input type="checkbox" name="mailing3" value="pops">모닝팝스</label>
+		</fieldset>
+    </form>
+</body>
+</html>

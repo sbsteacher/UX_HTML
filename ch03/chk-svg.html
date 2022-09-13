@@ -12,9 +12,7 @@
     
     <script src="js/modernizr-custom.min.js"></script>
     <script>        
-        if(Modernizr.svgasimg) {
-            
-        } else {
+        if(!Modernizr.svgasimg) { // !true > false, !false > true
             var ddd = document.getElementById('img');
             ddd.setAttribute('src', 'images/muffin.png');
         }
