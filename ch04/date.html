@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <label>date : <input type="date" value="2022-09-14" min="2022-09-10" max="2022-09-20" step="2"></label>
+    </div>
+    <form>
+        <div>
+            <label>time : <input type="time" value="18:01" min="09:00"></label>
+        </div>
+        <input type="submit" value="전송">
+    </form>
+    <div>
+        <label for="">datetime : <input type="datetime-local" name="" id="" value="2022-10-10 09:00"></label>
+    </div>
+
+    <form>		
+		<h3>대관시간을 선택하세요(오늘)</h3>
+		<label>시작 시간<input type="time" value="09:00" id="start1"></label>,
+		<label>종료 시간<input type="time" value="18:00" id="end1"></label>
+
+		<h3>대관시간을 선택하세요(다른날짜)</h3>
+		<label>시작 시간<input type="datetime-local" value="2016-03-02 09:00" id="start2"></label>,
+		<label>종료 시간<input type="datetime-local" value="2016-03-02 18:00" id="end2"></label>
+	</form>
+
+</body>
+</html>
