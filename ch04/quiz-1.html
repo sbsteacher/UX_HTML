@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        ul { list-style: none; }
+        /* ul li { margin-bottom: 20px; } */
+        ul li { line-height: 50px; }
+        label { display:inline-block; width: 60px; }
+    </style>
+    <title>Quiz-1</title>
+</head>
+<body>
+    <!-- 
+        ul 태그 사용하시구요. 앞에 점 모양 안 나오게 해주시면 되겠고
+        li마다 여백공간을 주어서 떨어트려주세요. (라인마다)    
+    -->
+    <h1>예약 정보</h1>
+	<form>
+		<ul>
+			<li>
+				<label for="r-name">이 름</label>
+				<input type="text" id="r-name">
+			</li>
+			<li>
+				<label for="r-phone">휴대폰</label>
+				<input type="tel" id="r-phone">
+			</li>
+			<li>
+				<label for="r-email">이메일</label>
+				<input type="email" id="r-email">
+			</li>
+			<li>
+				<input type="button" value="예약하기">
+		</ul>
+	</form>
+</body>
+</html>
