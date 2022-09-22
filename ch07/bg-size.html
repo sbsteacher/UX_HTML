@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div { 
+            width: 500px; height: 500px; 
+            border: 2px double black; margin-bottom: 20px;
+        }
+        .bg1 { 
+            /* left, center, right || top, center, bottom  */
+            background: url("images/bg4.jpg") no-repeat center bottom; 
+            background-size: auto;
+        }
+        .bg2 {             
+            background: url("images/bg4.jpg") no-repeat right center; 
+            background-size: 200px 150px;
+        }
+        .bg3 {             
+            background: url("images/bg4.jpg") no-repeat right center; 
+            background-size: 60% 40%;
+        }
+        .bg4 {             
+            background: url("images/bg4.jpg") no-repeat right center; 
+            background-size: contain;
+        }
+        .bg5 {             
+            background: url("images/bg4.jpg") no-repeat center center; 
+            background-size: cover;
+        }
+        .bg6 {             
+            background: url("images/bg4.jpg") no-repeat center center; 
+            background-size: 100% 100%;
+        }
+    </style>
+</head>
+<body>
+    <h1>bg-size.html</h1>
+    <div class="bg1"></div>
+    <div class="bg2"></div>
+    <div class="bg3"></div>
+    <div class="bg4"></div>
+    <div class="bg5"></div>
+    <div class="bg6"></div>
+</body>
+</html>
