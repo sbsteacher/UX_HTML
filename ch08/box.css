@@ -1,0 +1,27 @@
+* { margin: 0; padding: 0; }
+a { text-decoration: none; }
+header {        
+    width: 80%;
+    background-color: rgb(7, 27, 244);
+    color: #fff;
+    padding: 20px 10px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+header h1 { float:left; width: 40%; }
+header nav { float:right; width: 60%; }
+header nav ul { list-style-type: none; }
+header nav ul li { display: inline-block; margin-right: 30px; }
+header nav ul li a { color: #fff; }
+
+p { font-size: 15px; line-height: 20px;}
+section { 
+    width: 80%; margin: 0 auto; border: 5px solid #333;
+    padding: 5px;
+}
+dt { font-weight: bold; color: purple; }
+article h3 { 
+    background: url("images/bg.png") no-repeat left center;    
+    padding-left: 30px;
+}
+aside { clear: both; height: auto; padding: 10px; }
