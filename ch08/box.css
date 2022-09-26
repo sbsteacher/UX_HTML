@@ -78,3 +78,26 @@ footer{
 	color:white;	
 	text-align:center;
 }
+
+
+article { 
+	border: 1px solid #000; 
+	border-radius: 10px; 
+	margin-top: 15px;
+	padding: 10px;
+}
+
+#pet2 { border-color: rgb(249, 155, 237); }
+
+#pet3 { 
+	border-color: rgb(40, 157, 1); 
+	border-bottom-left-radius: 0;
+	border-top-right-radius: 0;
+}
+
+
+.exam { 
+	border-width: 5px;	
+}
+
+
