@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .navi { list-style-type: none; }
+        .navi li { 
+            width: 8em; height: 3em; float: left;            
+            text-align: center;
+            border: 1px solid #818181;
+            box-shadow: 1px 1px 1px #bbb;
+        }
+        .navi li a {
+            display: block; padding: .8em .5em .5em .5em;
+            text-decoration: none;
+        }
+        .navi li:hover { background: #333; }
+        .navi li:hover > a { color: #fff; }
+        .navi li:first-child { 
+            border-top-left-radius: 1em; 
+            border-bottom-left-radius: 1em;
+        }
+        .navi li:last-child {
+            border-top-right-radius: 1em; 
+            border-bottom-right-radius: 1em;
+        }
+    </style>
+</head>
+<body>
+    <h1>rounded-navi.html</h1>
+    <ul class="navi">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">HTML5</a></li>
+        <li><a href="#">CSS3</a></li>
+        <li><a href="#">jQuery</a></li>
+        
+    </ul>
+</body>
+</html>

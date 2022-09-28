@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        input:disabled { background: #d00; color:#fff; }        
+        input:checked + span { color: red; }
+        :root { background-color: red; }
+    </style>
+</head>
+<body>
+    <h1>states.html</h1>
+    <form>
+        <fieldset>
+            <legend>사용자 정보</legend>
+            <label>이름 <input type="text" value="뭣이 중헌디?" disabled></label>
+        </fieldset>
+        <fieldset>
+            <legend>신청 과목</legend>
+            <p>이 달에 신청할 과목을 선택하세요.</p>
+            <label>
+                <input type="radio" name="subject" checked>
+                <span>회화</span>               
+            </label>
+            <label>
+                <input type="radio" name="subject" id="sub2">
+                <span>문법</span>                
+            </label>
+            <label>
+                <input type="radio" name="subject">
+                <span>작문</span>
+            </label>
+        </fieldset>
+    </form>
+</body>
+</html>
