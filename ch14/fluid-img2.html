@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>        
+        #wrapper { width: 96%; }
+        header { 
+            font-size: 1.5em;
+            width: 100%; height: 120px; 
+            background-color: #066cfa;
+            border-bottom: 1px solid #000;
+        }
+        /*
+         글씨 크기 32px, 글자 색상: #fff;
+         글자 정렬: 중앙, 줄 높이: 120px
+        */
+        .header-text { 
+            font-size: 2em; color: #fff; 
+            text-align: center; line-height: 120px;
+        }
+
+        /*
+            float 왼쪽, 가로 62.5%
+            세로 400px, padding 1.5625%
+            배경색 #ffd800
+        */
+        .content { 
+            float: left; width: 62.5%;
+            height: 400px; padding: 1.5625%;
+            background: #ffd800;
+            font-size: 1.5em;
+        }
+
+        .content img { max-width: 100%; }
+
+        .right-side { 
+            float: right; width: 31.25%;
+            padding: 1.5625%;
+            height: 400px;
+            background-color: #00ff90;
+            font-size: 1.5em;
+        }
+
+        footer {         
+            clear: both;
+            height: 120px;
+            background: #c3590a;
+            font-size: 1.5em;
+        }
+        
+    </style>
+</head>
+<body>
+    <h1>fluid-img2.html</h1>
+    <div id="wrapper">
+        <header>
+            <span>테스트</span>
+            <h1 class="header-text">가변 그리드 레이아웃</h1>
+        </header>
+        <section class="content">
+            <h4>본문</h4>
+            <img src="images/fireworks.png" alt="불놀이">
+        </section>
+        <aside class="right-side">
+            <h4>사이드바</h4>
+        </aside>
+        <footer>
+            <h4>푸터</h4>
+        </footer>
+    </div>
+</body>
+</html>

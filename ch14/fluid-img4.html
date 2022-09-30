@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>            
+    </style>
+    <script>
+        const val = 1023;
+        if(val >= 1024) {
+            console.log('1024이상입니다.');
+        } else if (val >= 768) {
+            console.log('768이상입니다.');
+        } else if (val >= 320) {
+            console.log('320이상입니다.');
+        } else {
+            console.log('320미만입니다.');
+        }
+    </script>
+</head>
+<body>
+    <h1>fluid-img4.html</h1>    
+    <picture>
+        <source srcset="images/shop-large.jpg" 
+                media="(min-width: 1024px)">
+        <source srcset="images/shop-medium.jpg" 
+                media="(min-width: 768px)">
+        <source srcset="images/shop-small.jpg" 
+                media="(min-width: 320px)">
+        <img 
+            src="images/ice.jpg" 
+            alt="fill with coffee" style="width: 100%;">
+    </picture>
+</body>
+</html>

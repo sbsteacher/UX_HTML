@@ -1,0 +1,5 @@
+body {
+    height: 2000px;
+    background: url("../images/bg0.jpg") no-repeat fixed;
+    background-size: cover;
+}
