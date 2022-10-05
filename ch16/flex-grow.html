@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #container div {            
+            border: 2px solid #000;
+            background-color: #ccc;
+            padding: 0 10px;
+        }
+        #container {             
+            height: 300px;
+            margin: 0 auto;
+            background-color: bisque;
+            display: flex;           
+        }
+        #box1 { flex-grow: 1; }
+        #box2 { flex-grow: 3; }
+        #box3 { flex-grow: 3; }
+        #box4 { flex-grow: 3; }
+    </style>
+</head>
+<body>
+    <h1>flex-grow.html</h1>  
+    <div id="container">
+        <div id="box1">
+            <h2>1</h2>
+        </div>
+        <div id="box2">
+            <h2>2</h2>
+        </div>
+        <div id="box3">
+            <h2>3</h2>
+        </div>
+        <div id="box4">
+            <h2>4</h2>
+        </div>        
+    </div>  
+</body>
+</html>
