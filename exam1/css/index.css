@@ -88,6 +88,17 @@ footer {
     font-size: 1.25rem;
 }
 
+.breweries > ul > li { 
+    position: relative; 
+    padding-bottom: 40px;
+}
+.breweries > ul > li > a { 
+    display: inline-block;
+    position: absolute;
+    bottom: 5px;
+    left: 10px;
+}
+
 .breweries > ul > li > p {
     font-size: 1rem;
     line-height: 1.5;
