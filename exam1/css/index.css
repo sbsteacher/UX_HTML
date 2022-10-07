@@ -1,0 +1,91 @@
+html { scroll-behavior: smooth; }
+a { 
+    display: inline-block;
+    text-decoration: none;
+    color: #fff;
+    background-color: goldenrod;
+    padding: .5rem 1rem;
+    border-radius: .25rem;
+    transition: all .3s;
+}
+
+a:hover { 
+    background-color: blue;
+    opacity: .6; 
+}
+
+ul { list-style-type: none; }
+
+footer { 
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    font-size: .75rem;
+}
+.wrapper { padding-bottom: 60px; }
+.hero { 
+    padding: 4rem 2rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    align-items: center;    
+    color: #fff;
+ }
+ 
+ .hero h1 { font-size: 4rem; }
+ .hero > div { 
+     display: flex; 
+     align-items: center; 
+     justify-content: center;
+ }
+ .hero > article > p { 
+     font-size: 1.5rem; 
+     font-weight: 200;
+ }
+
+
+
+
+.breweries > ul > li { 
+    border: 1px solid #E2E2E2;
+    border-radius: .5rem;
+}
+
+.breweries > ul > li > figure {
+    max-height: 220px;
+    overflow: hidden;
+    border-top-left-radius: .5rem;
+    border-top-right-radius: .5rem;
+    position: relative;
+}
+.breweries > ul > li > figure > img { 
+    width: 100%;
+}
+
+.breweries > ul > li > figure > figcaption {
+    position: absolute;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, .7);
+    width: 100%;
+}
+
+.breweries > ul > li > figure > figcaption > h3 {
+    color: #fff;
+    padding: .75rem;
+    font-size: 1.25rem;
+}
+
+.breweries > ul > li > p {
+    font-size: 1rem;
+    line-height: 1.5;
+    padding: 1rem .75rem;
+}
+
+.breweries > ul > li > a {
+    margin: .5rem;
+}

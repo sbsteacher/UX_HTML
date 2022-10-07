@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /*
+            fr이 없을 때는 auto는 fr과 같다.
+            fr과 auto가 같이 사용되었을 때
+            auto는 필요한 만큼 공간 차지한다.
+        */
+        * { padding: 0; margin: 0; }
+        html, body { height: 100%; }
+        .container { 
+            height: 100%; display: grid; 
+            grid-template-rows: auto 1fr auto;
+        }
+        header { background-color: antiquewhite; }
+        footer { background-color: brown; }
+    </style>
+</head>
+<body>    
+    <div class="container">
+        <header>
+            <h1>grid-auto-vs-fr.html</h1>
+        </header>
+        <main>내용</main>
+        <footer>푸터</footer>
+    </div>
+</body>
+</html>
