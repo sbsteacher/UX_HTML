@@ -1,4 +1,5 @@
 html { scroll-behavior: smooth; }
+body { margin: 0;}
 a { 
     display: inline-block;
     text-decoration: none;
@@ -49,12 +50,15 @@ footer {
      font-weight: 200;
  }
 
+ .breweries { padding: 1rem 3rem; }
+
 .breweries > ul > li { 
     border: 1px solid #E2E2E2;
     border-radius: .5rem;
 }
 
 .breweries > ul {
+    padding: 0;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); 
     grid-gap: 1rem;
