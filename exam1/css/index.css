@@ -29,34 +29,38 @@ footer {
     font-size: .75rem;
 }
 .wrapper { padding-bottom: 60px; }
-.hero { 
+.hero {    
     padding: 4rem 2rem;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-    align-items: center;    
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));    
     color: #fff;
  }
  
  .hero h1 { font-size: 4rem; }
+ 
  .hero > div { 
      display: flex; 
      align-items: center; 
      justify-content: center;
  }
+ 
  .hero > article > p { 
      font-size: 1.5rem; 
      font-weight: 200;
  }
-
-
-
 
 .breweries > ul > li { 
     border: 1px solid #E2E2E2;
     border-radius: .5rem;
 }
 
-.breweries > ul > li > figure {
+.breweries > ul {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); 
+    grid-gap: 1rem;
+}
+
+.breweries > ul > li > figure {    
     max-height: 220px;
     overflow: hidden;
     border-top-left-radius: .5rem;
