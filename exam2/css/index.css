@@ -1,0 +1,122 @@
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    box-sizing: border-box;
+}
+a { text-decoration: none; }
+body { background-color: #f5f5f5; }
+
+.wrap { 
+    display: grid; 
+    grid-template-columns: 200px minmax(420px, 1fr);
+    grid-template-rows: 56px 1fr;
+}
+
+.wrap .header { 
+    background-color: #ff3b49;
+    grid-row: span 2; 
+    color: #fff;
+    height: 100vh;
+}
+
+.wrap .header .logo {
+    margin: 40px 0 50px;
+    font-size: 27px;
+    text-align: center;
+    font-family: Shrikhand, cursive;
+}
+
+.wrap .header .nav__container:first-child {
+    margin-bottom: 40px;
+}
+
+.wrap .header .nav__title {
+    display: block;
+    margin-bottom: 12px;
+    font-size: 80%;
+    background-color: #ff5662;
+    padding: 8px 20px;
+}
+
+.wrap .header .nav__list {
+    font-size: 1rem;
+    padding: 0 20px;
+}
+
+.wrap .header .nav__item { margin-bottom: 8px; }
+.wrap .header .nav__item .nav__link {
+    color: #fff; 
+}
+
+
+.wrap .top-bar { 
+    background-color: #f0f0f0; 
+    display: grid;
+    grid-template-columns: 1fr 52px;
+    column-gap: 5px;
+    align-content: center;
+}
+
+.wrap .top-bar .search {
+    padding: 0 8px;
+    display: flex;
+    align-items: center;    
+}
+
+.search__form { width: 100%; }
+
+.wrap .top-bar .search .search__label {
+    display: block;
+    overflow: hidden;
+    width: 0;
+    height: 0;
+}
+
+.wrap .top-bar .search .search__input {
+    width: 100%;
+    padding: 8px 10px;
+    border: 1px solid #d0d0d0;
+}
+
+.wrap .top-bar .search .search__input:focus,
+.wrap .top-bar .search .search__input:hover {
+    outline: 0;
+    border-color: #999;
+}
+
+.wrap .top-bar .profile .profile__icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    background-color: rgb(110, 90, 240);
+    border-radius: 50%;
+    color: #fff;
+    font-family: Shrikhand, cursive;
+    font-size: 22px;
+    padding-right: 1px;
+}
+
+.wrap .main .main__header { 
+    text-align: center;
+    padding: 100px 20px;
+    position: relative;
+    background: url("http://unsplash.it/1200/600?image=495") no-repeat;
+    background-size: cover;
+}
+
+.wrap .main .main__header::after {    
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, .3);
+}
+
+.wrap .main .main__header .main__title { 
+    color: #fff; position: relative; z-index:1; 
+}

@@ -6,24 +6,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        #container div {   
-            flex-basis: 250px;         
+        #container > div {   
+            width: 500px;
+            flex-basis: 300px;
             border: 2px solid #000;
             background-color: #ccc;
-            padding: 10px 10px;
+            padding: 10px 10px;            
         }
-        #container {                         
+        #container {                                   
             margin: 0 auto;
             background-color: bisque;
-            display: flex;    
-            flex-direction: column;       
+            display: flex;   
+            flex-direction: column;                         
         }
-        #box1 { flex-shrink: 4; }        
-        #box2 { flex-shrink: 4; }  
     </style>
 </head>
 <body>
-    <h1>flex-grow.html</h1>  
+    <h1>flex-shirink.html</h1>  
     <div id="container">
         <div id="box1">
             <h2>1</h2>
