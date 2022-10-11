@@ -16,8 +16,8 @@ body { background-color: #f5f5f5; }
 .wrap .header { 
     background-color: #ff3b49;
     grid-row: span 2; 
-    color: #fff;
-    height: 100vh;
+    color: #fff;    
+    min-height: 100vh;
 }
 
 .wrap .header .logo {
@@ -100,6 +100,7 @@ body { background-color: #f5f5f5; }
 }
 
 .wrap .main .main__header { 
+    font-size: 30px;
     text-align: center;
     padding: 100px 20px;
     position: relative;
@@ -114,9 +115,50 @@ body { background-color: #f5f5f5; }
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: rgba(0, 0, 0, .3);
+    background-color: rgba(10, 10, 10, .6);
 }
 
-.wrap .main .main__header .main__title { 
-    color: #fff; position: relative; z-index:1; 
+.wrap .main .main__header .main__title {     
+    color: #fff; 
+    position: relative; 
+    z-index:1; 
+}
+
+.wrap .main .listing-card {
+    max-width: 1600px;
+    margin: 30px auto 60px;
+    padding: 0 20px;    
+}
+
+.wrap .main .listing-card .listing-card__list {
+    display: grid;
+    grid-template-columns: 
+        repeat(auto-fill, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.wrap .main .listing-card .listing-card__item {
+    width: 100%;
+    background-color: #fff;
+    border: 1px solid #f0f0f0;
+    padding: 20px;
+}
+
+.wrap .main .listing-card .listing-card__image {
+    padding-top: 70%;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.wrap .main .listing-card .listing-card__info {
+    margin: 20px 0 10px;
+}
+
+.wrap .main .listing-card .listing-card__name {
+    font-size: 18px;
+}
+
+.wrap .main .listing-card .listing-card__date {
+    margin-top: 6px;
+    color: #333;
 }
