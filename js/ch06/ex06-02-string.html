@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>ex06-02-string.html</h1>
+    <script>
+        var str;
+
+        str = '문자열';
+        console.log(str);
+
+        str = "문'자'열";
+        console.log(str);
+
+        str = `문자열`; //백틱 (ES6)
+        console.log(str);
+
+        var name = '홍길동'; //name값 건들지마세요.   
+        var height = 173.5;    
+        var age = 22; 
+        console.log('제 이름은 %s입니다. 제 키는 %fcm입니다. 제 나이는 %d살 입니다.'
+        , name, height, age);
+        
+        const result = `제111 
+        
+        
+        
+        이름은 ${name}입니다. ${1 + 1 + 2}`;
+        console.log(result);
+        
+        /*
+        name 변수를 활용하여 "제 이름은 홍길동입니다."
+        를 콘솔에 출력해주세요.
+        */
+        let result2 = result;
+        result2 += 'ㅇㅇㅇㅇ';
+        console.log('1: ' + result);
+        console.log('2: ' + result2);
+        
+        const msg1 = '안\'녕\t반가워';
+        console.log(msg1);
+        document.write(msg1);
+    </script>
+</body>
+</html>

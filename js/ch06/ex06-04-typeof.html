@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>ex06-04-typeof.html</h1>    
+    <script>
+        var foo;
+        console.log(foo);
+        console.log(typeof foo);
+
+        foo = -1.1;
+        console.log(typeof foo);
+
+        foo = '반가워';
+        console.log(typeof foo);
+
+        foo = true;
+        console.log(typeof foo);
+
+        foo = null;
+        console.log(typeof foo);
+
+        foo = {};
+        console.log(typeof foo);
+
+        foo = Symbol();
+        console.log(typeof foo);
+
+        foo = [];
+        console.log(typeof foo);
+        console.log('함수처럼 ' + typeof(foo));
+
+        foo = function() {}
+        console.log(typeof foo);
+    </script>
+</body>
+</html>
+
