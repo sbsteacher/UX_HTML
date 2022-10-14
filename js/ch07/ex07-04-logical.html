@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>ex07-04-logical</h1>
+    <script>
+        /*
+            ||   > or
+            &&   > and
+            !    > not
+        */
+        console.log(true || true || true);
+        console.log(false || false || true);
+        console.log(false || false || false);
+        console.log('----');
+        console.log(true && true && true);
+        console.log(true && false && true);
+        console.log('----');
+        console.log(!true);
+        console.log(!false);
+        console.log('----');
+        console.log(true && true && false && true);
+        console.log(!(true || false));
+        console.log('----4');
+        console.log(!0);
+        console.log(!-100);
+        console.log(!!null);
+        console.log(!undefined);
+        console.log(!'');
+        console.log(!'1ewefgerfgwerf');
+        console.log(!NaN);
+        console.log('!Infinity: ' + !Infinity);
+
+        //숫자 - 0:false, 나머지:true
+        //문자열 - 빈칸:false, 나머지:true
+        //undefined, NaN, null - false
+
+        console.log('Cat' && '' && 'Dog' && '고마워');
+        console.log('Cat' || 'Dog');
+
+        console.log('Cat' && '' || 'ddd');
+        console.log(true && false || true);
+        console.log('------5');
+        var x = false;
+        var y = false;
+        console.log(!(x || y) === (!x && !y));
+        
+        console.log('------6');
+        var foo = null;
+        console.log(typeof foo);
+        console.log(typeof foo === null);
+        console.log(foo === null);
+
+        console.log('------7');
+        var foo2 = NaN
+        console.log(foo2 === NaN);
+        console.log(isNaN(foo2) === true);
+
+        console.log('------8');
+        var foo3;
+        console.log(foo3 === undefined);
+    </script>
+</body>
+</html>
