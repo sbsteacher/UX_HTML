@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>if-mission-2.html</h1>
+    <script>
+        const rNum = parseInt((Math.random()) * 10) + 1;
+        console.log(rNum);
+
+        /*
+        rNum값이 5 미만이면 "${rNum}은 5보다 작습니다." 가 출력.
+        rNum값이 5 초과이면 "${rNum}은 5보다 큽니다." 가 출력.
+        rNum값이 5이면 "rNum은 5입니다." 가 출력
+        */
+
+        const standValue = 7;
+
+        if(rNum < standValue) {
+            console.log(`${rNum}은 ${standValue}보다 작습니다.`);
+        } else if(rNum > standValue) {
+            console.log(`${rNum}은 ${standValue}보다 큽니다.`);
+        } else {
+            console.log(`rNum은 ${standValue}입니다.`);
+        }
+       
+    </script>
+</body>
+</html>

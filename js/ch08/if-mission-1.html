@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>if-mission-1.html</h1>
+    <script>
+        const rNum = parseInt((Math.random()) * 10) + 1;
+        console.log(rNum);
+
+        console.log(rNum % 2);
+
+        if(rNum % 2 === 0) { //짝수
+            console.log(`${rNum}은 짝수 입니다.`);
+        } else {
+            console.log(`${rNum}은 홀수 입니다.`);
+        }
+
+        const result = rNum % 2 ? '홀수' : '짝수';
+        console.log(`${rNum}은 ${result}입니다.`);
+
+        /*
+        만약 rNum값이 1라면
+        "1는 홀수입니다."
+
+        만약 rNum값이 2라면
+        "2는 짝수입니다.""
+
+        만약 rNum값이 9라면
+        "9는 홀수입니다.""
+
+        만약 rNum값이 10이라면
+        "10는 짝수입니다."
+        */
+    </script>
+</body>
+</html>
