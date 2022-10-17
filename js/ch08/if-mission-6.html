@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>if-mission-6</h1>
+    <script>
+        /*
+        const val = '1212';
+        const result = isNaN(val);
+        console.log(result);
+
+        const val2 = '12a12';
+        const result2 = isNaN(val2);
+        console.log(result2);
+        */
+        //숫자면 + 10, 문자열이면 출력
+        
+        const val = prompt();       
+        
+        if(isNaN(val)) {
+            console.log(val);
+        } else {
+            const result = parseInt(val);
+            console.log(result + 10);
+        }
+        
+        /*
+        let val = prompt();
+        if(!isNaN(val)) {
+            val = parseInt(val) + 10;
+        }
+        console.log(val);
+        */
+    </script>
+</body>
+</html>

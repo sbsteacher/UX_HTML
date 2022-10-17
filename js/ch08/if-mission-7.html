@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>if-mission-7</h1>
+    <script>
+        /*
+            입력받은 값이 문자열이면
+            콘솔에 "숫자가 아닙니다." 출력
+            숫자로만 이루워져 있으면
+            홀수라면 "홀수입니다."
+            짝수라면 "짝수입니다.";
+        */
+        let val = prompt();
+        if(isNaN(val)) { //true > 숫자가 아닌 것이다.
+            console.log('숫자가 아닙니다.');
+        } else if(parseInt(val) % 2) {
+            console.log('홀수입니다.');
+        } else {
+            console.log('짝수입니다.');
+        }
+    </script>
+</body>
+</html>

@@ -24,7 +24,7 @@
        //1. 일단 남자/여자를 구분할 수 있어야 한다.
        if(gender === 'W') {
            //여자였을 때는 여자값에만 집중한다.
-       } else if(gender === 'M') {
+       } else if(gender === 'M') { 
             //남자였을 때는 남자값에만 집중한다.
        }
        
@@ -50,8 +50,6 @@
         }
 
        
-       
-       
        const WOMAN_STAND_HEIGHT = 157;
        const MAN_STAND_HEIGHT = 171;
        
@@ -61,6 +59,7 @@
             standHeight = MAN_STAND_HEIGHT;
             strGender = '남자';
        }
+
        if(height > standHeight) {
             console.log(`${height}이면 ${strGender} 평균키보다 큽니다.`);
        } else if(height < standHeight) {
@@ -68,10 +67,6 @@
        } else {
             console.log(`${height}이면 ${strGender} 평균키입니다.`);
        }
-
-
-
-       
     </script>
 </body>
 </html>
