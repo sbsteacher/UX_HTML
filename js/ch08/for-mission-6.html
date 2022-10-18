@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>for-mission-6</h1>
+    <script>
+        //세로로 구구단 출력
+        const sDan = parseInt(prompt('시작 단 수'));
+        const eDan = parseInt(prompt('마지막 단 수'));
+         
+        for(var i=sDan; i<=eDan; i++) {
+            console.log(`${i}단`);
+            for(var z=1; z<10; z++) {
+                console.log(`${i} X ${z} = ${i * z}`);
+            }
+            console.log('');
+        }
+    </script>
+</body>
+</html>

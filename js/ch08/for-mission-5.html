@@ -7,20 +7,17 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>for</h1> 
+    <h1>for-mission-5</h1>
     <script>
-        /*
-            for( 초기값 ; 조건식 ; 증감식 ) {
-                반복하고 싶은 내용
-            }
-        */
-
-        for(var i=100 ; i<105 ; i++) {
-            console.log(i);
-        }
-        console.log('--- 끝 ----');
-
         
-    </script>   
+         
+        for(var i=1; i<10; i++) {
+            let str = '';
+            for(var z=2; z<10; z++) {
+                str += `${z} X ${i} = ${z * i}\t`;
+            }
+            console.log(str);
+        }
+    </script>
 </body>
 </html>

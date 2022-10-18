@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>자리 선정 (랜덤 순서)</h1>
+    <div id="list"></div>
+    <script>
+        const listDiv = document.querySelector('#list');
+        const stuList = [
+            '김민석', '김소연', '김예리', '김혜린', '박루아', 
+            '박원지', '박지민', '배소영', '배진화', '백현주', 
+            '오세훈', '유정원', '윤아람', '이민정', '이성환', 
+            '이승진', '이해단', '정성훈', '정소연', '정유림', 
+            '조수정', '최상혁', '최성환', '최혜빈', '황보규림', 
+            '황지원', 
+        ];
+
+        const cnt = stuList.length;
+        for(let i=0; i<cnt; i++) {
+            const idx = Math.random() * stuList.length;
+            const stu = stuList.splice(idx, 1);
+            console.log(`${i+1} : ${stu}`);
+            const div = document.createElement('div');
+            div.innerHTML = `${i+1} : ${stu}`; 
+            listDiv.append(div);
+        }        
+    </script>
+</body>
+</html>
