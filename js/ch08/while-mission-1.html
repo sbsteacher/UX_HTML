@@ -13,6 +13,17 @@
         //0이면 종료
         //짝수값을 입력했을 때만 계속 더한다.
         //(0 입력되면)짝수 입력된 값을 모두 더한 더하여 마지막에 출력한다.
+        let evenSum = 0;
+        while(true) {
+            const num = parseInt(prompt('숫자를 입력하세요. (종료: 0)'));
+            if(num === 0) { break; }
+            //  num % 2 !== 1 
+            //  !(num % 2)
+            if(num % 2 === 0) {
+                evenSum += num;
+            }
+        }
+        console.log(`짝수 합계 : ${evenSum}`);
     </script>
 </body>
 </html>
