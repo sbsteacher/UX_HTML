@@ -9,10 +9,15 @@
 <body>
     <h1>arr-mission-1</h1>
     <script>
-        const arr = [10, 20, 30, 40, 100, 120, 140];
-
         //배열 arr과 for문을 활용하여 배열에 있는 모든 값 더한 결과 값을 
         //출력해 주세요.
+        const arr = [10, 20, 30, 40, 100, 120, 140];
+        let sum = 0;
+        for(let i=0; i<arr.length; i++) {
+            sum += arr[i];
+        }
+        console.log(`합계 : ${sum}`);
+
     </script>
 </body>
 </html>
