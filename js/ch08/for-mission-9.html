@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>for-mission-9</h1>
+    <script>
+        const star = parseInt(prompt('찍고 싶은 별 수를 입력해주세요.'));
+
+        /*
+        예)3
+        *
+        **
+        ***
+
+        예)4
+        *
+        **
+        ***
+        ****
+        */
+        let str = '';
+        for(var i=0; i<star; i++) {
+            for(var z=0; z<=i; z++) {
+                str += '*';
+            }
+            str += '\n';
+        }
+        console.log(str);
+       
+    </script>
+</body>
+</html>

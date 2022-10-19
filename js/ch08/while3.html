@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>while3</h1>
+    <script>
+        let sum = 0;
+        let num = 0;
+        do {
+            num = parseInt(prompt('더할 값을 입력하세요. (종료는 0)'));
+            sum += num;
+        } while(num !== 0);            
+        
+        console.log(`합계 : ${sum}`);
+    </script>
+</body>
+</html>
