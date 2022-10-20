@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>arr-mission-2</h1>
+    <script>
+        /*
+            arr 배열을 사용하여 toString()
+            메소드와 같게 콘솔에 찍힐 수 있도록
+            작업을 한다.
+
+            for문, if문 적절하게 사용하여
+        */
+        const arr = [100, 200, 300, 400, 500];
+        console.log(arr.toString());
+      
+        let str2 = '';
+
+        
+        
+        for(var i=0; i<arr.length; i++) {
+            if(i !== 0) {
+                str2 += ',';
+            }
+            str2 += arr[i];
+        }
+        console.log(str2);
+
+        console.log(arr[4]);
+        console.log(arr[arr.length - 1]);
+        
+    </script>
+</body>
+</html>
