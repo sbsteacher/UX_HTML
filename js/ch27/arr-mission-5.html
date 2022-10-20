@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>arr-mission-5</h1>
+    <script>
+        const stuNames = ['철수', '영희', '영수', '순희'];
+        const myScores = [0, 0, 0, 0];
+        const clsNames = ['국어', '영어', '수학'];
+        const clsScores = [0, 0, 0];
+
+        //   국어, 영어, 수학
+        const stuScores = [
+            [100, 90,  80],
+            [100, 100, 100],
+            [50,  60,  30],
+            [90,  70,  20],
+        ];      
+      
+        for(let i=0; i<stuScores.length; i++) {
+            for(let z=0; z<stuScores[i].length; z++) {
+                myScores[i] = myScores[i] + stuScores[i][z];
+                clsScores[z] += stuScores[i][z];
+            }
+        }
+        for(let i=0; i<stuNames.length; i++) {
+            const avg = parseInt(myScores[i] / stuScores[i].length);
+            console.log(`${stuNames[i]} : ${myScores[i]}, ${avg}`);
+        }
+
+        for(let i=0; i<clsNames.length; i++) {
+            const avg = parseInt(clsScores[i] / stuScores.length);
+            console.log(`${clsNames[i]} : ${clsScores[i]}, ${avg}`);
+        }
+
+        //각 학생의 합계 점수를 출력해주세요. (과목이 늘어도 대응이 되도록)
+        //철수 : 270점, 90점
+        //영희 : 300점, 100점
+        //영수 : 140점, 46점
+        //순희 : 180점, 60점
+        //국어 : 총점, 평균점수
+        //영어 : 총점, 평균점수
+        //수학 : 총점, 평균점수
+    </script>
+</body>
+</html>
