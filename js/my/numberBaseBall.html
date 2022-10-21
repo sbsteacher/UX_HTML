@@ -7,7 +7,7 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>numberBaseBall</h1>
+    <h1>numberBaseBall</h1>   
     <script>
         const numArr = [0, 0, 0];
         let i=0;
@@ -20,9 +20,34 @@
                     continue mainLoop;
                 }
             }
-            numArr[i++] = rNum;
+            numArr[i++] = rNum;            
         }
-        console.log(numArr + '');
+        //console.log(numArr + '');
+        while(true) {
+            const answer = prompt('숫자 세개를 입력해 주세요. (구분은 빈칸)');
+            //1 2 3
+            console.log(answer);
+            const answerArr = answer.split(' ');
+            const answerNumberArr = answerArr.map(Number);            
+            
+            let s=0, b=0;
+            for(let i=0; i<numArr.length; i++) {
+                for(let z=0; z<answerNumberArr.length; z++) {
+                    if(numArr[i] === answerNumberArr[z]) {
+                        if(i === z) {
+                            s++;
+                        } else {
+                            b++;
+                        }
+                    }
+                }
+            }
+            console.log(`S: ${s}, B: ${b}, O: ${numArr.length - (s + b)}`);
+            if(s === numArr.length) {
+                break;
+            }
+        }
+        console.log(`게임 종료 : `);
 
         /*
         loop1 :
