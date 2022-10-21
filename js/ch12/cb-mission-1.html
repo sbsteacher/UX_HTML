@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>cb-mission-1</h1>
+    <script>
+        const arr = [1, 5, 10, 22, 30, 41, 8, 9];
+        /*
+            꼭 forEach메소드 이용
+            arr에 들어있는 값 중에 홀수값만 콘솔에 출력해주세요.
+        */
+        let sum = 0;
+        arr.forEach(function(item) {
+            if(item % 2) {
+                sum += item;
+            }
+        });
+
+        console.log(sum);
+    </script>
+</body>
+</html>
