@@ -7,21 +7,19 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>cb-mission-1</h1>
+    <h1>cb-mission-3</h1>
     <script>
         const arr = [1, 5, 10, 22, 30, 41, 8, 9];
-        /*
-            꼭 forEach메소드 이용
-            arr에 들어있는 값 중에 홀수값만 콘솔에 출력해주세요.
-        */
-        let sum = 0;
-        arr.forEach(function(item, a) {
-            if(item % 2) {
-                sum += item;
+        
+        // arr배열에 10이상 40미만인 값들만 뽑아낸 
+        // 새로운 배열을 만들어주세요.
+        const arrCopy = arr.filter(function(item) {
+            if(item >= 10 && item < 40) {
+                return true;
             }
         });
 
-        console.log(sum);
+        console.log(arrCopy.toString());
     </script>
 </body>
 </html>

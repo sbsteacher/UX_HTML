@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>cb2</h1>
+    <script>
+        {
+            function master(cb) {
+                for(let i=0; i<5; i++) {
+                    cb(i);
+                }
+            }
+            let sum2 = 0;
+            master(function(item) {
+                sum2 += item;
+            });
+            console.log(sum2);
+
+
+            function fn1(item) {           
+                console.log('item : ' + item);                       
+            }
+
+            function fn2(item) {
+                sum2 += item;
+            }
+
+            master(fn1);
+
+            let sum = 0;
+            for(let i=0; i<5; i++) {                
+                sum += i;
+            }   
+            console.log(sum);
+            console.log('-----');
+
+            master(fn2);
+            
+        
+        }
+    </script>
+</body>
+</html>

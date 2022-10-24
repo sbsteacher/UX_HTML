@@ -7,21 +7,17 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>cb-mission-1</h1>
+    <h1>cb_filter</h1>
     <script>
         const arr = [1, 5, 10, 22, 30, 41, 8, 9];
-        /*
-            꼭 forEach메소드 이용
-            arr에 들어있는 값 중에 홀수값만 콘솔에 출력해주세요.
-        */
-        let sum = 0;
-        arr.forEach(function(item, a) {
-            if(item % 2) {
-                sum += item;
+        const arrCopy = arr.filter(function(item) {
+            if(item % 2 === 0) {
+                return true;
             }
+            return false;
         });
-
-        console.log(sum);
+        console.log(arr.toString());
+        console.log(arrCopy.toString());
     </script>
 </body>
 </html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>fn1</h1>
+    <script>
+        const rVal = parseInt(Math.random() * 101); // 0~100 사이의 랜덤한 숫자가 나오는 식을 작성.
+        
+        //getOddEven 함수를 만들어주시고 파라미터값이 홀수면 리턴값 "홀수"
+        //                                         짝수면 리턴값 "짝수";
+        const result = getOddEven(rVal);
+        console.log(rVal); 
+        console.log(result); //"짝수" or "홀수"
+        console.log(getOddEven(rVal));
+
+        getOddEven(rVal);
+        
+        function getOddEven(num) {
+            return num % 2 ? '홀수' : '짝수';
+        }
+
+
+
+
+
+
+    </script>
+</body>
+</html>
