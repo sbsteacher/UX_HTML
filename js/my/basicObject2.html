@@ -10,39 +10,32 @@
     <h1>basicObject</h1>
     <script>
         const arrObj = {
-            0: 1,
-            1: 5,
-            2: 10,
-            length: 3,
-            forEach: function(cb) {
+            '0': 1,
+            '1': 5,
+            '2': 10,
+            'length': 3,
+            'forEach': function(cb) {
                 for(let i=0; i<this.length; i++) {
                     cb(this[i], i, this);
                 }                
             }
-        };        
-        arrObj.forEach(function(item) {
-            console.log('forEach: ' + item);
+        };           
+        let evenSum = 0;
+        arrObj.forEach(function(item, idx) {
+            if(item % 2 === 0) {
+                evenSum += item;
+            }
         });
+        console.log('evenSum : ' + evenSum);
 
-        const fn4 = function(item) {
-            console.log('forEach: ' + item);
-        }
-        fn4(1);
-        fn4(5);
-        fn4(10);
 
-      
 
-        const attr = '0';
-        console.log('attr : ' + arrObj[attr]);
-        console.log(arrObj.length)
 
         console.log(arrObj[0]);
+        console.log(arrObj['0']);
         //console.log(arrObj.0);
-        console.log(arrObj[1]);
-        console.log(arrObj[2]);
-        console.log(arrObj.length);
         console.log(arrObj['length']);
+        console.log(arrObj.length);
     </script>
 </body>
 </html>

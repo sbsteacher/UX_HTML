@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>json</h1>
+    <script>        
+       const human1 = {
+           "name": "홍길동",
+           "age": 22,
+           "location": "대구"
+       };
+
+       const human2 = {
+           "name": "신사임당",
+           "age": 24,
+           "location": "서울"
+       };
+
+       const arr = [human1, human2];
+       console.log(arr);
+
+       const strArr = JSON.stringify(arr);
+       console.log(strArr);
+
+       const arr2 = JSON.parse(strArr);
+       console.log(arr2);
+       
+    </script>
+</body>
+</html>

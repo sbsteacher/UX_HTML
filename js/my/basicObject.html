@@ -18,9 +18,11 @@
         };
 
         const obj2 = obj;
+        console.log('1' + obj.name);
         obj2.name = '신사임당';
-
-        console.log(obj.name);
+        obj.name = '장보고';
+        console.log('2' + obj.name);
+        console.log('3' + obj2.name);
         obj.wakeup();
         console.log(obj);
         console.log(typeof obj);

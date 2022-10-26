@@ -7,18 +7,22 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>fn4</h1>
-    <script>
-        printPre('안녕하세요', 7);
-        printPre('Hello', 10);
+    <h1>ex13-02</h1>
+    <script>                
+        var var1 = 1;
+        var var2;
+        var var3;
+        if(true) {
+            var2 = 2;
 
-        function printPre(str, cnt) {
-            let result = '';
-            for(let i=0; i<cnt; i++) {
-                result += str + '\n';
+            if(true) {
+                var3 = 3;
             }
-            console.log(result);            
         }
+
+        console.log(var1);
+        console.log(var2);
+        console.log(var3);
         
     </script>
 </body>

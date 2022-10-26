@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>myFilterArr</h1>
+    <script>        
+        const arr = {
+            0: 7,
+            1: 12,
+            2: 3,
+            3: 32,
+            4: 11,
+            length: 5,
+            map: function(cb) {                
+                const temp = [];
+                for(let i=0; i<this.length; i++) {
+                    const val = cb(this[i], i);
+                    temp.push(val);
+                }
+                return temp;
+            },
+            filter: function(cb) {
+                const temp = [];
+                for(let i=0; i<this.length; i++) {
+                    const result = cb(this[i], i);
+                    if(result) {
+                        temp.push(this[i]);
+                    }
+                }
+                return temp;
+            }
+        }
+        const arr2 = arr.filter(function(item) {
+            return item % 2;
+        });        
+        console.log(arr2.toString()); //7, 3, 11
+    </script>
+</body>
+</html>

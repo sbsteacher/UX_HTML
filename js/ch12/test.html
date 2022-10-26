@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var pc2 = [0, 0, 0];
+        var pc2_random = pc2.map(function(item) {
+
+            var rVal = parseInt(Math.random() * 9) + 1;
+
+            for(let i=0; i<pc2.length; i++) {
+                for(let z=0; z<i; z++) {
+                    if(pc2[i] === pc2[z]) {
+                        i--;
+                        break;
+                    }
+                }
+            }
+        });
+        console.log('끝!');
+
+    </script>
+</body>
+</html>

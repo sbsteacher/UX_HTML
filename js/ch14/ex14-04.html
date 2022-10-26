@@ -7,19 +7,26 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>fn4</h1>
+    <h1>ex14-04</h1>
     <script>
-        printPre('안녕하세요', 7);
-        printPre('Hello', 10);
+        //lib1
+        (function() {
 
-        function printPre(str, cnt) {
-            let result = '';
-            for(let i=0; i<cnt; i++) {
-                result += str + '\n';
+            var foo = 10;
+            function printFoo() {
+                console.log(foo);
             }
-            console.log(result);            
-        }
+            printFoo();
+
+        })();      
         
+        
+
+        //lib2
+        var foo = 20;
+
+        //사용
+        //printFoo();
     </script>
 </body>
 </html>

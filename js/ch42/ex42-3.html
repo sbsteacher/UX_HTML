@@ -7,18 +7,18 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>fn4</h1>
+    <h1>ex42-3</h1>
     <script>
-        printPre('안녕하세요', 7);
-        printPre('Hello', 10);
-
-        function printPre(str, cnt) {
-            let result = '';
-            for(let i=0; i<cnt; i++) {
-                result += str + '\n';
-            }
-            console.log(result);            
+        function foo() {
+            console.log('foo');
+            setTimeout(bar, 2000);
         }
+
+        function bar() {
+            console.log('bar');
+        }
+
+        setTimeout(foo, 3000);
         
     </script>
 </body>

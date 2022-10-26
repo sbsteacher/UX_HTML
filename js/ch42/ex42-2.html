@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>ex42-02</h1>
+    <script>
+        function sleep(fn, delay) {           
+            const delayUntil = Date.now() + delay;
+            while(Date.now() < delayUntil);
+            fn();
+        }
+
+        function foo() {
+            console.log('foo');
+        }
+
+        function bar() {
+            console.log('bar');
+        }
+
+        sleep(foo, 3000);
+        bar();
+    </script>
+</body>
+</html>

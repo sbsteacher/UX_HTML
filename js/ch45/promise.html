@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>promise</h1>    
+    <script>
+        //1. promise 객체 생성
+        //2. 객세 생성할 때, 
+        // (통신 작업이 있는) 콜백함수 보내줘야 한다.
+        //3. promise 객체에 then, catch에 콜백함수 세팅한다.
+        function p1(resolve, reject) {
+            reject('dddd');
+        }
+        const promise = new Promise(p1);
+        promise
+        .then(function(result) {
+            console.log('then : ' + result);
+        })
+        
+        promise
+        .catch(function(result) {
+            console.log('catch : ' + result);
+        });
+    </script>
+</body>
+</html>

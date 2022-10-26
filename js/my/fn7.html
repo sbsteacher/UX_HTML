@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>fn7</h1>
+    <script>
+        printStarLine(5);
+        //*****
+
+        printStarLine(3);
+        //***
+
+        printStarMulti(3);
+        //(3)***    
+
+        printStarMulti(4);
+        //(4)****
+
+        printStarTriangle(5);
+        //*
+        //**
+        //***
+        //****
+        //*****
+
+        function printStarTriangle(cnt) {
+            for(let i=1; i<=cnt; i++) {
+                printStarLine(i);
+            }
+        }
+
+        function printStarMulti(cnt) {
+            for(let z=0; z<cnt; z++) {
+                printStarLine(cnt);
+            }
+        }
+
+        function printStarLine(cnt) {
+            let result = '';
+            for(let i=0; i<cnt; i++) {
+                result += '*';
+            }
+            console.log(result);
+        }
+    </script>
+</body>
+</html>

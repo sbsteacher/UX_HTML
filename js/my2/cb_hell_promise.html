@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>cb_hell_promise</h1>
+    <script>
+        function fn1() {            
+            const p = new Promise(
+                function(resolve, reject) {
+                    setTimeout(function() {
+                        resolve(10);
+                    }, 3000);
+                }
+            );
+            return p;
+        }
+
+        function fn2(val) {
+            console.log(val * 2);
+        }
+
+        const promise = fn1();
+        promise
+        .then(function(val) {            
+            console.log('then : ' + val);
+            fn2(val);
+        })
+        
+        .catch(function(val) {
+            console.log('catch : ' + val);
+        });
+    </script>
+</body>
+</html>

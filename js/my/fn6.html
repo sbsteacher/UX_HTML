@@ -7,19 +7,19 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>fn4</h1>
+    <h1>fn6</h1>
     <script>
-        printPre('안녕하세요', 7);
-        printPre('Hello', 10);
+        const minValue = 2;
+        const maxValue = 8;
 
-        function printPre(str, cnt) {
-            let result = '';
-            for(let i=0; i<cnt; i++) {
-                result += str + '\n';
-            }
-            console.log(result);            
+        const rVal = getRandomMinMax(minValue, maxValue);
+        console.log(rVal);
+
+        function getRandomMinMax(min, max) {
+            return parseInt(Math.random() * (max - min + 1)) + min;
         }
         
+
     </script>
 </body>
 </html>

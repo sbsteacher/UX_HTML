@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>my-cb-forEach</h1>
+    <script>
+        const arr = [4, 9, 10, 1, 6, 33, 29];
+        //console.log(arr.length);
+        let evenSum = 0;
+        arr.forEach(function(item, idx) {
+            if(item % 2 === 0) {
+                evenSum += item;
+            }
+        });
+        console.log(evenSum);
+
+        for(let i=0; i<arr.length; i++) {
+            var val = arr[i];
+        }
+    </script>
+</body>
+</html>

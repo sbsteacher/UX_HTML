@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>fn8</h1>
+    <script>
+        //getRandomMinMax 함수를 이용하여 새로고침 할 때마다
+        //2~9단을 랜덤하게 찍는 프로그램을 완성해 주세요.
+        
+        //gugudan(getRandomMinMax(2, 9));
+
+        gugudanMulti(2, 3);
+
+        function gugudanMulti(min, max) {
+            for(var i=min; i<=max; i++) {
+                gugudan(i);
+            }
+        }      
+        
+
+        function getRandomMinMax(min, max) {
+            return parseInt(Math.random() * (max - min + 1)) + min;
+        }
+
+        function gugudan(dan) {
+            for(let i=1; i<10; i++) {
+                console.log(`${dan} X ${i} = ${dan * i}`);
+            }
+        }
+    </script>
+</body>
+</html>

@@ -7,19 +7,18 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>cb_filter</h1>
+    <h1>arrPush</h1>
     <script>
-        const arr = [1, 5, 10, 22, 30, 41, 8, 9];
-        const arrCopy = arr.filter(function(item) {
-            if(item % 2 === 0) {
-                return true;
-            }  
-            return false;          
-        });
+        const arr = [];
+        console.log(arr.length);
+        arr.push(10);
+        arr.push(20);
+        arr.push(22);
+        /*
+        arr[1] = 10; 
+        console.log(arr[0]);
+        */
         console.log(arr.toString());
-        console.log(arrCopy.toString());
-
-        
     </script>
 </body>
 </html>

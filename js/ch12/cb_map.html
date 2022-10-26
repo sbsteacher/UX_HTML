@@ -10,9 +10,11 @@
     <h1>cb_map</h1>
     <script>
         const arr = [1, 5, 10, 22, 30, 41, 8, 9];
-        const arr2 = arr.map(function(item) {
+        const arr2 = arr.map(function(item, idx) {
             return item * 2;
         });
+
+        const temp = [2, 10, 20, 44, 60, 82, 16, 18];
         console.log(arr.toString());
         console.log(arr2.toString());
     </script>

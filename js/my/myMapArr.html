@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>myMapArr</h1>
+    <script>
+        const arr = {
+            0: 7,
+            1: 12,
+            2: 3,
+            3: 32,
+            4: 11,
+            length: 5,
+            map: function(cb) {
+                const temp = [];
+                for(let i=0; i<this.length; i++) {
+                    const val = cb(this[i], i);
+                    temp.push(val);
+                }
+                return temp;
+            }
+        }
+        const arr2 = arr.map(function(item, idx) {
+            return item * 2;
+        });
+
+        console.log(arr23333[0]);
+        console.log(arr2.toString()); //14, 24, 6, 64
+    </script>
+</body>
+</html>
