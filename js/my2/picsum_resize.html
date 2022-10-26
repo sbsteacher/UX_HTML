@@ -7,10 +7,11 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>picsum</h1>    
+    <h1>picsum_resize</h1>    
     <div id="content"></div>
     
     <script>
+        const SIZE = 6;
         const contentElem = document.getElementById('content');
 
         fetch('https://picsum.photos/v2/list')
@@ -30,7 +31,9 @@
 
         function makeItem(item) {
             const img = document.createElement('img');
-            img.src = item.download_url;
+            const width = parseInt(item.width / SIZE);
+            const height = parseInt(item.height / SIZE);
+            img.src = `https://picsum.photos/id/${item.id}/${width}/${height}`;
             img.alt = item.author;
 
             contentElem.appendChild(img);
