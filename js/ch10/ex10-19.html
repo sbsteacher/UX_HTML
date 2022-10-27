@@ -7,21 +7,20 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>ex42-3-1</h1>
+    <h1>ex10-19</h1>
     <script>
-        setTimeout(function() {
-            console.log(1);
+       //es5
+       var x = 1, y = 2;
+       var obj = {
+           'x': x,
+           'y': y
+       }
+       console.log(obj);
 
-            
-        }, 3000);
+       //es6
+       var obj2 = { x, y };
+       console.log(obj2);
 
-        setTimeout(function() {
-                console.log(2);
-        }, 2000);
-
-        setTimeout(function() {
-            console.log(3);
-        }, 1000);        
     </script>
 </body>
 </html>

@@ -13,12 +13,18 @@
     <script>
         const contentElem = document.getElementById('content');
 
+        //Open API > 인증 X > Key값만 준다. 
+        //get, post, put, delete > Restful API
+        
         fetch('https://picsum.photos/v2/list')
         .then(function(res) {
             return res.json();
         })
         .then(function(data) {            
             makeList(data);
+        })        
+        .catch(function(err) {
+            console.log(err);
         });
 
         function makeList(data) {

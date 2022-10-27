@@ -7,21 +7,16 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>ex42-3-1</h1>
+    <h1>ex10-21</h1>    
     <script>
-        setTimeout(function() {
-            console.log(1);
+        var prefix = 'prop';
+        
+        var obj = {};
 
-            
-        }, 3000);
-
-        setTimeout(function() {
-                console.log(2);
-        }, 2000);
-
-        setTimeout(function() {
-            console.log(3);
-        }, 1000);        
+        for(var i=0; i<5; i++) {
+            obj[`${prefix}-${i+1}`] = i;
+        }
+        console.log(obj);
     </script>
 </body>
 </html>

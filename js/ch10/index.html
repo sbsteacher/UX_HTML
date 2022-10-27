@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>index</h1>
+    <script>
+        var person = {
+            name: 'Lee',
+            age: 20
+        };
+
+        console.log(person);
+
+        var counter = {
+            num: 0,
+            increase: function() {
+                this.num++;
+            }
+        }
+
+        var util = {
+            sum: function(n1, n2) {
+                return n1 + n2;
+            }
+        };
+        //프로퍼티(속성) : 객체의 상태를 나타내는 값(data)
+        //메서드 : 프로퍼티(속성)를 참조하고 조작할 수 있는 동작(behavior)
+        console.log(counter.num);
+        counter.increase();
+        counter.increase();
+        console.log(counter.num);
+
+        const result = util.sum(40, 20);
+        console.log(result);
+    </script>
+</body>
+</html>

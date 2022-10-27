@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>ex10-11</h1>
+    <script>
+       var circle = {
+           radius: 5,
+           getDiameter: function () {
+               return 2 * this.radius;
+           }
+       }
+
+       var ddd = {
+           radius: 100
+       }
+
+       circle.radius = 7;
+       const aaa = 'radius';
+       const result = circle.getDiameter();
+       console.log(result);
+
+       console.log(circle.getDiameter());
+       console.log(circle['getDiameter']());
+       console.log(circle['radius']);
+       console.log(circle[aaa]);
+       console.log(circle.bbb);
+       console.log(ddd[aaa])
+
+
+    </script>
+</body>
+</html>

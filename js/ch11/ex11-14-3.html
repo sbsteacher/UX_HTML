@@ -7,21 +7,19 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>ex42-3-1</h1>
+    <h1>ex11-14-3</h1>
     <script>
-        setTimeout(function() {
-            console.log(1);
+        const obj = {
+            a: 10,
+            b: {
+                b_c: 20
+            }
+        }
+       
+        const obj2 = { ...obj };
+        obj2.b = { ...obj.b };
 
-            
-        }, 3000);
-
-        setTimeout(function() {
-                console.log(2);
-        }, 2000);
-
-        setTimeout(function() {
-            console.log(3);
-        }, 1000);        
+        console.log(obj.b === obj2.b);
     </script>
 </body>
 </html>

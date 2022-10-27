@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>ex10-1</h1>
+    <script>
+        var person = {
+            name: 'Lee',
+            age: 20,
+            'last-name': 'Lee',
+            sayHello: function() {
+                console.log(`Hello! My name is ${this.name}`);
+            },
+        }
+        var b = 'aaa';
+        b = true;
+        console.log(person['last-name']);        
+        console.log(typeof person);
+        console.log(typeof 1);
+        console.log(typeof b);
+        console.log(person);
+
+        var empty = {};
+        console.log(typeof empty);
+        if(empty) {
+            console.log('나는 객체다');
+        }
+    </script>
+</body>
+</html>

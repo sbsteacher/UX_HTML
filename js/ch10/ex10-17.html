@@ -7,21 +7,21 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>ex42-3-1</h1>
+    <h1>ex10-17</h1>
     <script>
-        setTimeout(function() {
-            console.log(1);
+       var person = {
+           name: 'Lee'
+       }
 
-            
-        }, 3000);
+       person.age = 20;
+       console.log(person);
 
-        setTimeout(function() {
-                console.log(2);
-        }, 2000);
+       delete person.name;
 
-        setTimeout(function() {
-            console.log(3);
-        }, 1000);        
+       console.log(person);
+
+       person = null;
+       console.log(person);
     </script>
 </body>
 </html>

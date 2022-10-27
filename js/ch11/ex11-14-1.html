@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>ex11-14-1</h1>
+    <script>
+        const obj = {
+            x: 1,
+            y: 2,             
+        };
+
+        const obj2 = {
+            x: 1,
+            y: 2
+        };
+
+        const obj3 = { 
+            p: 10,
+            ...obj 
+        };
+
+        const copy1 = obj;
+        console.log(copy1 === obj);
+        console.log(obj === obj2);
+
+        console.log(obj);
+        console.log(obj3);
+        console.log(obj === obj3);
+    </script>
+</body>
+</html>

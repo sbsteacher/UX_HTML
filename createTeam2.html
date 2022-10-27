@@ -41,13 +41,14 @@
         mixGroup(bGroup);
         
         for(let i=0; i<sGroup.length; i++) {
-            console.log(`${i+1}팀`);
+            document.write(`${i+1}팀 `);
             for(let z=0; z<allGroup.length; z++) {
                 const val = allGroup[z][i];
                 if(val !== undefined) {
-                    console.log(val + ' ');    
+                    document.write(val + ' ');    
                 }
             }
+            document.write('<br>');
         }
     </script>
 </body>
