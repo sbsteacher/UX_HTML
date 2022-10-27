@@ -32,9 +32,14 @@
             const img = document.createElement('img');
             img.src = item.download_url;
             img.alt = item.author;
+            //contentElem.append(img);
+            //contentElem.append(img);
+            //contentElem.appendChild('안녕');
+            contentElem.prepend(img);
 
-            contentElem.appendChild(img);
         }
     </script>
+
+    <img src="이미지 주소값" alt="이미지 정보 텍스트">
 </body>
 </html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const sGroup = [
+            '최상혁', '김혜린', '이민정', '배진화', '유정원',
+            '최성환', '김민석', '김소연', '황지원'
+        ];
+        const aGroup = [
+            '김예리', '배소영', '윤아람', '정유림', '이해단',
+            '조수정', '정소연', '오세훈', '이성환'
+        ];
+        const bGroup = [
+            '황보규림', '박원지', '박루아', '백현주', '정성훈',
+            '최혜빈', '이승진', '박지민'
+        ];
+
+        const allGroup = [sGroup, aGroup, bGroup];
+        
+        function getRandomIdx(len) {
+            return parseInt(Math.random() * len);
+        }
+
+        function mixGroup(arr) {
+            for(let i=0; i<arr.length; i++) {
+                const rIdx = getRandomIdx(arr.length);
+                const temp = arr[i];
+                arr[i] = arr[rIdx];
+                arr[rIdx] = temp;
+            }
+        }
+
+        mixGroup(sGroup);
+        mixGroup(aGroup);
+        mixGroup(bGroup);
+        
+        for(let i=0; i<sGroup.length; i++) {
+            console.log(`${i+1}팀`);
+            for(let z=0; z<allGroup.length; z++) {
+                const val = allGroup[z][i];
+                if(val !== undefined) {
+                    console.log(val + ' ');    
+                }
+            }
+        }
+    </script>
+</body>
+</html>

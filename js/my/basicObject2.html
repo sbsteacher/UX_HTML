@@ -8,7 +8,7 @@
 </head>
 <body>
     <h1>basicObject</h1>
-    <script>
+    <script>        
         const arrObj = {
             '0': 1,
             '1': 5,
@@ -21,11 +21,14 @@
             }
         };           
         let evenSum = 0;
-        arrObj.forEach(function(item, idx) {
-            if(item % 2 === 0) {
-                evenSum += item;
+        console.log(arrObj.length);
+        arrObj.forEach(
+            function(item, idx) {
+                if(item % 2 === 0) {
+                    evenSum += item;
+                }
             }
-        });
+        );
         console.log('evenSum : ' + evenSum);
 
 

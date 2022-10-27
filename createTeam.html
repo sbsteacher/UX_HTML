@@ -8,23 +8,50 @@
 </head>
 <body>
     <script>
-        const sGroup = ['김소연', '김혜린', '배진화', '유정원', '최상혁', '이민정', '황지원', '김민석', '김예리'];
-        const aGroup = ['오세훈', '이해단', '윤아람', '최성환', '박원지', '정유림', '조수정', '박루아', '황보규림'];
-        const bGroup = ['배소영', '이성환', '백현주', '정소연', '이승진', '정성훈', '최혜빈', '박지민'];
+        const sGroup = [
+            '최상혁', '김혜린', '이민정', '배진화', '유정원',
+            '최성환', '김민석', '김소연', '황지원'
+        ];
+        const aGroup = [
+            '김예리', '배소영', '윤아람', '정유림', '이해단',
+            '조수정', '정소연', '오세훈', '이성환'
+        ];
+        const bGroup = [
+            '황보규림', '박원지', '박루아', '백현주', '정성훈',
+            '최혜빈', '이승진', '박지민'
+        ];
         const teams = [];
+
+        function getRandomVal(len) {
+            return parseInt(Math.random() * len);
+        }
+
         for(let i=0; i<9; i++) {
             const team = [];
-            const sIdx = parseInt(Math.random() * sGroup.length);
+            const sIdx = getRandomVal(sGroup.length);
+            //console.log('sIdx : ' + sIdx);
             team.push(sGroup.splice(sIdx, 1)[0]);
 
-            const aIdx = parseInt(Math.random() * aGroup.length);
+            let delayUntil = Date.now() + 250;
+            while(Date.now() < delayUntil);
+           
+            const aIdx = getRandomVal(aGroup.length);
+            //console.log('aIdx : ' + aIdx);
             team.push(aGroup.splice(sIdx, 1)[0]);
 
+            delayUntil = Date.now() + 250;
+            while(Date.now() < delayUntil);
+
             if(bGroup.length > 0) {
-                const bIdx = parseInt(Math.random() * bGroup.length);
+                const bIdx = getRandomVal(bGroup.length);
+                //console.log('bIdx : ' + bIdx);
                 team.push(bGroup.splice(bIdx, 1)[0]);
             }
             teams.push(team);
+        }
+
+        for(let i=0; i<9; i++) {
+            
         }
 
         /*
