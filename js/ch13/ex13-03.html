@@ -11,18 +11,13 @@
     <script>
         var x = 'global';
         x = 'dddd';
-
-       
-
-        function foo() {
-            
+        function foo() {                        
             console.log('foo : ' + x);
             var x = 'local';
             console.log('foo : ' + x);
         }
-
+        
         foo();
-
         console.log('전역 : ' + x);
     </script>
 </body>

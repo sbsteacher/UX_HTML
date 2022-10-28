@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>ex26-11</h1>
+    <script>
+        const multiply = (x, y) => { return x * y };
+
+        const multiply2 = function(x, y) {
+            return x * y;
+        }
+       
+        console.log(multiply(2, 4));
+        console.log(multiply2(2, 4));
+
+        const power = x => x ** 2;
+        const power2 = function(x) {
+            return x ** 2;
+        }
+
+        const result = console.log(power(5));
+        console.log(result);
+    </script>
+</body>
+</html>

@@ -7,20 +7,18 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>f2</h1>
+    <h1>ex17-1</h1>
     <script>
-        function abs(val) {
-            return val < 0 ? -val : val;
+        const person = new Object();
+        console.log(person);
+        person.name = 'Lee';
+        person.name = 'Park';
+        person.sayHello = function() {
+            console.log(`Hi! My name is ${this.name}`);
         }
+        console.log(person);
 
-        const abs2 = val => val < 0 ? -val : val;
-
-        const result = abs(-220);
-        console.log(result);
-
-        const num = 20;
-        console.log(abs2(num));
-        console.log(abs2(-10));
+        person.sayHello();
     </script>
 </body>
 </html>

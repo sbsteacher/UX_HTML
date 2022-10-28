@@ -10,12 +10,25 @@
     <h1>ex10-21</h1>    
     <script>
         var prefix = 'prop';
-        
+        var attr6 = 'prop_6';
+        var attr7 = 'prop_7';
         var obj = {};
+        /*
+        var obj = {
+            prop_1: 0,
+            prop_2: 1,
+            prop_3: 2,
+            prop_4: 3,
+            prop_5: 4,
+        };
+        */
+        obj[attr6] = 100;
+        obj['prop_8'] = 300;
 
         for(var i=0; i<5; i++) {
-            obj[`${prefix}-${i+1}`] = i;
+            obj[`${prefix}_${i+1}`] = i;
         }
+
         console.log(obj);
     </script>
 </body>

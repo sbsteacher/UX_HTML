@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>   
+</head>
+<body>
+    <h1>ex39-10</h1>
+    <ul>
+        <li id="apple">사과</li>
+        <li id="banana">바나나</li>
+        <li id="orange">오렌지</li>
+    </ul>    
+    <ul id="fruits">
+        <li>딸기</li>
+        <li>복숭아</li>
+        <li>수박</li>
+    </ul>    
+    <script>
+       const liList = document.getElementsByTagName('li');
+       console.log(liList);
+
+       const fruits = document.getElementById('fruits');
+       const liList2 = fruits.getElementsByTagName('li');
+       console.log(liList2);
+
+    </script>
+</body>
+</html>

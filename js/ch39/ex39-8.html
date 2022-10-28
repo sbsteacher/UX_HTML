@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>   
+</head>
+<body>
+    <h1>ex39-8</h1>
+    <ul>
+        <li id="apple">사과</li>
+        <li id="banana">바나나</li>
+        <li id="orange">오렌지</li>
+    </ul>    
+    <script>
+       const elems = document.getElementsByTagName('div');
+       console.log(elems);
+
+       for(let i=0; i<elems.length - 1 ; i++) {
+           const item = elems[i];
+           item.style.color = '#2ecc71';
+       }
+       /*
+       elems.forEach(item => {
+           console.log(item);
+       });
+       */
+    </script>
+</body>
+</html>

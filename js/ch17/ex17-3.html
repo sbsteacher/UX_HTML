@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>ex17-3</h1>
+    <script>
+       const circle1 = {
+           radius: 5,
+           getDiameter() {
+               return 2 * this.radius;
+           }
+       }
+
+       const circle2 = {
+           radius: 10,
+           getDiameter() {
+               return 2 * this.radius;
+           }
+       }
+
+       const circle3 = {};
+       circle3.radius = 20;
+       circle3.getDiameter = function() {
+               return 2 * this.radius;
+        }
+
+       console.log(circle1.getDiameter());
+       console.log(circle2.getDiameter());
+    </script>
+</body>
+</html>
