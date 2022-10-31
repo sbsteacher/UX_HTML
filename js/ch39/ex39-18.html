@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .red { color: red; }
+        .blue { color: blue; }
+    </style>
+</head>
+<body>
+    <h1>ex39-18</h1>
+    <ul id="fruits">
+        <li class="red">사과</li>
+        <li class="red">바나나</li>
+        <li class="red">오렌지</li>
+    </ul>     
+    <script>
+        //const elems = document.getElementsByClassName('red');
+        const elems = document.querySelectorAll('.red');
+        console.log(elems);
+        /*        
+        for(let i=0; i<elems.length; i++) {
+            const item = elems[i];
+            item.className = 'blue';
+        }
+        */
+       console.log(elems);
+        const arrElems = [ ...elems ]; //real 배열로 변경
+        //forEach를 사용 가능!!
+        //forEach + arrow fn
+        arrElems.forEach(item => {
+            item.className = 'blue';
+        });
+        console.log(elems);
+    </script>
+</body>
+</html>

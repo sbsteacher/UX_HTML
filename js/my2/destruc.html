@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>destruc</h1>
+    <script>
+        //구조분해할당
+        const obj = {
+            'name': '홍길동',
+            'age': 22,
+            'loca': '서울'
+        };
+        function printHuman(obj) {
+            const name = obj.name;
+            const age = obj.age;
+            console.log(`제 이름은 ${name}이고, 나이는 ${age}살 입니다.`);
+        }
+        function printHuman2({name, age}) {            
+            console.log(`제 이름은 ${name}이고, 나이는 ${age}살 입니다.`);
+        }
+        printHuman(obj);
+        printHuman2(obj);
+
+        let { name, age, loca } = obj;
+        /*
+        let name, age, loca;
+        name = obj.name;
+        age = obj.age;
+        loca = obj.loca;
+        */
+        console.log(nickname);
+        console.log(age);
+        console.log(loca);
+
+    </script>
+</body>
+</html>

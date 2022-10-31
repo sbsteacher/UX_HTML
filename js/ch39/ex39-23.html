@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .red { color: red; }
+        .blue { color: blue; }
+    </style>
+</head>
+<body>
+    <h1>ex39-18</h1>    
+    <ul id="fruits">
+        <li class="red">사과</li>
+        <li class="red">바나나</li>
+        <li class="red">오렌지</li>
+    </ul>     
+    <script>
+       const fruitsElem = document.getElementById('fruits');
+       console.log(fruitsElem);
+       console.dir(fruitsElem);
+
+       const { childNodes } = fruitsElem;
+       
+       console.log(fruitsElem.childNodes);
+       console.log(childNodes);
+       /*
+       console.log(childNodes.length);
+       for(let i=0; i<childNodes.length; i++) {
+            fruitsElem.removeChild(childNodes[i]);
+       }
+       */
+      /*
+      [...childNodes].forEach(item => {
+        fruitsElem.removeChild(item);
+      });
+       console.log(childNodes);
+       */
+    </script>
+</body>
+</html>

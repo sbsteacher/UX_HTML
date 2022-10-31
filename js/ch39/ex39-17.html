@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>ex39-17</h1>
+    <ul id="fruits">
+        <li class="apple">사과</li>
+        <li class="banana">바나나</li>
+        <li class="orange">오렌지</li>
+    </ul>  
+    <div id="div1">
+        <div class="hi">하이</div>
+    </div>
+    <div id="div2">
+        <div class="hello">헬로우</div>
+    </div>
+    <script>
+        const appleElem = document.querySelector('.apple');
+        console.log(appleElem.matches('#fruits .apple'));
+        const div1Elem = document.querySelector('#div1');
+        console.log(div1Elem.matches('#div1'));
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .red { color: red; }
+        .blue { color: blue; }
+    </style>
+</head>
+<body>
+    <h1>ex39-18-1</h1>
+    <ul id="fruits">
+        <li class="red">사과</li>        
+        <li id="banana" class="red">바나나</li>
+        <li class="red">오렌지</li>
+        <li class="red">수박</li>
+    </ul>     
+    <script>
+        //바나나만 class값을 blue로 변경
+        const bananaElem = document.querySelector('#banana');
+        bananaElem.className = 'blue';
+    </script>
+</body>
+</html>
