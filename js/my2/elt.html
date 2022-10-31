@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function elt(name, attributes) {
+            const node = document.createElement(name);
+            if(attributes) {
+                for(const attr in attributes) {
+                    if(attributes.hasOwnProperty(attr)) {                        
+                        node.setAttribute(attr, attributes[attr]);
+                    }
+                }
+            }
+        }
+
+        function Par() {
+            this.alt = 'test';
+        }
+
+        function Chil(src) {
+            this.src = src;
+        }
+
+        Chil.prototype = new Par();
+
+        const imgAttr = new Chil('http://www.naver.com');
+        console.log(imgAttr);
+        console.log(imgAttr.hasOwnProperty('src'));
+        console.log(imgAttr.hasOwnProperty('alt'));
+    </script>
+</body>
+</html>

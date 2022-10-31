@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>ex39-43</h1>
+    <div id="container"></div>
+
+    <script>
+        const containerElem = document.querySelector('#container');
+        /*
+        containerElem.innerHTML = `<ul id="fruits">`;
+        containerElem.innerHTML += `<li class="apple">사과</li>`;
+        containerElem.innerHTML += `<li class="banana">바나나</li>`;
+        containerElem.innerHTML += `</ul>`;
+        */
+
+        /*
+        containerElem.innerHTML = `<ul id="fruits">
+            <li class="apple">사과</li>
+            <li class="banana">바나나</li>
+        </ul>`;
+        */
+
+        let ctnt = `<ul id="fruits">`;
+        ctnt += `<li class="apple">사과</li>`;
+        ctnt += `<li class="banana">바나나</li>`;
+        ctnt += `</ul>`;
+        containerElem.innerHTML = ctnt;
+    </script>
+</body>
+</html>

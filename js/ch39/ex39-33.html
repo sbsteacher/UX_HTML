@@ -11,18 +11,19 @@
     </style>
 </head>
 <body>
-    <h1>ex39-32</h1>    
+    <h1>ex39-33</h1>    
     <ul id="fruits">
         <li class="apple">사과</li>
         <li class="banana">바나나</li>
         <li class="orange">오렌지</li>
     </ul>     
     <script>
-        const bananaElem = document.querySelector('.banana');
-        const parent = bananaElem.parentNode;
-        console.log(parent);
+        const appleElem = document.querySelector('.apple');
+        console.log(appleElem.nextSibling);
+        console.log(appleElem.nextElementSibling.nextElementSibling.nextElementSibling);
 
-        console.log(bananaElem.parentElement);
+        const bananaElem = document.querySelector('.banana');
+        console.log(bananaElem.previousElementSibling)
     </script>
 </body>
 </html>

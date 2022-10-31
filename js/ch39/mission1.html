@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table { border-collapse: collapse; }
+        table, td { border: 1px solid #333; }
+        td { padding: 10px; }
+    </style>
+</head>
+<body>
+    <div id="container"></div>
+    <script>
+        const clsName = ['수학', '국어', '영어'];
+        const arr = [
+            [100, 80, 70],
+            [90, 90, 70],
+            [66, 77, 88],
+        ];
+        const containerElem = document.querySelector('#container');
+        let str = '<table>';
+        str += '<tr>';
+        clsName.forEach(item => {
+            str += `<td>${item}</td>`;
+        });
+        str += '</tr>';
+
+        arr.forEach(cArr => {
+            str += '<tr>';
+            cArr.forEach(item => {
+                str += `<td>${item}</td>`;
+            });
+            str += '</tr>';
+        });
+
+        str += '</table>';
+        containerElem.innerHTML = str;
+
+    </script>
+    
+</body>
+</html>
