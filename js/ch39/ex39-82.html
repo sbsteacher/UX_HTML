@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>ex39-82</h1>
+    <ul class="users">
+        <li id="li_1" data-user-id="7621" data-role="admin">Lee</li>
+        <li id="li_2" data-userid="9524" data-role="subscriber">Kim</li>
+    </ul>
+
+    <script>
+        const li_1Elem = document.querySelector('#li_1');
+        console.log(li_1Elem.dataset.userId);
+        console.log(li_1Elem.dataset.role);
+
+        const { userId, role } = li_1Elem.dataset;
+        console.log(userId);
+        console.log(role);
+
+        const li_2Elem = document.querySelector('#li_2');
+        console.log(li_2Elem.dataset.userid);
+        console.log(li_2Elem.dataset.role);
+    </script>
+</body>
+</html>

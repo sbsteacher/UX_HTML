@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>        
+        .box { 
+            width: 100px; height: 100px; 
+            background-color: antiquewhite; 
+        }
+        .red { color: red; }
+        .blue { color: blue; }
+    </style>
+</head>
+<body>
+    <h1>ex39-89</h1>
+    <div class="box red aaa">Hello World!</div>
+    <script>
+        const divElem = document.querySelector('.box');
+        console.log(divElem.className);
+        divElem.className = 'box blue';
+        console.log(divElem.className);
+    </script>
+</body>
+</html>

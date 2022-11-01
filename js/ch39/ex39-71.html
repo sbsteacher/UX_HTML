@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>ex39-71</h1>
+    <input type="text" id="user" value="ungmo2" class="abc">
+    <script>
+        const userElem = document.getElementById('user');
+        //const { attributes } = userElem;
+        /*
+        const attributes = userElem.attributes;
+        console.log(userElem.attributes);
+        console.log(attributes.type.value);
+        console.log(attributes.id.value);
+        console.log(attributes.value.value);
+        */
+
+        userElem.className = 'jjj';
+        console.log(userElem.value);
+        console.log(userElem.id);
+        console.log(userElem.type);
+        console.log(userElem.className);
+
+        userElem.value = '반가워';
+        //userElem.type = 'radio';
+    </script>
+</body>
+</html>

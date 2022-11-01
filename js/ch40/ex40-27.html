@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>ex40-27</h1>
+    <ul id="fruits">
+        <li id="apple">Apple</li>
+        <li id="banana">Banana</li>
+        <li id="orange">Orange</li>
+    </ul>
+    <script>
+        const fruitsElem = document.getElementById('fruits');
+        
+        fruitsElem.addEventListener('click', e => {           
+            console.log(`ul 캡쳐링 단계`);
+        }, true);
+
+        fruitsElem.addEventListener('click', e => {           
+            console.log(`ul 버블링 단계`);
+        });
+        
+        const apple = document.getElementById('apple');
+        apple.addEventListener('click', e => {
+            console.log('apple');
+            console.log(e.eventPhase);
+            console.log(e.target);
+            console.log(e.currentTarget);
+        });
+    </script>
+</body>
+</html>

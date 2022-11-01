@@ -16,6 +16,7 @@
         <li>BlueBerry</li>
         <li>BlueBerry</li>
         <li>BlueBerry</li>
+        <li>A</li>
     </ul>
     <script>
         const fruitsElem = document.querySelector('#fruits');
@@ -25,7 +26,9 @@
         //fruitsElem.insertBefore(liElem, fruitsElem.firstElementChild.nextElementSibling);
         //fruitsElem.insertBefore(liElem, fruitsElem.children[1]);
         
-        
+        //fruitsElem.insertBefore(liElem, fruitsElem.lastElementChild);
+        //fruitsElem.insertBefore(liElem, fruitsElem.lastElementChild.previousElementSibling);
+        fruitsElem.insertBefore(liElem, fruitsElem.children[fruitsElem.children.length - 2]);
     </script>
 </body>
 </html>
