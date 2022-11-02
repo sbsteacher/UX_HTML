@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>ex40-26</h1>
+    <input type="text"> 
+    <em class="msg"></em>
+    <script>
+        const inputElem = document.querySelector('input');
+        const msgElem = document.querySelector('.msg');
+
+        inputElem.addEventListener('keyup', e => {            
+            if(e.key !== 'Enter') { return; }
+            //if(e.keyCode !== 13) { return; }
+
+            msgElem.textContent = e.target.value;
+            e.target.value = '';
+        });
+    </script>
+</body>
+</html>

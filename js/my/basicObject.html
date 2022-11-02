@@ -9,23 +9,16 @@
 <body>
     <h1>basicObject</h1>
     <script>
-        const obj = {
+        const obj2 = {
             name: '홍길동',
             age: 24,
             wakeup: function() {
                 console.log(this.name + '이 일어났다.');
             }
         };
-
-        const obj2 = obj;
-        console.log('1' + obj.name);
-        obj2.name = '신사임당';
-        obj.name = '장보고';
-        console.log('2' + obj.name);
-        console.log('3' + obj2.name);
-        obj.wakeup();
-        console.log(obj);
-        console.log(typeof obj);
+        console.log(obj2.name);
+        obj2.wakeup();
+      
     </script>
 </body>
 </html>

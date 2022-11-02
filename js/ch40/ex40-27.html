@@ -16,17 +16,20 @@
     <script>
         const fruitsElem = document.getElementById('fruits');
         
-        fruitsElem.addEventListener('click', e => {           
+        fruitsElem.addEventListener('click', e => {              
             console.log(`ul 캡쳐링 단계`);
+            console.log(e.composedPath());         
         }, true);
 
-        fruitsElem.addEventListener('click', e => {           
+        fruitsElem.addEventListener('click', e => {                       
             console.log(`ul 버블링 단계`);
+            console.log(e.composedPath()); 
         });
         
         const apple = document.getElementById('apple');
         apple.addEventListener('click', e => {
             console.log('apple');
+            console.log(e.composedPath());
             console.log(e.eventPhase);
             console.log(e.target);
             console.log(e.currentTarget);

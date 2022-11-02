@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>forVsForEach</h1>
+    <script>
+
+        function getVal(val) {
+            return new Promise(function(resolve) {
+                resolve(val);
+            });
+        }
+
+        const arr = [ 1, 2, 3, 4,  ];
+        
+        async function test() {
+            console.log('for 시작');
+            for(let i=0; i<arr.length; i++) {
+                const result = await getVal(arr[i]);
+                console.log(result);
+            }
+            console.log('for 끝');
+        }
+        test();      
+        
+    </script>
+</body>
+</html>

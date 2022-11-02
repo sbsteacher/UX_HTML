@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>ex40-18</h1>
+    <p>클릭하면 좌표 나타남.</p>
+    <em class="msg"></em>
+    <script>
+        const msgElem = document.querySelector('.msg');
+        function showCoords(e) {
+            console.log(e);
+            msgElem.textContent = `x: ${e.clientX}, y: ${e.clientY}`;
+        }
+
+        document.onclick = showCoords;
+    </script>
+</body>
+</html>

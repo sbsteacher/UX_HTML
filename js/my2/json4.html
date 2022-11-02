@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>json4</h1>    
+    <script>
+        const arr = [
+            { "번호":1, "이름":"홍길동", "나이":20 },
+            { "번호":2, "이름":"신사임당", "나이":22 },
+            { "번호":3, "이름":"강감찬", "나이":24 },
+        ];
+
+        console.log(arr);
+        const jsonStr = JSON.stringify(arr);
+        console.log(jsonStr);
+
+        const jsonObj = JSON.parse(jsonStr);
+        console.log(jsonObj);
+    </script>
+</body>
+</html>

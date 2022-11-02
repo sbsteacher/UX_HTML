@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="sayHi('Lee'); console.log(event);">Click Me!</button>
+    <button id="btn2">버튼2</button>
+    <script>
+        function onclick(event) {
+            sayHi('Lee');
+        }
+
+        function sayHi(name) {
+            alert(`${name}님 안녕~~`);
+        }
+
+        const btn2Elem = document.querySelector('#btn2');
+        btn2Elem.onclick = function(event) {
+            sayHi('Lee');
+            console.log(event);
+        }
+
+        btn2Elem.onclick = function(event) {
+            alert('두번째');
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>ex40-1</h1>
+    <button>Click me!</button>
+    <button>Hi!</button>
+    <input type="text">
+    <form action="목적지" method="post">
+        <div>
+            <input type="password" name="name" placeholder="이름">
+        </div>
+        <div>
+            <input type="submit" value="전송">
+            <input type="reset" value="초기화">
+        </div>
+    </form>
+    <script>
+        const btnElem = document.querySelector('button');
+        btnElem.onclick = function() {
+            console.log('클릭됨');
+        }
+    </script>
+</body>
+</html>

@@ -7,18 +7,13 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>ex13-01</h1>
+    <h1>ex40-9</h1>
+    <button>Click Me!</button>    
     <script>
-        let dd = 0;
-        function add(x, y) {
-            var d = 10;
-            console.log(d, x, y, '입니다.');
-            return x + y;
-        }
-
-        add(2, 5);
-        console.log(d);
-        console.log(x, y, '입니다.');
+        const btnElem = document.querySelector('button');
+        btnElem.addEventListener('click', function(e) {
+            alert('버튼 클릭함 ㅋㅋ');
+        });
     </script>
 </body>
 </html>

@@ -10,13 +10,22 @@
     <h1>my-cb-forEach</h1>
     <script>
         const arr = [4, 9, 10, 1, 6, 33, 29];
+        
+        //arr.length = 1;
+        console.log(arr);
         //console.log(arr.length);
         let evenSum = 0;
-        arr.forEach(function(item, idx) {
+        const anonyFn = function(item) {
             if(item % 2 === 0) {
                 evenSum += item;
             }
-        });
+        };
+        arr.forEach(anonyFn);
+        
+        anonyFn(4, 0);
+        anonyFn(9, 1);
+        anonyFn(10, 2);
+
         console.log(evenSum);
 
         for(let i=0; i<arr.length; i++) {

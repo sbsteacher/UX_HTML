@@ -7,18 +7,20 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>ex13-01</h1>
+    <h1>noNamedFn</h1>
     <script>
-        let dd = 0;
-        function add(x, y) {
-            var d = 10;
-            console.log(d, x, y, '입니다.');
-            return x + y;
+        /*
+        function sum(n1, n2) {
+            return n1 + n2;
+        }
+        */
+
+        const sum = function(n1, n2) {
+            return n1 + n2;
         }
 
-        add(2, 5);
-        console.log(d);
-        console.log(x, y, '입니다.');
+        const multi = (n1, n2) => n1 * n2;
+        console.log(multi(2, 4));
     </script>
 </body>
 </html>

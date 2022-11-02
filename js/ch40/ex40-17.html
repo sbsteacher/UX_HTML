@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>ex40-17</h1>
+    <button>Click Me!</button>     
+    <script>
+        const btnElem = document.querySelector('button');
+        
+        function clkEvent() {            
+            alert('버튼 클릭함 ㅋㅋ');
+        }
+        
+        btnElem.onclick = clkEvent;
+
+        btnElem.removeEventListener('click', clkEvent);
+
+        btnElem.onclick = null;
+    </script>
+</body>
+</html>

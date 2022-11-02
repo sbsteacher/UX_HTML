@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .active { color: red; text-decoration: underline; }
+    </style>
+</head>
+<body>
+    <h1>ex40-27</h1>
+    <ul id="fruits">
+        <li id="apple" class="active">Apple</li>
+        <li id="banana">Banana</li>
+        <li id="orange">Orange</li>
+    </ul>
+    <div>선택된 내비게이션 아이템 : <em class="msg">apple</em></div>
+    <script>
+        const fruitsElem = document.getElementById('fruits');
+        const msgElem = document.querySelector('.msg');
+
+        [ ...fruitsElem.children ].forEach(item => {
+            item.addEventListener('click', ({ target }) => {                
+                [ ...target.parentElement.children ].forEach(subItem => {
+                    subItem.classList.toggle('active', subItem === target);                    
+                    if(subItem === target) {
+                        msgElem.textContent = target.id;
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
