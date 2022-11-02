@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        input[type=checkbox] {
+            -moz-appearance:none;
+            -webkit-appearance:none;
+            -o-appearance:none;
+            outline: none;
+            content: none;	
+        }
+
+        input[type=checkbox]:before {
+            font-family: "FontAwesome";
+            content: "\f00c";
+            font-size: 15px;
+            color: transparent !important;
+            background: #fef2e0;
+            display: block;
+            width: 15px;
+            height: 15px;
+            border: 1px solid black;
+            margin-right: 7px;
+            border-radius: 3px;
+        }
+
+        input[type=checkbox]:checked:before {
+            color: black !important;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <input type="checkbox" name="dd" value="1">
+    </div>
+</body>
+</html>
