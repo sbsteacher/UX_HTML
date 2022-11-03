@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #fruits { display: flex; list-style-type: none; padding: 0; }
+        #fruits li { width: 100px; cursor: pointer; }
+        #fruits .active { color: red; text-decoration: underline; }
+        
+    </style>
+</head>
+<body>
+    <h1>ex40-31</h1>
+    <ul id="fruits">
+        <li id="apple" class="">Apple</li>
+        <li id="banana" class="">Banana</li>
+        <li id="orange" class="active">Orange</li>
+    </ul>
+    <div>선택된 내비게이션 아이템 <em class="msg">orange</em></div>
+    <script>
+       const apple = document.querySelector('#apple');
+       const banana = document.querySelector('#banana');
+       const orange = document.querySelector('#orange');
+       const msg = document.querySelector('.msg');
+
+       apple.addEventListener('click', e => {
+            banana.className = '';
+            orange.className = '';
+            apple.className = 'active';
+            msg.textContent = apple.id;
+       });
+
+       banana.addEventListener('click', e => {
+            apple.className = '';
+            orange.className = '';
+            banana.className = 'active';
+            msg.textContent = banana.id;
+       });
+       
+       orange.addEventListener('click', e => {
+            apple.className = '';
+            orange.className = 'active';
+            banana.className = '';
+            msg.textContent = orange.id;
+       });
+    </script>
+</body>
+</html>

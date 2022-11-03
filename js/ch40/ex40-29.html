@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>ex40-29</h1>
+    <ul id="fruits">
+        <li id="apple">Apple</li>
+        <li id="banana">Banana</li>
+        <li id="orange">Orange</li>
+    </ul>
+    <script>
+        const fruitsElem = document.getElementById('fruits');
+       
+        fruitsElem.addEventListener('click', e => {
+            console.log(`B이벤트 단계 : ${e.eventPhase}`);           
+        });
+
+        const appleElem = document.querySelector('#apple');
+        appleElem.addEventListener('click', e => {
+            console.log(`애플 이벤트 단계 : ${e.eventPhase}`);
+        });
+
+        fruitsElem.addEventListener('click', e => {
+            console.log(`A이벤트 단계 : ${e.eventPhase}`);           
+        }, true);
+       
+       
+    </script>
+</body>
+</html>

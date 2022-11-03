@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>ex40-35</h1>
+    <a href="https://www.google.com">구글로 이동</a>
+    <input type="checkbox">
+    <script>
+        const aElem = document.querySelector('a');
+        const chkElem = document.querySelector('input[type="checkbox"]');
+
+        aElem.addEventListener('click', e => {
+            e.preventDefault();
+        });
+
+        chkElem.addEventListener('click', e => {
+            e.preventDefault();
+        });
+    </script>
+</body>
+</html>

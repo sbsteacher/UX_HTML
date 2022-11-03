@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer">
+    <style>
+        li { list-style: none; }
+        .pointer { cursor: pointer; }
+    </style>
+    <title>Document</title>    
+</head>
+<body>
+    <h1>ToDo-List mission3</h1>    
+    <i class="fa-solid fa-xmark pointer"></i>
+    <input type="text" placeholder="할 일" autofocus>
+    <button>등록</button>
+    <button id="all_clear">전체 삭제</button>
+    <ul>
+    </ul>
+    <script>
+        const inputElem = document.querySelector('input[type="text"]');
+        const btnElem = document.querySelector('button');
+        const allClearBtnElem = document.querySelector('#all_clear');
+        const ulElem = document.querySelector('ul');
+       
+        function addTodoItem() {
+            const val = inputElem.value;
+            if(val === '') { return; }       
+            const li = document.createElement('li');
+            li.textContent = val + ' ';
+            const xIcon = document.createElement('i');
+            xIcon.className = 'fa-solid fa-xmark pointer';
+            li.append(xIcon);
+            ulElem.append(li);
+            inputElem.value = '';
+
+            xIcon.addEventListener('click', e => {
+                //li.remove();
+                e.target.parentNode.remove();
+            });
+        }
+
+        inputElem.addEventListener('keyup', e => {
+            if(e.key === 'Enter') { 
+                addTodoItem();
+            }
+        });
+
+        btnElem.addEventListener('click', addTodoItem);
+       
+        allClearBtnElem.addEventListener('click', e => {
+            if(ulElem.childElementCount === 0) {
+                alert('삭제할 할일이 없습니다.');
+                return;
+            }
+            //ulElem.innerHTML = null;
+            
+            while(ulElem.hasChildNodes()) {
+                ulElem.removeChild(ulElem.firstChild);
+            }            
+        });
+        
+        
+        
+    </script>
+</body>
+</html>

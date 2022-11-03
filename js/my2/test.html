@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Document</title>
+    <style>
+        #container { 
+            width: 400px;
+            height: 0 auto;
+            padding-bottom: 20px;
+            background-color: rgb(203, 182, 223);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            border-radius: 10px;
+        }
+        
+        #textbox{
+            height: 30px;
+            border: 0; border-radius: 10px;
+            outline: none;
+        }
+        
+        
+        ul{ 
+            list-style-type: none; 
+        }
+       
+        
+        .pointer { cursor: pointer; }
+
+
+    </style>
+</head>
+<body>
+    <div id="container">
+        <h1>ToDo-List3</h1>
+        <div id="box">
+            <input type="text" placeholder="할 일" id="textbox">
+            <i class="fa-solid fa-plus pointer"></i>
+            
+            <button id="remove">전체 삭제</button>
+            
+        </div>
+        <div id="box2">
+            <ul></ul>
+        </div>
+    </div>
+    <script>
+        const inputElem = document.querySelector('input');
+        const ulElem = document.querySelector('ul')
+        const removeBtnElem = document.querySelector('#remove')
+        const addBtnElem = document.querySelector('.fa-plus')
+        
+        inputElem.addEventListener('keyup',event => {
+            if(event.key !== 'Enter') { return; };
+            e();
+        });
+       
+        addBtnElem.addEventListener('click', e );
+        function e() {
+            const liElem = document.createElement('li');
+            const checkElem = document.createElement('input');
+            if( inputElem.value === '' ){return;}
+            checkElem.type = "checkbox";
+            liElem.append(checkElem);
+            liElem.append(`${inputElem.value} `);
+            inputElem.value = '';
+            const xIcon = document.createElement('i');
+            xIcon.className = 'fa-solid fa-xmark pointer';
+            liElem.append(xIcon);
+            ulElem.append(liElem);
+            checkElem.addEventListener('click',line => {
+                if(checkElem.checked) {
+                    liElem.style.textDecoration = 'line-through';
+                } else {
+                    liElem.style.textDecoration = 'none';
+                }                
+            });   
+            xIcon.addEventListener('click', e => {
+                //liElem.remove();
+                e.target.parentNode.remove();
+            });       
+        };
+        removeBtnElem.addEventListener('click', x => {                                                
+            if(ulElem.childNodes.length === 0) {
+                alert('삭제할내용이 없습니다.');
+            } else{
+                ulElem.innerHTML='';                                         
+            }
+                
+        });
+        console.dir(ulElem)
+    </script>
+</body>
+</html>

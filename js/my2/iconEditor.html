@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        table { border-collapse: collapse; }
+        table, td { border: 1px solid #ccc; }
+        td { padding: 15px; }
+    </style>
+    <title>Document</title>
+</head>
+<body>
+    <h1>iconEditor</h1>
+    <div>
+        가로: <input type="number" id="id_width">, 
+        세로: <input type="number" id="id_height">
+        <input type="button" id="id_create" value="테이블 생성">
+    </div>
+    <div id="container"></div>
+
+    <script>
+        const idWidth = document.querySelector('#id_width');
+        const idHeight = document.querySelector('#id_height');
+        const idCreate = document.querySelector('#id_create');
+        idCreate.addEventListener('click', () => {
+            //id값이 id_width 엘리먼트에 value 값을 가져와서 숫자형으로 파싱하여 상수 nx에 저장한다.
+            const nx = parseInt(idWidth.value); 
+
+            //id값이 id_height 엘리먼트에 value 값을 가져와서 숫자형으로 파싱하여 상수 ny에 저장한다.
+            const ny = parseInt(idHeight.value);
+
+            console.log(nx);
+            console.log(ny);
+
+            const containerElem = document.querySelector('#container');
+            createIconEditor(containerElem, nx, ny);
+        });
+
+        function createIconEditor(parent, nx, ny) {
+            const inputColorElem = document.createElement('input');
+            inputColorElem.type = 'color';
+
+            parent.append(inputColorElem);
+
+            const tableElem = document.createElement('table');
+            parent.append(tableElem);
+            for(let i=0; i<ny; i++) {
+                const tr = document.createElement('tr');
+                tableElem.append(tr);
+                for(let z=0; z<nx; z++) {
+                    const td = document.createElement('td');
+                    tr.append(td);
+                }
+            }            
+        }
+    </script>
+</body>
+</html>

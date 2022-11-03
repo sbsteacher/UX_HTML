@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer">
+    <style>
+        .pointer { cursor: pointer; }
+    </style>
+    <title>Document</title>    
+</head>
+<body>
+    <h1>ToDo-List2 아이템 삭제</h1>    
+    <input type="text" placeholder="할 일" autofocus>
+    <button>등록</button>
+    <ul></ul>
+    <script>
+        const inputElem = document.querySelector('input[type="text"]');
+        const btnElem = document.querySelector('button');
+        const ulElem = document.querySelector('ul');
+        
+        function addTodoItem() {
+            const val = inputElem.value;
+            if(val === '') { return; }       
+            const li = document.createElement('li');
+            li.textContent = val + ' ';
+            const xIcon = document.createElement('i');
+            xIcon.className = 'fa-solid fa-xmark pointer';
+            li.append(xIcon);
+            ulElem.append(li);
+            inputElem.value = '';
+
+            xIcon.addEventListener('click', e => {
+                //li.remove();
+                e.target.parentNode.remove();
+            });
+        }
+
+        inputElem.addEventListener('keyup', e => {
+            if(e.key === 'Enter') { 
+                addTodoItem();
+            }
+        });
+
+        btnElem.addEventListener('click', addTodoItem);
+
+        
+    </script>
+</body>
+</html>

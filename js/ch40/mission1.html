@@ -17,21 +17,22 @@
         const ulElem = document.querySelector('ul');
         
         function addTodoItem() {
-            const val = inputElem.value;
-            console.log(val);
+            const val = inputElem.value;           
             const li = document.createElement('li');
             li.textContent = val;
             ulElem.append(li);
-            inputElem.value = null;
+            inputElem.value = '';            
         }
 
         inputElem.addEventListener('keyup', e => {
             if(e.key === 'Enter') { 
                 addTodoItem();
-             }
+            }
         });
 
         btnElem.addEventListener('click', addTodoItem);
+
+        
     </script>
 </body>
 </html>

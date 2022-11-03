@@ -6,30 +6,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        .active { color: red; text-decoration: underline; }
+        html, body { height: 100%; }
     </style>
 </head>
 <body>
-    <h1>ex40-27</h1>
-    <ul id="fruits">
-        <li id="apple" class="active">Apple</li>
-        <li id="banana">Banana</li>
-        <li id="orange">Orange</li>
-    </ul>
-    <div>선택된 내비게이션 아이템 : <em class="msg">apple</em></div>
+    <h1>ex40-30</h1>
+    <p>
+        버블링과 캡처링 이벤트
+        <button>버튼</button>
+    </p>
     <script>
-        const fruitsElem = document.getElementById('fruits');
-        const msgElem = document.querySelector('.msg');
+        const bodyElem = document.querySelector('body');
+        bodyElem.addEventListener('click', () => {
+            console.log('body!');
+        });
 
-        [ ...fruitsElem.children ].forEach(item => {
-            item.addEventListener('click', ({ target }) => {                
-                [ ...target.parentElement.children ].forEach(subItem => {
-                    subItem.classList.toggle('active', subItem === target);                    
-                    if(subItem === target) {
-                        msgElem.textContent = target.id;
-                    }
-                });
-            });
+        const pElem = document.querySelector('p');
+        pElem.addEventListener('click', () => {
+            console.log('p!');
+        });
+
+        const buttonElem = document.querySelector('button');
+        buttonElem.addEventListener('click', () => {
+            console.log('button!');
         });
     </script>
 </body>

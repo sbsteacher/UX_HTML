@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+        integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/js/all.min.js"
+        integrity="sha512-naukR7I+Nk6gp7p5TMA4ycgfxaZBJ7MO5iC3Fp6ySQyKFHOGfpkSZkYVWV5R7u7cfAicxanwYQ5D1e17EfJcMA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <title>Document</title>
+    <style>
+        .pointer {
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>ex40(아이템삭제)-mission2</h1>
+    <i class="fa-solid fa-xmark"></i>
+    <input type="text" placeholder="할일">
+    <button>등록</button>
+    <ul></ul>
+    <script>
+        const inputElem = document.querySelector('input[type="text"]');
+        //= const inputElem = document.querySelector('input');
+        const btnElem = document.querySelector('button');
+        const ulElem = document.querySelector('ul');
+
+        function addTodoItem() {
+            const val = inputElem.value;
+            if (val === '') { return; }
+            console.log(val);
+            const li = document.createElement('li');
+            li.textContent = val;
+
+            const xIcon = document.createElement('i')
+            xIcon.className = 'fa-solid fa-xmark pointer';
+            li.append(xIcon);
+
+            ulElem.append(li);
+            inputElem.value = '';
+
+            xIcon.addEventListener('click', e => {
+                console.log('dddd');
+            })
+
+        }
+
+        inputElem.addEventListener('keyup', e => {
+            if (e.key === 'Enter') {
+                addTodoItem();
+            }
+        });
+        btnElem.addEventListener('click',
+            addTodoItem //참조값 -> 호출하지마 addTodoItem() x -> for) 결과가 addEventListener에 넘어가 따라서 return 값인데 return 값이 없어서 underfined 떠!
+        );
+    </script>
+
+</body>
+
+</html>
