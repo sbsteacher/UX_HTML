@@ -8,24 +8,23 @@
     <title>회원가입</title>
 </head>
 <body>
-    
     <div id="container">
         <h1>회원가입</h1>    
         <div class="joinContainer">
-            <form action="">
+            <form id="frm" action="address_url" onsubmit="return chk();">
                 <div class="row">
                     <span class="title">아이디</span>
-                    <input type="text" name="id">
+                    <input type="text" name="uid">
                 </div>
 
                 <div class="row">
                     <span class="title">비밀번호</span>
-                    <input type="password" name="pw">
+                    <input type="password" name="upw">
                 </div>
 
                 <div class="row">
                     <span class="title">확인비밀번호</span>
-                    <input type="password" name="re_pw">
+                    <input type="password" name="re_upw">
                 </div>
 
                 <div class="row">
@@ -34,11 +33,39 @@
                 </div>
 
                 <div class="row">
+                    <span class="title">상태메시지</span>
+                    <textarea name="state_msg"></textarea>
+                </div>
+
+                <div class="row">
+                    <span class="title">지역</span>
+                    <select name="region">
+                        <option value="1">서울</option>
+                        <option value="2">대구</option>
+                        <option value="3">부산</option>
+                    </select>
+                </div>
+
+                <div class="row">
+                    <span class="title">성별</span>
+                    <label>여성<input type="radio" name="gender" value="0" checked></label>
+                    <label>남성<input type="radio" name="gender" value="1"></label>
+                </div>
+
+                <div class="row">
+                    <span class="title">취미</span>
+                    <label>독서<input type="checkbox" name="hobby" value="1"></label>
+                    <label>등산<input type="checkbox" name="hobby" value="2"></label>
+                    <label>캠핑<input type="checkbox" name="hobby" value="3"></label>
+                </div>
+
+                <div class="row">
                     <input type="submit" value="회원가입">
                 </div>
             </form>
         </div>
-
     </div>
+    <script src="js/joinForm.js"></script>
+
 </body>
 </html>
