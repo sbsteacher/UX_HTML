@@ -1,0 +1,13 @@
+* { padding: 0; margin: 0; box-sizing: border-box; }
+
+body { height: 100vh; }
+
+#container { 
+    height: 100%; display: flex; flex-direction: column; justify-content: center; align-items: center; 
+}
+#container > .joinContainer {
+    margin-top: 20px; border: 1px solid #ccc; padding: 20px; border-radius: 10px;  
+}
+#container > .joinContainer .row { margin-bottom: 10px; }
+#container .row .title { display: inline-block; width: 100px; }
+#container .row:last-of-type { margin-top: 40px; display: flex; justify-content: center; }

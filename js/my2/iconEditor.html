@@ -31,20 +31,30 @@
             //id값이 id_height 엘리먼트에 value 값을 가져와서 숫자형으로 파싱하여 상수 ny에 저장한다.
             const ny = parseInt(idHeight.value);
 
+            idWidth.value = '';
+            idHeight.value = '';
+
             console.log(nx);
             console.log(ny);
 
             const containerElem = document.querySelector('#container');
             createIconEditor(containerElem, nx, ny);
+           
         });
 
         function createIconEditor(parent, nx, ny) {
+            parent.innerHTML = '';
             const inputColorElem = document.createElement('input');
             inputColorElem.type = 'color';
 
             parent.append(inputColorElem);
 
             const tableElem = document.createElement('table');
+            tableElem.addEventListener('click', ( {target} ) => {                                
+                e.target.style.backgroundColor = e.target.style.backgroundColor 
+                                               ? null
+                                               : inputColorElem.value;
+            });
             parent.append(tableElem);
             for(let i=0; i<ny; i++) {
                 const tr = document.createElement('tr');
@@ -52,6 +62,12 @@
                 for(let z=0; z<nx; z++) {
                     const td = document.createElement('td');
                     tr.append(td);
+
+                    /*
+                    td.addEventListener('click', e => {
+                        td.style.backgroundColor = inputColorElem.value;
+                    });
+                    */
                 }
             }            
         }
