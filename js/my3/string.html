@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //문자열 > 문자 배열
+        const str = 'abcdefghijklmnopqrstuvwxyz';
+        const arr = [ 'a', 'b', 'c', 'd' ];
+
+        console.log(str[0]); //a
+        console.log(str[1]); //b
+
+        const r1 = str.substring(3, 6);
+        console.log(r1);
+
+        const r2 = str.substring(3);
+        console.log(r2);
+
+        const r3 = str.substr(3, 3);
+        console.log(`r3 : ${r3}`);
+
+        const r4 = str.substr(-3);
+        console.log(`r4 : ${r4}`);
+
+        const str1 = 'Hello';
+        const r5 = str1.concat(' ', 'world', ' ', '!');
+
+        console.log(str1);
+        console.log(r5);
+
+        const str2 = '2022-11-11';
+        const r6 = str2.replace('-', '');
+        console.log(`r6 : ${r6}`);
+        
+        const r7 = str2.replaceAll('-', '');
+        console.log(`r7 : ${r7}`);
+
+    </script>    
+</body>
+</html>

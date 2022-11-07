@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>getFileNmExt</h1>
+    <script>
+        const fileNm = 'asdfsadf.dksdsdfsdfeic.jaszjjj.aaa';
+
+        const pureFileNm = getFileNm(fileNm);
+        const fileExt = getFileExt(fileNm);
+
+        console.log(pureFileNm); //dkeic.jaszjjj
+        console.log(fileExt); //aaa
+
+        function getFileNm(fnm) {
+            // const lastDotIdx = fnm.lastIndexOf('.');
+            // const result = fnm.substring(0, lastDotIdx);
+            // return result;
+
+            return fnm.substring(0, fnm.lastIndexOf('.'));
+        }
+
+        function getFileExt(fnm) {
+            const lastDotIdx = fnm.lastIndexOf('.');
+            const result = fnm.substring(lastDotIdx + 1);
+            return result;
+        }
+    </script>
+</body>
+</html>

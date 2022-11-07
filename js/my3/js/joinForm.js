@@ -28,7 +28,8 @@ function chk(e) {
     if($frm.upw.value !== $frm.re_upw.value) {
         alert('비밀번호를 확인해주세요.');
         //return false;
-        return e.preventDefault();
+        e.preventDefault();
+        return;
     }
 
     const pwReg = /(?=.*\d{1,50})(?=.*[~`!@#$%\^&*()-+=]{1,50})(?=.*[a-zA-Z]{2,50}).{8,50}$/;
@@ -36,7 +37,8 @@ function chk(e) {
         alert('비밀번호는 문자,숫자,특수문자 포함한 8자리 이상이어야 합니다.');
         //return false;
         $frm.upw.focus();
-        return e.preventDefault();
+        e.preventDefault();
+        return;
     }
 
     const emailReg = /[0-9a-zA-Z]([-_.]?[0-9a-zA-Z])*@[0-9a-zA-Z]([-_.]?[0-9a-zA-Z])*.[a-zA-Z]{2,3}$/i;
@@ -44,8 +46,9 @@ function chk(e) {
         alert('이메일을 확인해 주세요.');
         //return false;
         $frm.email.focus();
-        return e.preventDefault();
-    }    
+        e.preventDefault();
+        return;
+    }   
 }
 
 /*
