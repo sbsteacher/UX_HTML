@@ -33,7 +33,8 @@
     });
 
     function makeList(data) {        
-        data.boxOfficeResult.dailyBoxOfficeList.forEach(makeRow);
+        const arr = data.boxOfficeResult.dailyBoxOfficeList;
+        arr.forEach(makeRow);
     }
 
     function makeRow(item) {
@@ -46,3 +47,4 @@
     }
 
 })();
+
