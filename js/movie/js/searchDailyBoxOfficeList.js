@@ -8,7 +8,8 @@
     const searchBtnElem = frmElem.search;
     //const contentsElem = document.querySelector('#contents');
     const contentsElem = document.querySelector('.main__body > .listing-card > ul.listing-card__list');
-    
+    let isProc = false;
+
     window.addEventListener('load', e => {
         const now = new Date();
         const nowDate = now.toISOString().substring(0, 10);
@@ -19,9 +20,12 @@
 
     }
     */
-    searchBtnElem.addEventListener('click', e => {
+    searchBtnElem.addEventListener('click', e => {        
+        if(isProc) { return; }
+        isProc = true;
+        
         contentsElem.innerHTML = null;
-
+      
         const val = dateElem.value.replaceAll('-', '');
         console.log(val);
 
@@ -30,15 +34,22 @@
 
         fetch(url)
         .then(res => res.json())
-        .then(makeList);
+        .then(data => {
+            isProc = false;
+            makeList(data);
+        });
     });
 
     function makeList(data) {        
         const arr = data.boxOfficeResult.dailyBoxOfficeList;
+        if(arr.length === 0) {            
+            return alert('박스오피스 정보가 없습니다.');
+        }
         arr.forEach(makeItem);
     }
 
     function makeItem(item) {
+        const audiCnt = parseInt(item.audiCnt).toLocaleString('ko-KR');
         const li = document.createElement('li');
         li.className = 'listing-card__item';
         li.innerHTML = `
@@ -46,7 +57,7 @@
                 <h1>${item.rank}</h1>
                 <strong class="listing-card__name">${item.movieNm}</strong>
                 <p class="listing-card__date">${item.openDt}</p>
-                <div class="listing-card__audiCnt">${item.audiCnt}명</div>
+                <div class="listing-card__audiCnt">${audiCnt}명</div>
             </div>
         `;
         contentsElem.appendChild(li);
