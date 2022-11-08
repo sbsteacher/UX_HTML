@@ -8,6 +8,8 @@
     const searchBtnElem = frmElem.search;
     //const contentsElem = document.querySelector('#contents');
     const contentsElem = document.querySelector('.main__body > .listing-card > ul.listing-card__list');
+    const loadingElem = document.querySelector('#loading');
+
     let isProc = false;
 
     window.addEventListener('load', e => {
@@ -22,7 +24,14 @@
     */
     searchBtnElem.addEventListener('click', e => {        
         if(isProc) { return; }
+        const nowDate = new Date().toISOString().substring(0, 10);
+        if(nowDate === dateElem.value) {
+            return alert('오늘은 검색할 수 없습니다.');
+        } else if(dateElem.value > nowDate) {
+            return alert('미래는 검색할 수 없습니다.');
+        }
         isProc = true;
+        loadingElem.classList.remove('display_none');
         
         contentsElem.innerHTML = null;
       
@@ -36,6 +45,7 @@
         .then(res => res.json())
         .then(data => {
             isProc = false;
+            loadingElem.classList.add('display_none');
             makeList(data);
         });
     });
