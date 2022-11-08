@@ -6,8 +6,9 @@
     const frmElem = document.querySelector('#searchFrm');
     const dateElem = frmElem.targetDt;
     const searchBtnElem = frmElem.search;
-    const contentsElem = document.querySelector('#contents');
-
+    //const contentsElem = document.querySelector('#contents');
+    const contentsElem = document.querySelector('.main__body > .listing-card > ul.listing-card__list');
+    
     window.addEventListener('load', e => {
         const now = new Date();
         const nowDate = now.toISOString().substring(0, 10);
@@ -34,16 +35,21 @@
 
     function makeList(data) {        
         const arr = data.boxOfficeResult.dailyBoxOfficeList;
-        arr.forEach(makeRow);
+        arr.forEach(makeItem);
     }
 
-    function makeRow(item) {
-        console.log(item);
-        const div = document.createElement('div');
-        div.innerHTML = `
-            <h3>${item.rank}. ${item.movieNm}</h3>
+    function makeItem(item) {
+        const li = document.createElement('li');
+        li.className = 'listing-card__item';
+        li.innerHTML = `
+            <div class="listing-card__info">
+                <h1>${item.rank}</h1>
+                <strong class="listing-card__name">${item.movieNm}</strong>
+                <p class="listing-card__date">${item.openDt}</p>
+                <div class="listing-card__audiCnt">${item.audiCnt}명</div>
+            </div>
         `;
-        contentsElem.append(div);
+        contentsElem.appendChild(li);
     }
 
 })();
