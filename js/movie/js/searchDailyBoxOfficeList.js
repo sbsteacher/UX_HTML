@@ -22,15 +22,14 @@
 
     let isProc = false;
     window.addEventListener('load', e => {
-        const now = new Date();
-        now.setDate(now.getDate() - 1);        
-        const nowDate = now.toNormalFormat().substring(0, 10);
-        dateElem.value = nowDate;
-        /*
-        //moment.js 라이브러리 사용
-        const now = moment();        
-        dateElem.value = now.add(-1, 'd').format('YYYY-MM-DD');
-        */
+        // const now = new Date();
+        // now.setDate(now.getDate() - 1);        
+        // const nowDate = now.toNormalFormat().substring(0, 10);
+        // dateElem.value = nowDate;
+        
+        //moment.js 라이브러리 사용            
+        dateElem.value = moment().add(-1, 'd').format('YYYY-MM-DD');
+        
         /*
         //ISO가 
         const now = new Date();
