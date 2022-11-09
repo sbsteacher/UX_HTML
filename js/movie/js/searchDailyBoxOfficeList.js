@@ -11,17 +11,13 @@
     const loadingElem = document.querySelector('#loading');
 
     let isProc = false;
-
     window.addEventListener('load', e => {
         const now = new Date();
+        now.setDate(now.getDate() - 1);
         const nowDate = now.toISOString().substring(0, 10);
         dateElem.value = nowDate;
     });
-    /*
-    window.onload = function() {
-
-    }
-    */
+  
     searchBtnElem.addEventListener('click', e => {        
         if(isProc) { return; }
         const nowDate = new Date().toISOString().substring(0, 10);
