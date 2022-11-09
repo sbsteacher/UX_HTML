@@ -10,8 +10,14 @@
     const loadingElem = document.querySelector('#loading');
 
     let isProc = false;
-    window.addEventListener('load', e => {        
-        const maxDate = moment().day(0).format('YYYY-MM-DD');
+    window.addEventListener('load', e => {    
+        const nowDate = moment();
+        if(nowDate.day() === 0) {
+            nowDate.add(-7, 'd');
+        } else {
+            nowDate.day(0);
+        }
+        const maxDate = nowDate.format('YYYY-MM-DD');
         dateElem.value = maxDate;
         dateElem.setAttribute('max', maxDate);
     });
