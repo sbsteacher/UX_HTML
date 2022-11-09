@@ -11,7 +11,9 @@
 
     let isProc = false;
     window.addEventListener('load', e => {        
-        dateElem.value = moment().add(-1, 'd').format('YYYY-MM-DD');
+        const maxDate = moment().day(0).format('YYYY-MM-DD');
+        dateElem.value = maxDate;
+        dateElem.setAttribute('max', maxDate);
     });
   
     searchBtnElem.addEventListener('click', e => {        
@@ -19,11 +21,11 @@
                 
         const nowDate = new Date(new Date().toDateString() + ' 00:00:00');
         const nowDay = nowDate.getDay() === 0 ? 7 : nowDate.getDay();        
-        nowDate.setDate(nowDate.getDate() - nowDay + 1)
+        nowDate.setDate(nowDate.getDate() - nowDay + 1);
         
         const targetDate = new Date(dateElem.value + ' 00:00:00');
         const targetDay = targetDate.getDay() === 0 ? 7 : targetDate.getDay();        
-        targetDate.setDate(targetDate.getDate() - targetDay + 1)
+        targetDate.setDate(targetDate.getDate() - targetDay + 1);
 
         if(nowDate.getTime() === targetDate.getTime()) {
             return alert('이번주는 검색할 수 없습니다.');
