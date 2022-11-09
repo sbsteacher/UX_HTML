@@ -1,5 +1,15 @@
 (function() {
     'use strict';
+    Date.prototype.toNormalFormat = function(delimiter = '-') {
+        const year = this.getFullYear();
+        const mon = (this.getMonth() + 1).toString().padStart(2, '0');
+        const date = this.getDate().toString().padStart(2, '0');
+        const hour = this.getHours().toString().padStart(2, '0');        
+        const min = this.getMinutes().toString().padStart(2, '0');
+        const sec = this.getSeconds().toString().padStart(2, '0');
+        
+        return [year, mon, date].join(delimiter).concat(` ${hour}:${min}:${sec}`);
+    }
 
     const KEY = 'cc1e6045dc81b1e1955cc52c3af43278';
 
@@ -13,9 +23,21 @@
     let isProc = false;
     window.addEventListener('load', e => {
         const now = new Date();
-        now.setDate(now.getDate() - 1);
+        now.setDate(now.getDate() - 1);        
+        const nowDate = now.toNormalFormat().substring(0, 10);
+        dateElem.value = nowDate;
+        /*
+        //moment.js 라이브러리 사용
+        const now = moment();        
+        dateElem.value = now.add(-1, 'd').format('YYYY-MM-DD');
+        */
+        /*
+        //ISO가 
+        const now = new Date();
+        now.setDate(now.getDate() - 1);        
         const nowDate = now.toISOString().substring(0, 10);
         dateElem.value = nowDate;
+        */
     });
   
     searchBtnElem.addEventListener('click', e => {        

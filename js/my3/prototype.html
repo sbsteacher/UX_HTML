@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>prototype</h1>
+    <script>        
+        function Human(name, age) {
+            this.name = name;
+            this.age = age;
+            this.whoAmI = function() {
+                console.log(`나는 ${this.name}이고, ${this.age}살 입니다.`);
+            }
+        }
+        
+        Human.prototype.driving = function(car) {
+            console.log(`${this.name}은(는) ${car}을(를) 타고 드라이브를 갑니다.`);
+        }
+        
+        //이름은 '신사임당', 나이는 20 값을 가지고 있는 객체 생성
+        const h1 = new Human('신사임당', 20);
+        console.log(h1.name);
+        console.log(h1.age);
+        h1.whoAmI();
+        h1.driving('벤츠');
+
+        h1.name = '홍길동';
+        h1.whoAmI();
+
+        const h2 = new Human('세바스찬', 32);
+        h2.whoAmI();
+        h1.whoAmI();
+        h2.driving('BMW');
+    </script>
+</body>
+</html>
