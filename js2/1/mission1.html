@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //호출하는 것만 보고 함수 정의
+        const m1 = whoAmI('홍길동', 20);
+        console.log(m1); //나는 홍길동이고 나이는 20살입니다.
+
+        const m2 = whoAmI('신사임당', 30);
+        console.log(m2); //나는 신사임당이고 나이는 30살입니다.
+
+        function whoAmI(nm, age) {            
+            return `나는 ${nm}이고 나이는 ${age}살입니다.`;
+        }
+    </script>
+</body>
+</html>

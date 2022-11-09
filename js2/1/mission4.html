@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const evenOdd = val => {
+            if(val % 2 === 0) {
+                console.log('짝수');
+            } else {
+                console.log('홀수');
+            }
+            //console.log(val % 2 ? '홀수' : '짝수');
+        }
+
+        evenOdd(10); //짝수
+        evenOdd(11); //홀수
+        evenOdd(12); //짝수
+        evenOdd(13); //홀수
+    </script>
+</body>
+</html>
