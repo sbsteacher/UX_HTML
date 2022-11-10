@@ -10,9 +10,7 @@
         const val = $select.value;        
         const url = `https://www.daegufood.go.kr/kor/api/tasty.html?mode=json&addr=${val}`;
         fetch(url)
-        .then(res => {
-            return res.json();
-        })
+        .then(res => res.json())
         .then(makeList);
     });
 
@@ -38,6 +36,7 @@
         `;
         li.addEventListener('click', e => {
             const json = JSON.stringify(item);
+            console.log(json);
             localStorage.setItem('item', json);
             location.href = `detail.html`;
         });
