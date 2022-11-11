@@ -35,7 +35,8 @@
     function makeList() {
         $contentsContainer.innerHTML = null;
         const sIdx = (page - 1) * rowCnt;
-        const eIdx = page * rowCnt;
+        const eResult = page * rowCnt;
+        const eIdx = eResult > data.length ? data.length : eResult;
 
         for(let i=sIdx; i<eIdx; i++) {
             const item = data[i];
@@ -52,6 +53,12 @@
             span.classList.add('page');
             span.classList.add('pointer');                        
             span.textContent = i.toString();
+
+            span.addEventListener('click', e => {
+                page = i;
+                makeList();
+                window.scrollTo(0, 0);
+            })
         }
     }
 
