@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
         .pointer { cursor: pointer; }
+        .page:not(:first-child) { margin-left: 8px; }
     </style>
 
     <title>Document</title>
@@ -25,13 +26,8 @@
         <button id="search">검색</button>
     </div>
     <div class="contents">
-        <ul class="contents_container">
-            <li class="pointer">
-                <h3>벙글벙글식당</h3>
-                <div>종류: 퓨전</div>
-                
-            </li>
-        </ul>
+        <ul class="contents_container"></ul>
+        <div class="paging"></div>
     </div>
     <script src="js/index.js"></script>
 </body> 
