@@ -35,10 +35,9 @@
             <p>${item.SMPL_DESC.replaceAll(`${item.BZ_NM} `, item.BZ_NM)}</p>
         `;
         li.addEventListener('click', e => {
-            const json = JSON.stringify(item);
-            console.log(json);
-            localStorage.setItem('item', json);
-            location.href = `detail.html`;
+            const json = JSON.stringify(item);            
+            localStorage.setItem('ddd', json);
+            location.href = 'detail.html';
         });
 
     }
