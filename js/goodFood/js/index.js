@@ -15,6 +15,7 @@
 
     $search.addEventListener('click', e => {                
         //$contentsContainer.innerHTML = null;
+        $paging.innerHTML = null;
         const val = $select.value;        
         const url = `https://www.daegufood.go.kr/kor/api/tasty.html?mode=json&addr=${val}`;
         fetch(url)
