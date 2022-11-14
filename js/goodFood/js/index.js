@@ -18,6 +18,7 @@
         $paging.innerHTML = null;
         const val = $select.value;        
         const url = `https://www.daegufood.go.kr/kor/api/tasty.html?mode=json&addr=${val}`;
+        console.log(url);
         fetch(url)
         .then(res => res.json())
         .then(makeDisplay);
@@ -42,6 +43,16 @@
             const item = data[i];
             makeItem(item);
         }
+        changeSelected();
+    }
+
+    //선택된 page 클래스 처리
+    function changeSelected() {
+        const pageSpanList = document.querySelectorAll('.page');
+        pageSpanList.forEach(item => {
+            const innerNum = parseInt(item.textContent);
+            item.classList.toggle('selected', page === innerNum);
+        });
     }
 
     //페이징 숫자 찍기
@@ -58,7 +69,7 @@
                 page = i;
                 makeList();
                 window.scrollTo(0, 0);
-            })
+            });
         }
     }
 
