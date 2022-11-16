@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //남자 167
+        //여자 157 평균키
+
+        checkHeight('남', 167); //남자 평균키 입니다.
+        checkHeight('남', 168); //남자 평균키 보다 큽니다.
+        checkHeight('남', 166); //남자 평균키 보다 작습니다.
+
+        checkHeight('여', 157); //여자 평균키 입니다.
+        checkHeight('여', 159); //여자 평균키 보다 큽니다.
+        checkHeight('여', 155); //여자 평균키 보다 작습니다.
+
+        function checkHeight(gender, height) {
+            const WOMAN_HEIGHT = 157;
+            const MAN_HEIGHT = 167;
+
+            const STAND_HEIGHT = gender === '여' ? WOMAN_HEIGHT : MAN_HEIGHT;
+
+            let strTail = '입니다.';
+            if(STAND_HEIGHT > height) {
+                strTail = '보다 작습니다.';
+            } else if(STAND_HEIGHT < height) {
+                strTail = '보다 큽니다.';
+            }
+            
+            console.log(`${gender}자 평균키 ${strTail}`);
+        }
+    </script>
+</body>
+</html>

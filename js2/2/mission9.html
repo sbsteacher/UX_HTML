@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const result = calc(10); //짝수값을 보내면 보낸 값에 +2 한 값을 리턴
+                                 //홀수값을 보내면 보낸 값에 *2 한 값을 리턴
+
+        function calc(val) {
+            return val % 2 ? val * 2 : val + 2;
+        }          
+        
+        function calc2(val) {
+            if(val % 2) {
+                return val * 2;
+            }
+            return val + 2;
+        }
+    </script>
+</body>
+</html>

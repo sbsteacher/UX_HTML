@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const val = -10;
+
+        const result = abs(val); //양수 10이 리턴되어야 함.
+        const result2 = abs(9); //양수 9가 리턴되어야 함.
+
+        printAbs(val, val); //양수 10이 콘솔에 찍혀야 함.
+        printAbs(9); //양수 9가 콘솔에 찍혀야 함.
+
+        function abs(num) {
+            if(num < 0) {
+                return -num;
+            }
+            return num;
+            /*
+            if(num >= 0) {
+                return num;
+            }
+            return -num;
+            */
+        }
+
+        function printAbs(num) {
+            console.log(abs(num));
+            // if(num < 0) {
+            //     console.log(-num);
+            // } else {
+            //     console.log(num);
+            // }
+
+            /*
+            if(num >= 0) {
+                console.log(num);
+            } else {
+                console.log(-num);
+            }
+            */
+        }
+
+    </script>    
+</body>
+</html>
