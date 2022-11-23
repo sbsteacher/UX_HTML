@@ -1,0 +1,15 @@
+@mixin border-style-1($weight, $color, $radius) {
+    border: $weight solid $color;
+    border-radius: $radius;
+}
+
+body { 
+    background-color: antiquewhite; 
+
+    .container {
+        color: red;
+        padding: 10px;
+        font-weight: bold;
+        @include border-style-1(1px, rgb(210, 32, 32), 10px);
+    }
+}

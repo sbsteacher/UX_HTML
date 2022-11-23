@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        isBiggerV2(1, 2, 3); //가장 큰 수는 3입니다.
+        isBiggerV2(1, 4, 4); //가장 큰 수는 4입니다.
+        isBiggerV2(10, 4, 4); //가장 큰 수는 10입니다.
+        isBiggerV2(10, 14, 4); //가장 큰 수는 14입니다.
+        isBiggerV2(-10, -20, -30);
+        isBiggerV2(-30, -20, -10);
+        isBiggerV2(-30, -2, -10);
+        isBiggerV2(-30, -2, -10, 100, 200, 3400, 400, 500);
+
+
+        function isBiggerV2() {
+            let bigger = arguments[0];
+            for(let i=1; i<arguments.length; i++) {
+                if(bigger < arguments[i]) {
+                    bigger = arguments[i];
+                }
+            }
+            console.log(`가장 큰 값은 ${bigger}`);
+            
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        /*
+        function isBiggerV2(n1, n2, n3) {            
+            const arguments = [ n1, n2, n3 ];
+            let bigger = arr[0];
+            for(let i=1; i<arr.length; i++) {
+                if(bigger < arr[i]) {
+                    bigger = arr[i];
+                }
+            }
+            console.log(`가장 큰 수는 ${bigger}입니다.`);
+        }
+        */
+        /*
+        function isBiggerV2(n1, n2, n3) {
+            let bigger = n1 > n2 ? n1 : n2;
+            bigger = bigger > n3 ? bigger : n3;
+            console.log(`가장 큰 수는 ${bigger}입니다.`);
+        }
+        */
+    </script>
+</body>
+</html>

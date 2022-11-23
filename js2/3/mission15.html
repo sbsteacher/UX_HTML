@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        ageRange(10); //당신은 18세 미만입니다.
+        ageRange(18); //당신은 18~60세 사이입니다.
+        ageRange(59); //당신은 18~60세 사이입니다.
+        ageRange(61); //당신은 60세 초과입니다.
+        ageRange(81); //당신은 60세 초과입니다.
+        
+        function ageRange(age) {
+            if(age < 18) {
+                console.log('당신은 18세 미만입니다.');
+            } else if(age <= 60) {
+                console.log('당신은 18~60세 사이입니다.');
+            } else {
+                console.log('당신은 60세 초과입니다.');
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        isBigger(1, 2); // 가장 큰 수는 2입니다.
+        isBigger(10, 5); // 가장 큰 수는 10입니다.
+        isBigger(100, 101);
+
+        function isBigger(n1, n2) {
+            const bigger = n1 > n2 ? n1 : n2;
+            console.log(`가장 큰 수는 ${bigger}입니다.`);
+        }
+        /*
+        function isBigger(n1, n2) {
+            if(n1 > n2) {
+                console.log(`가장 큰 수는 ${n1}입니다.`);
+            } else {
+                console.log(`가장 큰 수는 ${n2}입니다.`);
+            }
+        }
+        */
+    </script>
+</body>
+</html>
