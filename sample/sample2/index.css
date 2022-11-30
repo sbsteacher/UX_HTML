@@ -1,0 +1,28 @@
+* { padding: 0; margin: 0; box-sizing: border-box; }
+ul { list-style: none; }
+html, body { height: 100%; }
+
+.container { 
+    overflow: hidden;
+    background-color: aliceblue;     
+}
+
+main { 
+    
+    display: flex;
+}
+
+section {
+    min-width: 50vw;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 4ch;
+  }
+
+  section:nth-child(even) {
+    background-color: teal;
+    color: white;
+  }
+  

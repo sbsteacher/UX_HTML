@@ -1,0 +1,23 @@
+.hList {
+    width: 100%;
+    border: 2px solid red;
+    display: flex;
+    overflow: auto;
+  }
+  
+  .element {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-family: sans-serif;
+    flex-shrink: 0;
+    width: 550px;
+    height: 275px;
+    background: green;
+    border-right: 2px solid yellow;
+  }
+  
+  .element:last-of-type {
+    border: none;
+  }

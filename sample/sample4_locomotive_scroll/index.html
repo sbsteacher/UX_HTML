@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html class="is-smooth-scroll-compatible is-loading" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="locomotive-scroll.min.css">
+    <style>
+    .the-sticky-div {
+        position: absolute;
+        top: 0;
+        height: 100vh;
+        width: 100%;
+        overflow-x: hidden;
+        background: #ccc;
+        z-index: 1;
+    }
+    .the-overflow-hidden-mask {
+    position: relative;
+    z-index: 200;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    background: #000;
+    }
+    .the-height-400vh-section {
+    position: relative;
+    display: flex;
+    height: 400vh;
+    margin-left: 0px;
+    justify-content: center;
+    align-items: center;
+    border-top: 60px none rgba(36, 36, 36, 0.09);
+    background-color: #fff;
+    }
+
+    .the-width-400vh-scrollable-div {
+    display: flex;
+    width: 400vh;
+    position:relative;
+    height: 100%;
+    flex-wrap: wrap;
+    align-items: center;
+    will-change: transform;
+    }
+    .the-content {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    padding-bottom: 10vh;
+    justify-content: flex-start;
+    align-items: flex-end;  
+    }
+
+    .the-content .a-block {
+        overflow: hidden;
+        width: 100vw;
+        height: 100vh;
+        left:0;
+        margin-right: 40px;
+        margin-left: 40px;
+        flex: 0 0 auto;
+        border-radius: 6px;
+        background-color: hsla(0, 0%, 87.1%, 0.72);
+        box-shadow: 0 0 100px 8px rgba(205, 43, 177, 0.25);
+    }
+    </style>
+    <title>Document</title>
+</head>
+<body>
+    <div class="o-scroll" data-scroll-container id="js-scroll" data-horizontal="true">
+
+
+        <div data-scroll-section>
+            <div class="o-container">
+                <header class="c-header" id="header">
+                    <div class="c-header_heading" data-scroll data-scroll-speed="-8" data-scroll-position="top" data-scroll-target="#header" data-scroll-repeat>
+                        <div class="o-layout">
+                            <div class="o-layout_item u-1/2" data-scroll data-scroll-direction="horizontal" data-scroll-speed="-2" data-scroll-position="top" data-scroll-target="#header">
+                                <span class="u-label c-header_heading_label">
+                                    <a href="https://locomotive.ca" target="_blank" rel="noopener noreferrer">
+                                        Locomotive.ca
+                                    </a>
+                                </span>
+                            </div>
+                            <div class="o-layout_item u-1/2" data-scroll data-scroll-direction="horizontal" data-scroll-speed="2" data-scroll-position="top" data-scroll-target="#header">
+                                <div class="u-text-right">
+                                    <p class="u-label c-header_heading_label">
+                                        v4.x – Edition
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <h1 class="c-header_title o-h1" data-scroll>
+                        <span class="c-header_title_line">
+                            <span data-scroll data-scroll-speed="3" data-scroll-position="top">Locomotive</span>
+                        </span>
+                        <span class="c-header_title_line">
+                            <span data-scroll data-scroll-speed="2" data-scroll-position="top">Scroll</span>
+                        </span>
+                        <span class="c-header_title_line -version u-white">
+                            <span class="o-h1" data-scroll data-scroll-speed="3" data-scroll-position="top" data-scroll-delay="0.05">v</span><span class="o-h1" data-scroll data-scroll-speed="5" data-scroll-position="top" data-scroll-delay="0.05">4</span><span class="o-h1" data-scroll data-scroll-speed="2" data-scroll-position="top" data-scroll-delay="0.05">.</span><span class="o-h1" data-scroll data-scroll-speed="4" data-scroll-position="top" data-scroll-delay="0.05">X</span>
+                        </span>
+                    </h1>
+                    <hr class="c-header_line" data-scroll data-scroll-offset="100" />
+                    <a class="c-header_logo" href="https://locomotive.ca" target="_blank">
+                        <svg role="img"><use xlink:href="dist/images/sprite.svg#logo"></use></svg>
+                    </a>
+                </header>
+            </div>
+        </div>
+
+        <div data-scroll-section>
+            <h1>
+                <p class="o-h1 -huge" data-scroll data-scroll-speed="3.5" data-scroll-position="left">
+                    Welcome to 
+                </p>
+                <p class="o-h1 -huge" data-scroll data-scroll-speed="2.5" data-scroll-delay="0.2" data-scroll-position="left">
+                    Horizontal 
+                </p>
+                <p class="o-h1 -huge" data-scroll data-scroll-speed="1.5" data-scroll-delay="0.1" data-scroll-position="left">
+                    Scrolling 
+                </p>
+            </h1>
+        </div>
+
+        <div data-scroll-section>
+            <div class="c-helicopter_wrapper">
+                <div class="o-h1 c-helicopter" data-scroll data-scroll-direction="vertical" data-scroll-speed="1">
+                    헬리콥터
+                </div>
+            </div>
+        </div>
+
+        <div data-scroll-section>
+            <div class="c-helicopter_wrapper">
+                <div class="o-h1 c-helicopter" data-scroll data-scroll-direction="vertical" data-scroll-speed="2">
+                    🚁
+                </div>
+            </div>
+        </div>
+
+        <div data-scroll-section>
+            <div class="c-helicopter_wrapper">
+                <div class="o-h1 c-helicopter" data-scroll data-scroll-direction="vertical" data-scroll-speed="3">
+                    헬리콥터
+                </div>
+            </div>
+        </div>
+
+        <div data-scroll-section>
+            <div class="c-helicopter_wrapper">
+                <div class="o-h1 c-helicopter" data-scroll data-scroll-direction="vertical" data-scroll-speed="4">
+                    헬리콥터
+                </div>
+            </div>
+        </div>
+
+        <div data-scroll-section>
+            <div class="c-helicopter_wrapper">
+                <div class="o-h1 c-helicopter" data-scroll data-scroll-direction="vertical" data-scroll-speed="5">
+                    헬리콥터
+                </div>
+            </div>
+        </div>
+     
+
+       
+
+        <div data-scroll-section>
+            <div class="o-image_wrapper -full">
+                <div data-scroll class="o-image">
+                    <img data-scroll-to data-scroll-href="left" src="imgs/locomotive01.jpg" alt="Random image">
+                </div>
+            </div>
+        </div>
+        <div data-scroll-section>
+            <div class="o-image_wrapper -full">
+                <div data-scroll class="o-image">
+                    <img data-scroll-to data-scroll-href="left" src="imgs/locomotive02.jpg" alt="Random image">
+                </div>
+            </div>
+        </div>
+        <div data-scroll-section>
+            <div class="o-image_wrapper -full">
+                <div data-scroll class="o-image">
+                    <img data-scroll-to data-scroll-href="left" src="imgs/locomotive03.jpg" alt="Random image">
+                </div>
+            </div>
+        </div>
+
+
+
+       
+
+        <div data-scroll-section>
+            <div class="c-helicopter_wrapper">
+                <div class="o-h1 c-helicopter" data-scroll data-scroll-direction="vertical" data-scroll-speed="1">
+                    헬리콥터
+                </div>
+            </div>
+        </div>
+
+        <div data-scroll-section>
+            <div class="c-helicopter_wrapper">
+                <div class="o-h1 c-helicopter" data-scroll data-scroll-direction="vertical" data-scroll-speed="2">
+                    헬리콥터
+                </div>
+            </div>
+        </div>
+
+        <div data-scroll-section>
+            <div class="c-helicopter_wrapper">
+                <div class="o-h1 c-helicopter" data-scroll data-scroll-direction="vertical" data-scroll-speed="3">
+                    헬리콥터
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script nomodule src="https://cdnjs.cloudflare.com/ajax/libs/babel-polyfill/7.6.0/polyfill.min.js" crossorigin="anonymous"></script>
+    <script nomodule src="https://polyfill.io/v3/polyfill.min.js?features=Object.assign%2CElement.prototype.append%2CNodeList.prototype.forEach%2CCustomEvent%2Csmoothscroll" crossorigin="anonymous"></script>
+    <script src="locomotive-scroll2.min.js"></script>    
+   
+</body>
+</html>

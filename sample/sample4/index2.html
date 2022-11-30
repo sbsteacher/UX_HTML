@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        ul {
+  align-items: flex-start;
+  display: flex;
+  flex-wrap: nowrap;
+  list-style: none;
+  margin: 1rem 0;
+  overflow-x: scroll;
+  padding: 0 0 0 1rem;
+  scroll-padding-left: 1rem; /* Same as gutter */
+  scroll-snap-type: x mandatory;
+}
+ul li {
+  padding: 0 1rem 0 0;
+  scroll-snap-align: center;
+}
+ul li div.card {
+  background-color: #ff7979;
+  border-radius: 9px;
+  height: 40vw;
+  width: 65vw;
+}
+    </style>
+</head>
+<body>
+    <ul>
+        <li>
+          <div class="card">...</div>
+        </li>
+        <li>
+          <div class="card">...</div>
+        </li>
+        <li>
+          <div class="card">...</div>
+        </li>
+        <li>
+          <div class="card">...</div>
+        </li>
+        <li>
+          <div class="card">...</div>
+        </li>
+      </ul>
+</body>
+</html>
