@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        printStrHour(23); //오후 11시
+        printStrHour(11); //오전 11시
+        printStrHour(0); //오전 12시
+        printStrHour(12); //오후 12시
+        printStrHour(-1); //잘못된 값
+        printStrHour(24); //잘못된 값
+        printStrHour(9); //오전 9
+        printStrHour(14); //오후 2
+
+        function printStrHour(hour) {
+            if(hour < 0 || hour > 23) { //0보다 작았을 때 or 23 초과 (24이상)
+                console.log('잘못된 값');
+            } else if(hour < 12) { // 0~11
+                console.log(`오전 ${hour === 0 ? 12 : hour}`);
+            } else { //12~23
+                console.log(`오후 ${hour === 12 ? 12 : hour - 12}`);
+            }
+        }
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        printCnt2('안녕', 5); 
+        //1. 안녕
+        //2. 안녕
+        //3. 안녕
+        //4. 안녕
+        //5. 안녕
+        printCnt2('Hello', 2);
+        //1. Hello
+        //2. Hello
+
+        function printCnt(str, cnt) {
+            for(let i=1; i<=cnt; i++) {
+                console.log(`${i}. ${str}`);
+                //console.log(i + '. ' + str);
+            }
+        }
+
+        function printCnt2(str, cnt) {
+            let result = '';
+            for(let i=1; i<=cnt; i++) {
+                //result = result + `${i}. ${str}`; 
+                result += `${i}. ${str}\n`;
+            }
+            console.log(result);
+        }
+    </script>
+</body>
+</html>

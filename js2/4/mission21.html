@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <button id="plusBtn">+</button>
+        <span id="result">0</span>
+    </div>
+    <script>
+        const $plusBtn = document.querySelector('#plusBtn');
+        const $result = document.querySelector('#result');
+
+        $plusBtn.addEventListener('click', e => {
+            const val = parseInt($result.textContent);
+            $result.textContent = val + 1;
+        })
+    </script>
+</body>
+</html>

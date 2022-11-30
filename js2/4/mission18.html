@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const result = getEvenOdd(2); //'짝수' 문자열 리턴
+        const result2 = getEvenOdd(3); //'홀수' 문자열 리턴
+        const result3 = getEvenOdd(14); //'짝수' 문자열 리턴
+        const result4 = getEvenOdd(15); //'홀수' 문자열 리턴
+
+        console.log(result);
+        console.log(result2);
+        console.log(result3);
+        console.log(result4);
+
+        function getEvenOdd(num) {
+            return num % 2 ? '홀수' : '짝수';
+        }
+    </script>
+</body>
+</html>
