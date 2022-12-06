@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <label>30% <input type="number" id="discount_price_30"></label>        
+    </div>
+    <div id="imme_result"></div>
+    <div>
+        <label>10% <input type="number" id="discount_price_10"></label>        
+    </div>
+    <button id="btn_calc">계산</button>
+    <div id="result"></div>
+    <script>
+        const $dis30 = document.querySelector('#discount_price_30');
+        const $immeResult = document.querySelector('#imme_result');
+        const $dis10 = document.querySelector('#discount_price_10');
+        const $btnCalc = document.querySelector('#btn_calc');
+        const $result = document.querySelector('#result');
+        
+        $dis30.addEventListener('keyup', e => {
+            const dis30Val = parseInt($dis30.value) * 0.7;
+            const price5999 = parseInt((5999 - dis30Val) / 0.9);
+            const price6999 = parseInt((6999 - dis30Val) / 0.9);
+            $immeResult.innerHTML = `
+                5900: ${price5999}<br>
+                6900: ${price6999}<br>
+            `;
+        });
+
+        $btnCalc.addEventListener('click', e => {
+            const dis30Val = parseInt($dis30.value) * 0.7;
+            const dis10Val = parseInt($dis10.value) * 0.9;
+            const result = dis30Val + dis10Val;
+
+            $result.textContent = result;
+        });
+    </script>
+</body>
+</html>
