@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        section { height: 3000px; }
+    </style>
+</head>
+<body>
+    <section>
+
+    </section>
+    <script>
+
+        const throttle = (cb, delay) => {
+            let timerId;
+
+            return () => {
+                if(timerId) return;
+
+                timerId = setTimeout(function() {
+                    cb();
+                }, delay)
+            }
+        }
+
+        const callThrottle = function(e) {
+            throttle(function() {
+                console.log('dd');
+            }, 2000);
+        }
+        const $section = document.querySelector('section');
+        window.addEventListener('scroll', callThrottle);
+    </script>
+</body>
+</html>

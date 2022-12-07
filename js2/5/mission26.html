@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //0이하, 25이상
+        //'알 수 없음'
+
+        //1~12 오전
+        //1 > '오전 1시'
+        //12 > '오전 12시'
+
+        //13~24 오후
+        //13 > '오후 1시'
+        //15 > '오후 3시'
+        //24 > '오후 12시'
+
+        for(let i=0; i<26; i++) {
+            console.log(`${i} - ${getHour(i)}`);
+        }
+        
+        //return > 함수안에서 console.log 쓸 일이 없음!!
+        //void > 함수안에서 console.log 써야 함!
+        
+        function getHour(time) {
+            if(time < 1 || time > 24) {
+                return '알 수 없음';
+            } 
+            //1~24
+
+            if(time < 13) { // 1~12
+                return `오전 ${time}시`;
+            }
+
+            //13~24
+            return `오후 ${time - 12}시`;
+        }
+    </script>
+</body>
+</html>

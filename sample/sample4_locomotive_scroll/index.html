@@ -127,7 +127,7 @@
 
         <div data-scroll-section>
             <div class="c-helicopter_wrapper">
-                <div class="o-h1 c-helicopter" data-scroll data-scroll-direction="vertical" data-scroll-speed="1">
+                <div class="o-h1 c-helicopter a" data-scroll>
                     헬리콥터
                 </div>
             </div>
@@ -135,7 +135,7 @@
 
         <div data-scroll-section>
             <div class="c-helicopter_wrapper">
-                <div class="o-h1 c-helicopter" data-scroll data-scroll-direction="vertical" data-scroll-speed="2">
+                <div class="o-h1 c-helicopter b" data-scroll>
                     🚁
                 </div>
             </div>
@@ -143,7 +143,7 @@
 
         <div data-scroll-section>
             <div class="c-helicopter_wrapper">
-                <div class="o-h1 c-helicopter" data-scroll data-scroll-direction="vertical" data-scroll-speed="3">
+                <div class="o-h1 c-helicopter c" data-scroll>
                     헬리콥터
                 </div>
             </div>
@@ -151,7 +151,7 @@
 
         <div data-scroll-section>
             <div class="c-helicopter_wrapper">
-                <div class="o-h1 c-helicopter" data-scroll data-scroll-direction="vertical" data-scroll-speed="4">
+                <div class="o-h1 c-helicopter d" data-scroll>
                     헬리콥터
                 </div>
             </div>
@@ -222,7 +222,19 @@
 
     <script nomodule src="https://cdnjs.cloudflare.com/ajax/libs/babel-polyfill/7.6.0/polyfill.min.js" crossorigin="anonymous"></script>
     <script nomodule src="https://polyfill.io/v3/polyfill.min.js?features=Object.assign%2CElement.prototype.append%2CNodeList.prototype.forEach%2CCustomEvent%2Csmoothscroll" crossorigin="anonymous"></script>
-    <script src="locomotive-scroll2.min.js"></script>    
-   
+    <script src="locomotive-scroll.min.js"></script>    
+    <script>
+        (function () {
+            const scroll = new LocomotiveScroll({
+                el: document.querySelector('[data-scroll-container]'),
+                direction: 'horizontal',
+                smooth: true
+            });
+
+            scroll.on('scroll', function(val) {
+                console.log(val);
+            });
+        })();
+    </script>
 </body>
 </html>

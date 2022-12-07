@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const rVal = getRandomVal(10); //1~10
+        //1~10 사이의 랜덤값 값이 리턴
+        console.log(rVal);
+
+        const rVal2 = getRandomVal(5); //1~5
+        //1~5 사이의 랜덤값 값이 리턴
+        console.log(rVal2);
+
+        function getRandomVal(n) {
+            return Math.floor(Math.random() * n) + 1
+        }
+
+        console.log('---------------');
+        for(let i=0; i<1000; i++) {
+            const r = getRandomVal(5); //1~5
+
+            if(r < 1 || r > 5) {
+                console.log('잘 못 됨!!');
+            }
+        }
+    </script>    
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const rVal = getRandomVal2(10, 25); //10~25
+        const rVal2 = getRandomVal2(5, 8); //5~8
+        
+        function getRandomVal2(sVal, eVal) {
+            return parseInt(Math.random() * (eVal - sVal + 1)) + sVal;
+        }
+
+        for(let i=0; i<1000; i++) {
+            const r = getRandomVal2(1, 2);
+
+            if(!(r === 1 || r === 2)) {
+                console.log('bad!!');
+            }
+
+            const r2 = getRandomVal2(2, 4);
+            if(!(r2 >= 2 && r2 <= 4)) {
+                console.log('bad2!!');
+            }
+        }
+        console.log('끝!');
+    </script>    
+</body>
+</html>
