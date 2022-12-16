@@ -1,0 +1,713 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hello, Knotted World ! </title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Black+Han+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css">
+    <link rel="stylesheet" href="css/jquery.fullPage.css">
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js"
+        integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+    <script src="js/jquery.fullPage.js"></script>
+    <script src="js/main.js"></script>
+    <!-- <script src="js/slick.min.js"></script> -->
+    <link rel="stylesheet" href="css/common.css">
+    <!-- <link rel="stylesheet" href="css/slick.css"> -->
+</head>
+
+<body>
+
+    <!--마우스커서 커스텀-->
+    <div id="cursor"></div>
+    <script src="js/mouseCurser.js"></script>
+
+
+    <!-- header -->
+    <div id="wrapper">
+        <div id="header">
+            <nav>
+                <div class="logo" data-menuanchor="section1">
+                    <a href="#section1">KNOTTED</a>
+                </div>
+                <div class="category">
+                    <ul class="menu">
+                        <li data-menuanchor="section2" class="none768">
+                            <a href="#section2">DONUT</a>
+                        </li>
+                        <li data-menuanchor="section3" class="none768">
+                            <a href="#section3">DESSERT</a>
+                        </li>
+                        <li data-menuanchor="section4" class="none768">
+                            <a href="#section4">GOODS</a>
+                        </li>
+                        <li data-menuanchor="section5" class="none768">
+                            <a href="#section5">CAFE</a>
+                        </li>
+                        <li data-menuanchor="section6" class="none768">
+                            <a href="#section6">EVENT & PROMOTION</a>
+                        </li>
+                        <li data-menuanchor="section7" class="none768">
+                            <a href="#section7">ABOUT</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- search form -->
+                <div>
+                    <div class="btn hover">
+                        <a href="../프로젝트-html-지원/index-login.html">
+                            <span class="btn-login">LOG I N</span>
+                        </a>
+                    </div>
+                    <button type='button' id="modal_btn" class="btn-allmenu btn-allmenu1"></button>
+                    <div class="black_bg"></div>
+                    <div class="modal_wrap">
+                        <div class="modal_close"><a href="#"><img src="image/버튼 호버_창닫기 icon.png"></a></div>
+                        <div class="search-div">
+                            <form action="" class="search-form">
+                                <input type="text" class="search-input" placeholder="what's your favorite?">
+                            </form>
+                        </div>
+                        <!-- 팝업 호버 -->
+                        <div class="search-popup">
+                            <div class="search-popup-content">
+                                <div class="search-popup-content-left float-left">
+                                    <div class="search-popup-title"> Popular </div>
+                                    <div class="popular-keyword">
+                                        <ul class="popular-keyword-list ul">
+                                            <li class="popular-keyword-item">
+                                                <a href="../project/detailPage_a.html">우유 생크림 도넛</a>
+                                            </li>
+                                            <li class="popular-keyword-item">
+                                                <a href="../project/detailPage_a.html">클래식 바닐라 도넛</a>
+                                            </li>
+                                            <li class="popular-keyword-item">
+                                                <a href="../project/detailPage_a.html">얼그레이 도넛</a>
+                                            </li>
+                                            <li class="popular-keyword-item">
+                                                <a href="../project/detailPage_a.html">민트 초코 도넛</a>
+                                            </li>
+                                            <li class="popular-keyword-item">
+                                                <a href="../project/detailPage_a.html">라즈베리 도넛</a>
+                                            </li>
+                                            <li class="popular-keyword-item">
+                                                <a href="../project/detailPage_a.html">스트로베리 도넛</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="search-popup-content-right float-right">
+                                    <div class="search-popup-title"> Recommended </div>
+                                    <div class="collection-box">
+                                        <ul class="collection-box-list">
+                                            <li class="collection-box-item">
+                                                <a href="../project/detailPage_a.html">
+                                                    <div class="collection-image">
+                                                        <img src="image/버튼 호버_생크림 도넛.png" alt="image">
+                                                    </div>
+                                                    <div class="collection-name"></div>
+                                                </a>
+                                            </li>
+                                            <li class="collection-box-item">
+                                                <a href="../project/productDetailPage_c.html">
+                                                    <div class="collection-image">
+                                                        <img src="image/버튼 호버_노세범.png" alt="image">
+                                                    </div>
+                                                    <div class="collection-name"></div>
+                                                </a>
+                                            </li>
+                                            <li class="collection-box-item">
+                                                <a href="../project/productDetailPage_c.html">
+                                                    <div class="collection-image ">
+                                                        <img src="image/버튼 호버_노즈워크.png" alt="image">
+                                                    </div>
+                                                    <div class="collection-name"></div>
+                                                </a>
+                                            </li>
+                                            <li class="collection-box-item">
+                                                <a href="../project/productDetailPage_c.html">
+                                                    <div class="collection-image collection-top">
+                                                        <img src="image/버튼 호버_손세정제.png" alt="image">
+                                                    </div>
+                                                    <div class="collection-name"></div>
+                                                </a>
+                                            </li>
+                                            <li class="collection-box-item">
+                                                <a href="../project/productDetailPage_c.html">
+                                                    <div class="collection-image collection-top">
+                                                        <img src="image/버튼 호버_슈가베어.png" alt="image">
+                                                    </div>
+                                                    <div class="collection-name"></div>
+                                                </a>
+                                            </li>
+                                            <li class="collection-box-item">
+                                                <a href="../project/productDetailPage_c.html">
+                                                    <div class="collection-image collection-top">
+                                                        <img src="image/버튼 호버_아이스크림.png" alt="image">
+                                                    </div>
+                                                    <div class="collection-name"></div>
+                                                </a>
+                                            </li>
+                                            <li class="collection-box-item">
+                                                <a href="../project/productDetailPage_c.html">
+                                                    <div class="collection-image">
+                                                        <img src="image/버튼 호버_버즈(pink).png" alt="image">
+                                                    </div>
+                                                    <div class="collection-name"></div>
+                                                </a>
+                                            </li>
+                                            <li class="collection-box-item">
+                                                <a href="../project/productDetailPage_c.html">
+                                                    <div class="collection-image">
+                                                        <img src="image/버튼 호버_버즈(blue).png" alt="image">
+                                                    </div>
+                                                    <div class="collection-name"></div>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="innerbox">
+                                        <a href="http://127.0.0.1:5500/%E1%84%91%E1%85%B3%E1%84%85%E1%85%A9%E1%84%8C%E1%85%A6%E1%86%A8%E1%84%90%E1%85%B3-html-%E1%84%8C%E1%85%B5%E1%84%8B%E1%85%AF%E1%86%AB/index-login.html"><img src="/Knotted.html/image/free-icon-login-1629081.png" alt="user"class="user-img"></a>
+                                            <a href="http://127.0.0.1:5500/%E1%84%91%E1%85%B3%E1%84%85%E1%85%A9%E1%84%8C%E1%85%A6%E1%86%A8%E1%84%90%E1%85%B3-html-%E1%84%8C%E1%85%B5%E1%84%8B%E1%85%AF%E1%86%AB/index-login.html" class="innerbox-login">로그인</a>
+                                            <a href="http://127.0.0.1:5500/%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8-html-%EC%A7%80%EC%9B%90/index-mypage.html"><img src="/Knotted.html/image/free-icon-user-747376.png" alt="user"class="user-img"></a>
+                                            <a href="http://127.0.0.1:5500/%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8-html-%EC%A7%80%EC%9B%90/index-mypage.html" class="innerbox-login">마이페이지</a>
+
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </div>
+
+
+
+
+    <!-- header -->
+
+    <!-- main -->
+    <main id="fullpage">
+        <section class="section" id="o_section1" data-font-color="rgb(255,255,255)">
+            <div id="container" role="main">
+                <section class="main_banner swiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <div>
+                                <img src="image/노티드 메인 배너 5.png" alt="main1"
+                                    class="banner-img banner-img1 swiper">
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div><img src="image/배경할려고했던거.png" alt="main2"
+                                    class="banner-img banner-img2 swiper">
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div><img src="image/노티드 메인 배너3.png" alt="main2" class="banner-img swiper">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-button-prev swiper-color"></div>
+                    <div class="swiper-button-next swiper-color"></div>
+                    <div class="swiper-pagination swiper-color"></div>
+                </section>
+            </div>
+        </section>
+
+
+        <!-- donut -->
+        <section class="section" id="o_section2" data-font-color="rgb(0,0,0)">
+            <section class="donut">
+                <div class="background">
+                    <div class="container">
+                        <div class="text-container">
+                            <div class="donut-title">
+                                <h1 class="main_title">KNOTTED<br>DONUT</h1>
+                                <img src="image/main-donut.png" alt="main-donut" class="main-donut-image">
+                            </div>
+                            <p class="text">노티드의 가장 대표적인 메뉴 '우유생크림도넛'은<br>
+                                한입 베어 물면 입안에 가득 퍼지는 우유크림이 기분 좋은 달콤함을 선사합니다.<br>
+                                이외에도 스테디셀러인 클래식바닐라도넛, 베리머치도넛, 얼그레이도넛 등<br>
+                                다양한 도넛들과 함께 특별한 날을 더욱 더 특별하게 만들어 드립니다.</p>
+
+                            <a href="../project/detailPage_a.html">
+                                <span class="more-font">VIEW MORE <img src="image/arrow.png" alt="arrow"
+                                        class="arrow"></span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </section>
+
+
+
+        <!-- dessert -->
+        <section class="section" id="o_section3" data-font-color="rgb(0,0,0)">
+            <section class="dessert">
+                <div class="container column">
+                    <div class="a">
+                        <h1 class="title">DESSERT</h1>
+                    </div>
+                    <div class="row-image">
+                        <div class="select-menu">
+                            <ul class="bigger">
+                                <li>
+                                    <div class="name1 cursor-pointer">CAKE</div>
+                                </li>
+                                <li>
+                                    <div class="name2 cursor-pointer nm">BREAD</div>
+                                </li>
+                                <li>
+                                    <div class="name3 cursor-pointer nm">CROFFLE</div>
+                                </li>
+                                <li>
+                                    <div class="name4 cursor-pointer nm">COFFEE</div>
+                                </li>
+                                <li>
+                                    <div class="name5 cursor-pointer nm">TEA</div>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="photo1 p1">
+                            <div class="column">
+                                <img src="https://www.gffg.co.kr/images/menu/%EC%98%90%EB%A1%9C%EC%9A%B0%EC%8A%A4%EB%A7%88%EC%9D%BC%EC%BC%80%EC%9D%B4%ED%81%AC.jpg"
+                                    alt="1" class="shadow">
+                                <span>옐로우 스마일</span>
+                            </div>
+                            <div class="column">
+                                <img src="https://www.gffg.co.kr/images/menu/%ED%93%A8%EC%96%B4%EC%8A%A4%ED%8A%B8%EB%A1%9C%EB%B2%A0%EB%A6%AC%EC%A3%BC%EB%8B%88%EC%96%B4%EC%BC%80%EC%9D%B4%ED%81%AC.jpg"
+                                    alt="2">
+                                <span>퓨어스트로베리주니어</span>
+                            </div>
+                            <div class="column">
+                                <img src="https://www.gffg.co.kr/images/menu/%EB%B8%8C%EB%9D%BC%EC%9A%B4%EB%B2%A0%EC%96%B4%EC%BC%80%EC%9D%B4%ED%81%AC.jpg"
+                                    alt="3">
+                                <span>브라운베어</span>
+                            </div>
+                            <div class="column">
+                                <img src="https://www.gffg.co.kr/images/menu/%ED%95%B4%ED%94%BC%EB%B2%84%EB%8B%88%EC%BC%80%EC%9D%B4%ED%81%AC.jpg"
+                                    alt="4">
+                                <span>해피바니</span>
+                            </div>
+                        </div>
+                        <div class="photo1 p2 display-none">
+                            <div class="column">
+                                <img src="https://www.gffg.co.kr/images/menu/%EB%A7%90%EB%8F%88%EC%86%8C%EA%B8%88%EB%B9%B5.jpg"
+                                    alt="1">
+                                <span>소금빵</span>
+                            </div>
+                            <div class="column">
+                                <img src="https://www.gffg.co.kr/images/menu/%EB%94%B8%EA%B8%B0%ED%81%AC%EB%A6%AC%EB%AF%B8.jpg"
+                                    alt="2">
+                                <span>딸기크리미</span>
+                            </div>
+                            <div class="column">
+                                <img src="https://www.gffg.co.kr/images/menu/%EB%89%B4%EC%9A%95%EB%B2%84%ED%84%B0%EB%B0%80%ED%81%AC%EC%8A%A4%EC%BD%98.jpg"
+                                    alt="3">
+                                <span>뉴욕버터밀크스콘</span>
+                            </div>
+                            <div class="qqq">
+                                <img src="https://www.gffg.co.kr/images/menu/%EC%B9%A0%EB%A6%AC%EC%86%8C%EC%84%B8%EC%A7%80%ED%8E%98%EC%9D%B4%EC%8A%A4%ED%8A%B8%EB%A6%AC.jpg"
+                                    alt="4">
+                                <span>칠리소세지페이스트리</span>
+                            </div>
+                        </div>
+                        <div class="photo1 p3 display-none">
+                            <div class="column">
+                                <img src="https://www.gffg.co.kr/images/menu/%EB%B0%80%ED%82%A4%ED%81%AC%EB%A6%BC%ED%81%AC%EB%A1%9C%ED%94%8C-2.jpg"
+                                    alt="1">
+                                <span>밀키크림크로플</span>
+                            </div>
+                            <div class="column">
+                                <img src="https://www.gffg.co.kr/images/menu/%EC%8A%A4%ED%8A%B8%EB%A1%9C%EB%B2%A0%EB%A6%AC%EB%B0%80%ED%82%A4%ED%81%AC%EB%A1%9C%ED%94%8C.jpg"
+                                    alt="2">
+                                <span>스트로베리밀키크로플</span>
+                            </div>
+                            <div class="column">
+                                <img src="https://www.gffg.co.kr/images/menu/%EB%AA%BD%EB%B8%94%EB%9E%91%ED%81%AC%EB%A1%9C%ED%94%8C.jpg"
+                                    alt="3">
+                                <span>몽블랑크로플</span>
+                            </div>
+                            <div class="column">
+                                <img src="https://www.gffg.co.kr/images/menu/%EB%88%84%ED%85%94%EB%9D%BC%ED%81%AC%EB%A6%BC%ED%81%AC%EB%A1%9C%ED%94%8C.jpg"
+                                    alt="4">
+                                <span>누텔라크림크로플</span>
+                            </div>
+                        </div>
+                        <div class="photo1 p4 display-none">
+                            <div class="column">
+                                <img src="https://www.gffg.co.kr/images/menu/KN_I%EB%85%B8%ED%8B%B0%EB%93%9C%ED%81%AC%EB%A6%BC%EC%BB%A4%ED%94%BC(1).jpg"
+                                    alt="1">
+                                <span>노티드크림커피(ICE)</span>
+                            </div>
+                            <div class="column">
+                                <img src="https://www.gffg.co.kr/images/menu/KN_I%EB%85%B8%ED%8B%B0%EB%93%9C%ED%81%AC%EB%A6%BC%EB%A7%90%EC%B0%A8(1).jpg"
+                                    alt="2">
+                                <span>노티드크림말차(ICE)</span>
+                            </div>
+                            <div class="column">
+                                <img src="https://www.gffg.co.kr/images/menu/KN_H%EB%B8%94%EB%9E%99%EC%BB%A4%ED%94%BC(%EB%B2%88).jpg"
+                                    alt="3">
+                                <span>블랙커피(HOT)</span>
+                            </div>
+                            <div class="column">
+                                <img src="https://www.gffg.co.kr/images/menu/KN_H%EC%8A%A4%EC%9C%84%ED%8A%B8%EB%B0%80%ED%81%AC%EC%BB%A4%ED%94%BC(%EB%B2%88).jpg"
+                                    alt="4">
+                                <span>스위트밀크커피(HOT)</span>
+                            </div>
+                        </div>
+                        <div class="photo1 p5 display-none">
+                            <div class="column">
+                                <img src="https://www.gffg.co.kr/images/menu/KN_%ED%94%BC%EC%B9%98%EC%86%8C%EB%8B%A4.jpg"
+                                    alt="1">
+                                <span>피치스소다(ICE)</span>
+                            </div>
+                            <div class="column">
+                                <img src="https://www.gffg.co.kr/images/menu/KN_%EB%8F%84%EC%9B%90%EC%86%8C%EB%8B%A4.jpg"
+                                    alt="2">
+                                <span>도원소다(ICE)</span>
+                            </div>
+                            <div class="column">
+                                <img src="https://www.gffg.co.kr/images/menu/KN_I%EB%A0%88%EB%AA%AC%EC%97%90%EC%9D%B4%EB%93%9C(%EB%A1%9C%EC%A6%88%EB%A7%88%EB%A6%ACX).jpg"
+                                    alt="3">
+                                <span>레몬에이드(ICE)</span>
+                            </div>
+                            <div class="column">
+                                <img src="https://www.gffg.co.kr/images/menu/KN_H%EB%A0%88%EB%AA%AC%ED%8B%B01.jpg"
+                                    alt="4">
+                                <span>레몬티(HOT)</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="qwer">
+                        <a href="../project/detailPage_a.html">
+                            <span>VIEW MORE <img src="./image/arrow.png" alt="arrow" class="arrow">
+                            </span>
+                        </a>
+                    </div>
+                </div>
+            </section>
+        </section>
+
+
+        <!-- goods -->
+        <section class="section" id="o_section4" data-font-color="rgb(255,255,255)">
+            <section class="goods">
+                <div class="container">
+                    <div class="goods-text-container">
+                        <div class="godds-title">
+                            <h1 class="goods_main_title">KNOTTED GOODS</h1>
+                            <p class="text">프리미엄 디저트 카페 노티드는
+                                보기만 해도 기분이 좋아지는 <br>노티드의 상징 '스마일리'와
+                                사랑스러운 '슈가베어' 이미지의 <br>굿즈들을 제작하여 매 시즌 선보이고 있으며 노티드를<br>
+                                사랑해주시는 모든 분들에게 더 가까운곳에서 노티드를 즐기 실 수<br>
+                                있도록 다양한 분야의 여러 브랜드와 협업을 통하여 도넛만큼<br>
+                                달콤한 재미와 행복을 선물하고자 노력하고 있습니다.</p>
+                            <a href="../project/productDetailPage_c.html">
+                                <span>VIEW MORE
+                                    <img src="image/arrow.png" alt="arrow" class="arrow">
+                                </span>
+                            </a>
+                        </div>
+                        <div class="goods-image swiper">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <img src="image/슈가베어.png" alt="banner1" class="swiper-banner1">
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="image/노티드초콜릿봉봉.png" alt="banner1" class="swiper-banner1">
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="image/홈페이지_스마일리사이클키링.png" alt="banner1"
+                                        class="swiper-banner1">
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="image/노티드와인스티커.png" alt="banner1" class="swiper-banner1">
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="image/스마일스마트톡.png" alt="banner1" class="swiper-banner1">
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="image/스토조텀블러(옐로우_화이트).png" alt="banner1"
+                                        class="swiper-banner1">
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="image/노티드w글로썸인센스홀더.png" alt="banner1"
+                                        class="swiper-banner1">
+                                </div>
+                            </div>
+                            <div class="swiper-button-prev swiper-color"></div>
+                            <div class="swiper-button-next swiper-color"></div>
+                            <div class="swiper-pagination swiper-color"></div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </section>
+
+
+        <!-- cafe knotted -->
+        <div class="section" id="o_section5" data-font-color="rgb(0,0,0)">
+            <section class="cafe">
+                <div class="container">
+                    <div class="a">
+                        <div class="row">
+                            <h1 class="title">CAFE<br>KNOTTED</h1>
+                            <div class="select-menu1">
+                                <ul class="bigger cafe-ul">
+                                    <li><a href="https://naver.me/FAQrxLlG" target="_blank">
+                                            <div class="name1 cursor-pointer nm cafe-hover">해운대</div>
+                                        </a>
+                                    </li>
+                                    <li><a href="https://naver.me/G4wbu0ha" target="_blank">
+                                            <div class="name2 cursor-pointer nm cafe-hover">제주</div>
+                                        </a>
+                                    </li>
+                                    <li><a href="https://naver.me/F5L7JT34" target="_blank">
+                                            <div class="name3 cursor-pointer nm cafe-hover">한남</div>
+                                        </a>
+                                    </li>
+                                    <li><a href="https://naver.me/GqBWBdcX" target="_blank">
+                                            <div class="name4 cursor-pointer nm cafe-hover">성수</div>
+                                        </a>
+                                    </li>
+                                    <li><a href="https://naver.me/5t4Kdy1t" target="_blank">
+                                            <div class="name5 cursor-pointer nm cafe-hover">잠실</div>
+                                        </a>
+                                    </li>
+                                    <li><a href="https://naver.me/FtYSabch" target="_blank">
+                                            <div class="name5 cursor-pointer nm cafe-hover">청담</div>
+                                        </a>
+                                    </li>
+                                    <li><a href="https://naver.me/xVljnz5S" target="_blank">
+                                            <div class="name5 cursor-pointer nm cafe-hover">강남</div>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="background">
+                        <div class="handleScroll">
+                            <div class="main-scroll-div">
+                                <div class="cover">
+                                    <div class="scroll-image">
+                                        <div class="child"><img class="child-img" src="image/방배동 카페 노티드.jpeg"
+                                                alt="image"></div>
+                                        <div class="child"><img class="child-img" src="image/카페노티드 제주.jpeg"
+                                                alt="image"></div>
+                                        <div class="child"><img class="child-img" src="image/제주애월 카페노티드.png"
+                                                alt="image"></div>
+                                        <div class="child"><img class="child-img" src="image/카페 노티드 한남.jpeg"
+                                                alt="image"></div>
+                                        <div class="child"><img class="child-img" src="image/카페노티드 제주.jpeg"
+                                                alt="image"></div>
+                                        <div class="child"><img class="child-img" src="image/방배동 카페 노티드.jpeg"
+                                                alt="image"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="qwer">
+                            <a href="#">
+                                <span>VIEW MORE <img src="image/arrow.png" alt="arrow" class="arrow">
+                                </span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+
+
+        <!-- event&promotion -->
+        <section class="section" id="o_section6" data-font-color="rgb(0,0,0)">
+            <section class="event">
+                <div class="container">
+                    <div class="text-container">
+                        <h1 class="main_title">EVENT& PROMOTION</h1>
+                        <div class="promotion">
+                            <a href="https://www.shinhancard.com/pconts/html/benefit/event/1216703_2239.html">
+                                <div class="event-1 event-img">
+                                    <div class="event-text">
+                                        <h1>신한카드 X 카페 노티드<br>
+                                            콜라보 기념 이벤트
+                                        </h1>
+                                    </div>
+                                    <img src="image/신한카드.png" alt="shinhan" class="img-size">
+                                </div>
+                            </a>
+                            <a
+                                href="https://www.samsung.com/sec/mobile-accessories/knotted-cover-for-galaxy-buds2/GP-FPR177AMCYK/">
+                                <div class="event-2 event-img">
+                                    <div class="event-text">
+                                        <div class="font-size-20">삼성닷컴 단독!</div>
+                                        <h1>Galaxy Buds2</h1>
+                                        <div class="font-size-20">달콤한 노티드 커버와<br>
+                                            삼성케어플러스 10% 할인 쿠폰 증정!
+                                        </div>
+                                    </div>
+                                    <img src="image/삼성전자.png" alt="" class="buds-img-size">
+                                </div>
+                            </a>
+                            <a
+                                href="https://socar-mkt.socar.kr/ringroad/?_branch_match_id=1095876656083152261&utm_source=wairi&utm_campaign=branding&utm_medium=event&_branch_referrer=H4sIAAAAAAAAA8soKSkottLXT8%2FXK85PTizSyy7SrwpJz8%2FzKy7PL04CAHS3rw0fAAAA">
+                                <div class="event-3 event-img">
+                                    <div class="event-text">
+                                        <div>
+                                            <img src="image/socar.png" alt="image">
+                                        </div>
+                                        <div class="font-size-20">즐겁고, 달콤한 여행을 전하기 위해<br>
+                                            쏘카와 카페노티드가 만났어요.
+                                        </div>
+                                    </div>
+                                    <img src="image/쏘카.png" alt="" class="socar-img-size">
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </section>
+
+
+
+        <!-- footer -->
+        <footer class="footer section fp-auto-height">
+            <div class="footer-container">
+                <!--footer-top -->
+                <div class="footer-top">
+                    <!--footer-top-menu -->
+                    <div class="footer-top-menu float-left">
+                        <ul>
+                            <li><a href="#">기업 및 단체구매안내</a></li>
+                            <li><a href="#">가맹상담신청</a></li>
+                            <li><a href="#">사이버신문고</a></li>
+                        </ul>
+                    </div>
+                    <!--footer-top-menu -->
+                    <!--footer-top-cs -->
+                    <div class="footer-top-cs float-right">
+                        <dl>
+                            <dt>
+                                Address
+                            </dt>
+                            <dd>
+                                서울특별시 강남구 도산대로 51길 16 (강남구 신사동 654-13), GFFG
+                            </dd>
+                        </dl>
+                        <dl>
+                            <dt>
+                                Customer Center
+                            </dt>
+                            <dd>
+                                <ul>
+                                    <li>
+                                        고객센터 : 02-545-9377 │ 팩스 : 02-545-9377
+                                    </li>
+                                </ul>
+                            </dd>
+                        </dl>
+                    </div>
+                    <!-- E : footer-top-cs -->
+                </div>
+                <!-- E : footer-top -->
+                <!-- S : footer-bottom -->
+                <div class="footer-bottom">
+                    <div class="float-left float-none">
+                        <!-- S : footer-bottom-menu -->
+                        <div class="footer-bottom-menu">
+                            <ul>
+                                <li><a href="#" class="footer-bottom-menu__link">이용약관</a></li>
+                                <li><a href="#" class="footer-bottom-menu__link"><strong>개인정보처리방침</strong></a></li>
+                                <li><a href="#" class="footer-bottom-menu__link">위치기반서비스
+                                        이용약관</a></li>
+                                <!-- <li><a href="#" class="footer-bottom-menu__link">사이트맵</a></li> -->
+                                <li><a href="#" class="footer-bottom-menu__link modal-button"
+                                        data-target="modal-popup1">이메일
+                                        무단수집거부</a></li>
+                                <li><a href="#" class="footer-bottom-menu__link modal-button"
+                                        data-target="modal-popup2">법적고지</a></li>
+                                <li><a href="#" target="_blank" class="footer-bottom-menu__link">사업자정보확인</a></li>
+                            </ul>
+                        </div>
+                        <!-- E : footer-bottom-menu -->
+                        <!-- S : footer-bottom-info -->
+                        <div class="footer-bottom-info">
+                            <ul class="footer-bottom-info__address">
+                                <li>
+                                    서울특별시 강남구 도산대로 51길 16 (강남구 신사동 654-13), GFFG
+                                </li>
+                                <li>
+                                    고객센터 : 1577-4410 <span class="span">|</span> 팩스 : 02-2058-6777
+                                </li>
+                            </ul>
+                            <ul>
+                                <li>
+                                    대표이사 : 이준범 |
+                                </li>
+                                <li>
+                                    개인정보보호책임자 : 박원지 |
+                                </li>
+                                <li>
+                                    사업자등록번호 : 404-86-01054 |
+                                </li>
+                            </ul>
+                            <ul>
+                                <li>
+                                    통신판매업종신고증 : 제 2018-서울중구-0353호 |
+                                </li>
+                                <li>
+                                    대표이메일 : helpmaster@knotted.co.kr
+                                </li>
+                            </ul>
+                        </div>
+                        <!-- E : footer-bottom-info -->
+                        <div class="footer-bottom-copy">
+                            <span>Copyright ⓒ 2021 A TWOSOME PLACE Co., LTD.</span>
+                            <span>All Rights Reserved.</span>
+                        </div>
+                    </div>
+
+                    <!-- S : footer-bottom-sns -->
+                    <div class="footer-bottom-sns float-right">
+                        <a href="https://www.facebook.com/cafeknotted.official" class="footer-bottom-sns__link icon"
+                            title="새창 열림">
+                            <span>페이스북</span>
+                        </a>
+                        <a href="https://www.instagram.com/cafeknotted/?hl=ko" class="footer-bottom-sns__link icon"
+                            title="새창 열림">
+                            <span>인스타그램</span>
+                        </a>
+                        <a href="https://pf.kakao.com/_AUDFj" class="footer-bottom-sns__link icon" title="새창 열림">
+                            <span>카카오톡</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+        <!-- 고정영역 앵커
+        <div class="main-quick-container">
+            <a href="#section1" data-menuanchor="section1" class="button button-move-top is-active">
+                <i class="ico-arrow-up"></i>
+                <span class="sr-only">맨 위로 이동</span></a>
+        </div> -->
+
+
+        <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+        <script src="./js/Knotted.js"></script>
+        <script src="./js/text-color.js"></script>
+</body>
+
+</html>
