@@ -1,0 +1,774 @@
+* {
+    -webkit-text-size-adjust: none;
+    box-sizing: border-box;
+    
+  }
+@font-face {
+    font-family: 'GangwonEduPowerExtraBoldA';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2201-2@1.0/GangwonEduPowerExtraBoldA.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+  font-family: 'SBAggroB';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2108@1.1/SBAggroB.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Happiness-Sans-Title';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2205@1.0/Happiness-Sans-Title.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+body::-webkit-scrollbar {
+  width: 8px;  /* 스크롤바의 너비 */
+}
+
+body::-webkit-scrollbar-thumb {
+  height: 30%; /* 스크롤바의 길이 */
+  background: #f2a69a; /* 스크롤바의 색상 */
+  
+  border-radius: 10px;
+}
+
+body::-webkit-scrollbar-track {
+  background: #f2a69a43;  /*스크롤바 뒷 배경 색상*/
+}
+  
+  /* ëª¨ë“  Deviceë¥¼ ìœ„í•œ ê³µí†µ ë¡œë“œ */
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,textarea,p,blockquote,th,td,figure,figcaption,span {
+    margin: 0;
+    padding: 0;
+    letter-spacing: -0.5px;
+}
+body,html,div,h1,h2,h3,h4,h5,h6,ul,ol,dl,dt,dd,p hr,button,input,form,fieldset,table,caption,th,td,header,nav,section,article,aside,footer,textarea {
+    margin: 0;
+    padding: 0;
+}
+  
+html,body {
+    width: 100%;
+    height: 100%;
+    font-family: 'NanumSquareExtraBold';
+    font-size: 10px;
+    color: #212121;
+    background-color: #fdfaf2;
+}
+  
+header,nav,section,article,aside,footer {
+    display: block;
+}
+  
+h1,h2,h3,h4,h5,h6 {
+    font-size: inherit;
+    font-weight: inherit;
+}
+  
+ol,ul {
+    list-style: none;
+}
+  
+legend,caption {
+    text-indent: -100%;
+    *text-indent: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    font-size: 0;
+    line-height: 0;
+    text-shadow: none;
+    color: transparent;
+}
+img {
+    max-width: 100%;
+    border: 0;
+    vertical-align: top;
+}
+  
+table {
+    border-spacing: 0;
+    border-collapse: collapse;
+}
+  
+table,th,td {
+    border: none;
+    text-align: left;
+}
+  
+th,label {
+    font-weight: normal;
+}
+  
+address {
+    font-style: normal;
+}
+  
+button,input {
+    border: none;
+    background: none;
+}
+  
+button:focus,input:focus {
+    outline: none;
+}
+  
+button,a,input,label {
+    cursor: pointer;
+    text-decoration: none;
+    outline: 0;
+}
+  
+input[type="radio"] {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+  
+input[type="checkbox"]:disabled, input[type="radio"]:disabled, button:disabled {
+    cursor: no-drop;
+}
+  
+input[type="checkbox"]:disabled + label, input[type="radio"]:disabled + label {
+    cursor: no-drop;
+}
+  
+a {
+    text-decoration: none;
+    color: #333;
+}
+  
+input::-ms-clear {
+    display: none;
+}
+  
+input[type="number"]::-webkit-inner-spin-button, input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+  
+textarea {
+    resize: none;
+}
+textarea:placeholder {
+    color: #6b6b6b;
+}
+textarea:focus {
+    outline: none;
+}
+
+#cursor {
+  position: absolute;
+  z-index: 9999999999999999;
+  transform: translate(10%, 10%);
+  background-image: url(../image/cursorFill3.svg);
+  background-size: contain;
+  width: 30px;
+  height: 30px;
+  pointer-events: none;
+  background-color: rgba(255, 255, 255, 0);
+}
+
+
+
+
+.menu-wrap > .inner {
+    padding-top: 180px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .menu-head {
+    width: 1400px;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .menu-head > span {
+    font-size: 65px;
+    font-family: 'GangwonEduPowerExtraBoldA';
+    font-weight: bold;
+    color: #f2a69a;
+    margin-bottom: 60px;
+  }
+  
+  .detail-wrap > .inner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #fef6d1;
+    padding-bottom: 80px;
+  }
+  
+  .detail-img,
+  .detail-info {
+    width: 50%;
+    display: flex;
+  }
+  
+  .detail-img {
+    justify-content: end;
+    background: none;
+  }
+  
+  .detail-img > div {
+    position: relative;
+    width: 416px;
+    height: 416px;
+    border-radius: 50%;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 100px;
+  }
+  
+  .detail-img > div > img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    box-shadow: 5px 5px 5px rgb(239 238 238);
+  }
+  
+  .menu-img-new {
+    position: absolute;
+    top: 40px;
+    right: 40px;
+    width: 44px;
+    height: 44px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: var(--main-Orange);
+    border-radius: 50%;
+    font-size: 14px;
+    font-family: var(--font-proxima);
+    font-weight: normal;
+    color: #fff;
+  }
+  
+  .detail-info {
+    margin-top: 100px;
+    flex-direction: column;
+    justify-content: start;
+    margin-left: 60px;
+    background: none;
+  }
+  
+  .info-sns a {
+    height: 30px;
+    width: 30px;
+  }
+  
+  .info-sns a:first-child {
+    margin-right: 16px;
+  }
+  
+  .info-name {
+    font-size: 28px;
+    font-weight: bold;
+    margin-top: 10px;
+    font-family: 'GangwonEduPowerExtraBoldA';
+    text-align: center;
+    width: 300px;
+    background: none;
+  }
+  
+  .info-size {
+    font-size: 14px;
+    font-weight: normal;
+    font-family: vaR(--font-proxima);
+    margin-top: 12px;
+  }
+  
+  .info-info {
+    font-size: 14px;
+    font-weight: normal;
+    margin-top: 30px;
+    margin-bottom: 50px;
+    line-height: 21px;
+    font-family: ;
+  }
+  
+  .info-explain {
+    margin-bottom: 50px;
+    width: 300px;
+    text-align: center;
+    line-height: 20px;
+    background: none;
+    font-size: 12px;
+    font-family: 'NanumSquareBold';
+  }
+  
+  .info-explain > div {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .info-explain > div:first-child {
+    width: 110px;
+    margin-right: 40px;
+  }
+  
+  .info-explain > div:first-child > span {
+    width: 100%;
+    font-size: 14px;
+    line-height: 14px;
+    font-weight: 500;
+    margin-bottom: 10px;
+  }
+  
+  .info-explain > div:last-child > span {
+    font-size: 14px;
+    font-weight: normal;
+    line-height: 14px;
+    margin-bottom: 10px;
+  }
+  
+  .info-explain > div:last-child > span:first-child,
+  .info-explain > div:last-child > span:last-child {
+    font-family: 'NanumSquareBold';
+  }
+  
+  .info-topping > span {
+    font-size: 14px;
+    font-weight: 500;
+  }
+  
+  .info-topping > div {
+    margin-top: 20px;
+  }
+  
+  .info-topping img {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    margin-left: 20px;
+  }
+  
+  .info-topping img:first-child {
+    margin-left: 0;
+  }
+  
+  .detail-slider-wrap > .inner {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 200px;
+    margin-top: 150px;
+  }
+  
+  .detail-slider-head {
+    margin-top: 100px;
+    margin-bottom: 40px;
+    font-family: 'GangwonEduPowerExtraBoldA';
+    font-size: 23px;
+    font-weight: bold;
+    color: #f2a69a;
+  }
+  
+  .swiper-wrap {
+    width: 1300px;
+    height: 305px;
+    position: relative;
+    margin-bottom: 60px;
+  }
+  
+  .swiper {
+    width: 1200px;
+    height: 100%;
+  }
+  
+  .swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: transparent;
+  
+    /* Center slide text vertically */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    flex-direction: column;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+  }
+  
+  .swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .menu-img {
+    position: relative;
+    width: 224px;
+    height: 224px;
+    border-radius: 50%;
+    background: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: 0.45s ease;
+  }
+  
+  .menu-img:hover {
+    background: rgba(255, 71, 19, 0.1);
+  }
+  
+  .menu-img > a {
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+  
+    margin-top: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    background-size: contain;
+    border-radius: 50%;
+    box-shadow: 5px 5px 5px rgb(239, 238, 238);
+  }
+  .menu-img > a:hover {
+    transform: scale(1.1);
+    -webkit-transition: .2s ease-in-out;
+    transition: .2s ease-in-out;
+  }
+  .menu-info {
+    width: 80%;
+    height: 60px;
+    font-size: 22px;
+    font-weight: 500;
+    text-align: center;
+    word-break: keep-all;
+    margin-top: 20px;
+  }
+  
+  .menu-img > img {
+    width: 70%;
+    height: 70%;
+    margin-top: 26px;
+    margin-left: 15px;
+  }
+  
+  .menu-img-new {
+    position: absolute;
+    top: 35px;
+    right: 35px;
+    width: 44px;
+    height: 44px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: var(--main-Orange);
+    border-radius: 50%;
+    font-size: 14px;
+    font-family: var(--font-proxima);
+    font-weight: normal;
+    color: #fff;
+  }
+  
+  .swiper-slide .menu-img-new {
+    top: 5px;
+    right: 5px;
+  }
+  
+  .swiper-button-next,
+  .swiper-button-prev {
+    color: #fff !important;
+    width: 36px !important;
+    height: 36px !important;
+    background: #f2a69a;
+    border-radius: 50%;
+    transform: translateY(-34px) !important;
+  }
+  
+  .swiper-button-next:after,
+  .swiper-button-prev:after {
+    font-size: 14px !important;
+    font-weight: 900;
+  }
+  
+  .swiper-button-next:hover,
+  .swiper-button-prev:hover  {
+    background-color: #f19688;
+    -webkit-transition: .3s ease-in-out;
+    transition: .3s ease-in-out;
+  }
+
+  
+  @media (max-width: 1550px) {
+    .menu-head {
+      width: 80%;
+    }
+  }
+  
+  @media (max-width: 1320px) {
+    .swiper-wrap {
+      width: 100%;
+    }
+    .swiper {
+      width: 90%;
+      height: 100%;
+    }
+    .menu-img {
+      width: 180px;
+      height: 180px;
+    }
+  }
+  @media (max-width: 1024px) {
+    .detail-wrap > .inner {
+      padding-top: 80px;
+      padding-bottom: 80px;
+    }
+  
+    .menu-head > span {
+      text-align: center;
+    }
+  
+    .detail-img {
+      margin-top: 0;
+      justify-content: center;
+    }
+  
+    .detail-img > div {
+      width: 280px;
+      height: 280px;
+      margin-top: 0;
+    }
+    
+    .detail-img img {
+      width: 100%;
+      margin-top: 0;
+    }
+    .detail-info {
+      justify-content: center;
+      margin-left: 0;
+      margin-top: 0;
+    }
+  
+    .info-name {
+      font-size: 26px;
+   
+    }
+  
+    .info-info {
+      margin-top: 25px;
+      margin-bottom: 40px;
+    }
+  
+    .info-topping img {
+      width: 70px;
+      height: 70px;
+      margin-left: 7px;
+    }
+  
+    .menu-info {
+      font-size: 18px;
+    }
+  }
+  @media (min-width: 961px){
+  nav {
+      max-width: 1440px;
+  }
+}
+  @media(max-width: 900px){
+    #cursor {
+      display: none;
+    }
+  }
+  @media (max-width: 700px) {
+    .menu-wrap > .inner {
+      padding-top: 140px;
+    }
+  
+    .detail-wrap > .inner {
+      flex-direction: column;
+      align-items: center;
+      padding-top: 40px;
+      padding-bottom: 40px;
+    }
+  
+    .menu-head > span {
+      font-size: 50px;
+    }
+  
+    .menu-img:hover {
+      background: unset;
+    }
+  
+    .detail-img,
+    .detail-info {
+      width: 100%;
+      align-items: center;
+    }
+  
+    .detail-img > div {
+      width: 230px;
+      height: 230px;
+    }
+  
+    .detail-img img {
+      width: 100%;
+      margin-top: 0;
+    }
+  
+    .detail-info {
+      margin-top: 60px;
+    }
+  
+    .info-topping {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+  
+    .info-topping > div {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  
+    .info-topping img {
+      width: 80px;
+      height: 80px;
+      margin: 0 5px;
+    }
+  
+    .info-info {
+      text-align: center;
+    }
+  
+    .info-explain {
+      width: 321px;
+      justify-content: space-between;
+    }
+  
+    .info-topping img:nth-child(2n) {
+      margin-left: 0;
+    }
+  
+    .info-topping img:nth-child(3),
+    .info-topping img:nth-child(4) {
+      margin-top: 0;
+    }
+  
+    .detail-slider-head {
+      margin-top: 60px;
+      margin-bottom: 20px;
+      font-size: 23px;
+    }
+  
+    .menu-img-new {
+      top: 20px;
+      right: 20px;
+      width: 40px;
+      height: 40px;
+    }
+  
+    .swiper-wrap {
+      margin-bottom: 20px;
+      height: fit-content;
+    }
+  
+    .menu-info {
+      font-size: 16px;
+    }
+  
+    .detail-slider-wrap > .inner {
+      padding-bottom: 80px;
+    }
+  }
+  
+  @media (max-width: 500px) {
+    .menu-head > span {
+      font-size: 40px;
+      margin-bottom: 40px;
+    }
+    .detail-info {
+      margin-top: 40px;
+    }
+  
+    .info-info {
+      margin-top: 20px;
+      margin-bottom: 32px;
+      padding-left: 30px;
+      padding-right: 30px;
+    }
+  
+    .info-explain {
+      display: flex;
+      margin-bottom: 35px;
+    }
+  }
+
+
+  /* 리스트 버튼 */
+  .cta {
+    font-family: 'GangwonEduPowerExtraBoldA';
+    text-decoration: none;
+    color: inherit;
+    position: relative;
+    margin: auto;
+    padding: 19px 22px;
+    transition: all 0.2s ease;
+  }
+  .cta:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    border-radius: 28px;
+    background: rgba(255, 171, 157, 0.5);
+    width: 56px;
+    height: 56px;
+    transition: all 0.3s ease;
+  }
+  .cta span {
+    position: relative;
+    font-size: 16px;
+    line-height: 18px;
+    font-weight: 900;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    vertical-align: middle;
+  }
+  .cta svg {
+    position: relative;
+    top: 0;
+    margin-left: 10px;
+    fill: none;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke: #111;
+    stroke-width: 2;
+    transform: translateX(-5px);
+    transition: all 0.3s ease;
+  }
+  .cta:hover:before {
+    width: 100%;
+    background: #f2a69a;
+  }
+  .cta:hover svg {
+    transform: translateX(0);
+  }
+  .cta:active {
+    transform: scale(0.96);
+  }
+  
+  

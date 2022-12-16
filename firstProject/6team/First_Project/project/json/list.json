@@ -1,0 +1,664 @@
+list = {
+  "Donut" : [
+    { 
+      "category" :"Donut",
+      "image": "https://www.gffg.co.kr/images/menu/%EC%9A%B0%EC%9C%A0%EC%83%9D%ED%81%AC%EB%A6%BC%EB%8F%84%EB%84%9B.jpg",
+      "name": "우유생크림도넛",
+      "price": "3,500",
+      "detail": "노티트 도넛 믹스[밀가루(밀:미국, 캐나다산), 영양강화밀가루(프랑스산), 혼합분유(혼합탈지분유(네덜란드산), 유청분말(외국산)), 가공유크림 (독일산),가공유크림[유크림(국산),농축유크림(벨기에산)], 기타가공품[우유(국산), 팜유(말레이시아산)], 가공버터(말레이시아산), 가당연유[원유(국산), 유당(미국산)]"
+    },
+    { 
+      "category" :"Donut",
+      "image": "https://www.gffg.co.kr/images/menu/%EB%B0%94%EB%8B%90%EB%9D%BC%EB%8F%84%EB%84%9B.jpg",
+      "name": "클래식바닐라도넛",
+      "price": "3,000",
+      "detail": "기타가공품[우유(국산), 팜유(말레이시아산)], 노티드 도넛 믹스[밀가루(밀:미국, 캐나다산), 영양강화밀가루(프랑스산)], 전란액(국내산)"
+    },
+    {
+      "category" :"Donut",
+      "image": "https://www.gffg.co.kr/images/menu/%EC%96%BC%EA%B7%B8%EB%A0%88%EC%9D%B4%EB%8F%84%EB%84%9B.jpg",
+      "name": "얼그레이도넛",
+      "price": "3,000",
+      "detail": "기타가공품[우유(국산), 팜유(말레이시아산), 얼그레이티(폴란드산)], 노티드 노넛 믹스[밀가루(밀:미국, 캐나다산), 영양강화밀가루(프랑스산)], 전란액(국내산),침출차(폴란드산)"
+    },
+    {
+      "category" :"Donut",
+      "image": "https://www.gffg.co.kr/images/menu/%EC%B4%88%EC%BD%94%ED%91%B8%EB%94%A9%EB%8F%84%EB%84%9B.jpg",
+      "name": "초코푸딩도넛",
+      "price": "3,500",
+      "detail": "기타가공품[우유(국산), 초콜릿(벨기에산)], 노티드 도넛 믹스[밀가루(밀:미국, 캐나다산), 영양강화밀가루(프랑스산)], 전란액(국내산)"
+    },
+    {
+      "category" :"Donut",
+      "image": "https://www.gffg.co.kr/images/menu/%EB%9D%BC%EC%A6%88%EB%B2%A0%EB%A6%AC%EB%8F%84%EB%84%9B.jpg",
+      "name": "라즈베리도넛",
+      "price": "3,000",
+      "detail": "프리마프루타라즈베리잼(이탈리아산), 노티드 도넛 믹스[밀가루(밀:미국, 캐나다산), 영양강화밀가루(프랑스산)], 전란액(국내산), 라즈베리잼(라즈베리:칠레산)"
+    },
+    {
+      "category" :"Donut",
+      "image": "https://www.gffg.co.kr/images/menu/%EC%B9%B4%EC%95%BC%EB%B2%84%ED%84%B0%EB%8F%84%EB%84%9B.jpg",
+      "name": "카야버터도넛",
+      "price": "3,500",
+      "detail": "노티드 도넛 믹스[밀가루(밀:미국, 캐나다산), 영양강화밀가루(프랑스산)], 버터(덴마크), 전란액(국내산)"
+    },
+    {
+      "category" :"Donut",
+      "image": "https://www.gffg.co.kr/images/menu/%EB%B8%94%EB%A3%A8%EB%B2%A0%EB%A6%AC%ED%81%AC%EB%A6%BC%EC%B9%98%EC%A6%88%EB%8F%84%EB%84%9B.jpg",
+      "name": "블루베리크림치즈도넛",
+      "price": "3,500","detail": "노티트 도넛 믹스[밀가루(밀:미국, 캐나다산), 영양강화밀가루(프랑스산), 혼합분유(혼합탈지분유(네덜란드산), 유청분말(외국산)), 가공유크림 (독일산),가공유크림[유크림(국산),농축유크림(벨기에산)], 기타가공품[우유(국산), 팜유(말레이시아산)], 가공버터(말레이시아산), 가당연유[원유(국산), 유당(미국산)]"
+    },
+    {
+      "category" :"Donut",
+      "image": "https://www.gffg.co.kr/images/menu/%EB%A0%88%EB%AA%AC%EC%8A%88%EA%B0%80%EB%8F%84%EB%84%9B.jpg",
+      "name": "레몬슈가도넛",
+      "price": "3,500",
+      "detail": "노티드 도넛 믹스[밀가루(밀:미국, 캐나다산), 영양강화밀가루(프랑스산)], 레몬커드[레몬농축쥬스(이탈리아산), 난황액(미국산)], 가공유크림(독일산), 전란액(국내산)"
+    },
+    {
+      "category" :"Donut",
+      "image": "https://www.gffg.co.kr/images/menu/%EB%88%84%EB%A3%BD%EC%A7%80%EC%B9%B4%EB%9D%BC%EB%A9%9C%EB%8F%84%EB%84%9B.jpg",
+      "name": "누룽지카라멜도넛",
+      "price": "3,500","detail": "노티트 도넛 믹스[밀가루(밀:미국, 캐나다산), 영양강화밀가루(프랑스산), 혼합분유(혼합탈지분유(네덜란드산), 유청분말(외국산)), 가공유크림 (독일산),가공유크림[유크림(국산),농축유크림(벨기에산)], 기타가공품[우유(국산), 팜유(말레이시아산)], 가공버터(말레이시아산), 가당연유[원유(국산), 유당(미국산)]"
+    },
+    {
+      "category" :"Donut",
+      "image": "https://www.gffg.co.kr/images/menu/%EB%AF%BC%ED%8A%B8%EC%B4%88%EC%BD%94%EB%8F%84%EB%84%9B.jpg",
+      "name": "민트초코도넛",
+      "price": "3,500",
+      "detail": "노티드 도넛 믹스[밀가루(밀:미국, 캐나다산), 영양강화밀가루(프랑스산)], 가공유크림(독일산), 식물성크림[팜핵경화유(말레이시아산), 쇼트닝{대두경화유(대두:아르헨티나산)}], 노티드블루먼트파우더[페퍼민트향(합성착향료:미국산), 페퍼민트향(합성착향료:국산)]"
+    },
+    {
+      "category" :"Donut",
+      "image": "https://www.gffg.co.kr/images/menu/%EC%8A%A4%ED%8A%B8%EB%A1%9C%EB%B2%A0%EB%A6%AC%ED%81%AC%EB%A6%BC%EB%8F%84%EB%84%9B-2.jpg",
+      "name": "스트로베리크림도넛",
+      "price": "3,800",
+      "detail": "노티드 도넛 믹스[밀가루(밀:미국, 캐나다산), 영양강화밀가루(프랑스산)], 딸기(국내산), 가공유크림(독일산)"
+    },
+    {
+      "category" :"Donut",
+      "image": "https://www.gffg.co.kr/images/menu/%ED%81%AC%EB%9F%B0%EC%B9%98%EB%9D%BC%EC%A6%88%EB%B2%A0%EB%A6%AC%EB%8F%84%EB%84%9B.jpg",
+      "name": "라즈베리크런치도넛",
+      "price": "3,500",
+      "detail": "노티트 도넛 믹스[밀가루(밀:미국, 캐나다산), 영양강화밀가루(프랑스산), 가공유크림Ⅰ (독일산),가공유크림Ⅱ[유크림(국산),농축유크림(벨기에산)], 프리마프루타라즈베리잼(이탈리아산)"
+    },
+    {
+      "category" :"Donut",
+      "image": "https://www.gffg.co.kr/images/menu/%EB%B0%94%ED%86%A0%ED%94%BC%EC%B9%98%EB%8F%84%EB%84%9B.jpg",
+      "name": "바또피치도넛",
+      "price": "3,500",
+      "detail": "노티트 도넛 믹스[밀가루(밀:미국, 캐나다산), 영양강화밀가루(프랑스산), 혼합분유(혼합탈지분유(네덜란드산), 유청분말(외국산)), 가공유크림 (독일산),가공유크림[유크림(국산),농축유크림(벨기에산)], 기타가공품[우유(국산), 팜유(말레이시아산)], 가공버터(말레이시아산), 가당연유[원유(국산), 유당(미국산)]"
+    },
+    {
+      "category" :"Donut",
+      "image": "https://www.gffg.co.kr/images/menu/5%EC%A3%BC%EB%85%84_%EC%B2%AD%EA%B7%A4%EB%8F%84%EB%84%9B.jpg",
+      "name": "제주청귤도넛",
+      "price": "3,500",
+      "detail": "노티트 도넛 믹스[밀가루(밀:미국, 캐나다산), 영양강화밀가루(프랑스산), 혼합분유(혼합탈지분유(네덜란드산), 유청분말(외국산)), 가공유크림 (독일산),가공유크림[유크림(국산),농축유크림(벨기에산)], 기타가공품[우유(국산), 팜유(말레이시아산)], 가공버터(말레이시아산), 가당연유[원유(국산), 유당(미국산)]"
+    },
+    {
+      "category" :"Donut",
+      "image": "https://www.gffg.co.kr/images/menu/%EC%A0%9C%EC%A3%BC%EB%85%B9%EC%B0%A8%EB%8F%84%EB%84%9B.jpg",
+      "name": "제주녹차도넛",
+      "price": "3,500",
+      "detail": "노티트 도넛 믹스[밀가루(밀:미국, 캐나다산), 영양강화밀가루(프랑스산), 혼합분유(혼합탈지분유(네덜란드산), 유청분말(외국산)), 가공유크림 (독일산),가공유크림[유크림(국산),농축유크림(벨기에산)], 기타가공품[우유(국산), 팜유(말레이시아산)], 가공버터(말레이시아산), 가당연유[원유(국산), 유당(미국산)]"
+    }
+],
+"Croiffle" : [
+  {
+    "category" :"Croiffle",
+    "image": "https://www.gffg.co.kr/images/menu/%EB%B0%80%ED%82%A4%ED%81%AC%EB%A6%BC%ED%81%AC%EB%A1%9C%ED%94%8C-2.jpg",
+    "name": "밀키크림크로플",
+    "price": "3,500",
+    "detail": "가공유크림Ⅰ(독일산), 빵류[강력분(밀:미국, 캐나다산), 버터(프랑스산)], 가공유크림Ⅱ[유크림(국산), 농축유크림(벨기에산)]"
+  },
+  {
+    "category" :"Croiffle",
+    "image": "https://www.gffg.co.kr/images/menu/%EC%8A%A4%ED%8A%B8%EB%A1%9C%EB%B2%A0%EB%A6%AC%EB%B0%80%ED%82%A4%ED%81%AC%EB%A1%9C%ED%94%8C.jpg",
+    "name": "스트로베리밀키크로플",
+    "price": "4,200",
+    "detail": "가공유크림Ⅰ(독일산), 빵류[강력분(밀:미국, 캐나다산), 버터(프랑스산)], 가공유크림Ⅱ[유크림(국산), 농축유크림(벨기에산)], 딸기(국내산)"
+  },
+  {
+    "category" :"Croiffle",
+    "image": "https://www.gffg.co.kr/images/menu/%EB%AA%BD%EB%B8%94%EB%9E%91%ED%81%AC%EB%A1%9C%ED%94%8C.jpg",
+    "name": "몽블랑크로플",
+    "price": "3,500",
+    "detail": "빵류[강력분(밀:미국, 캐나다산), 버터(프랑스산)], 가공유크림Ⅱ[유크림(국산), 농축유크림(벨기에산)]"
+  },
+  {
+    "category" :"Croiffle",
+    "image": "https://www.gffg.co.kr/images/menu/%EB%88%84%ED%85%94%EB%9D%BC%ED%81%AC%EB%A6%BC%ED%81%AC%EB%A1%9C%ED%94%8C.jpg",
+    "name": "누텔라크로플",
+    "price": "3,500",
+    "detail": "가공유크림Ⅰ(독일산), 빵류[강력분(밀:미국, 캐나다산), 버터(프랑스산)], 가공유크림Ⅱ[유크림(국산), 농축유크림(벨기에산)]"
+  }
+],
+"Cake" : [
+  {
+    "category" :"Cake",
+    "image": "https://www.gffg.co.kr/images/menu/%EC%98%90%EB%A1%9C%EC%9A%B0%EC%8A%A4%EB%A7%88%EC%9D%BC%EC%BC%80%EC%9D%B4%ED%81%AC.jpg",
+    "name": "옐로우스마일케이크",
+    "price": "16,000",
+    "detail": "빵류[가공유크림Ⅰ(독일산), 빵류(전란액(국내산), 밀가루(밀:미국산))], 식물성크림(팜핵경화유(말레이시아산), 쇼트닝(대두경화유(대두:아르헨티나산))], 가공유크림(독일산)"
+  },
+  {
+    "category" :"Cake",
+    "image": "https://www.gffg.co.kr/images/menu/%EB%A7%9D%EA%B3%A0%EC%8A%A4%EB%A7%88%EC%9D%BC%EC%BC%80%EC%9D%B4%ED%81%AC.jpg",
+    "name": "망고스마일케이크",
+    "price": "16,000",
+    "detail": "빵류[가공유크림Ⅰ(독일산), 빵류(전란액(국내산), 밀가루(밀:미국산))], 가공유크림 Ⅰ(독일산), 가공유크림Ⅱ[유크림(국산), 농축유크림(벨기에산)], 화이트초콜릿(벨기에산), 냉동망고퓨레(프랑스산)"
+  },
+  {
+    "category" :"Cake",
+    "image": "https://www.gffg.co.kr/images/menu/%ED%81%B4%EB%A1%9C%EB%B2%84%EC%8A%A4%EB%A7%88%EC%9D%BC%EC%BC%80%EC%9D%B4%ED%81%AC.jpg",
+    "name": "클로버스마일케이크",
+    "price": "16,000",
+    "detail": "빵류[가공유크림Ⅰ(독일산), 빵류(전란액(국내산), 밀가루(밀:미국산))], 식물성크림(팜핵경화유(말레이시아산), 쇼트닝(대두경화유(대두:아르헨티나산))], 가공유크림(독일산)"
+  },
+  {
+    "category" :"Cake",
+    "image": "https://www.gffg.co.kr/images/menu/%ED%93%A8%EC%96%B4%EC%8A%A4%ED%8A%B8%EB%A1%9C%EB%B2%A0%EB%A6%AC%EC%A3%BC%EB%8B%88%EC%96%B4%EC%BC%80%EC%9D%B4%ED%81%AC.jpg",
+    "name": "퓨어스트로베리주니어케이크",
+    "price": "16,000",
+    "detail": "빵류[가공유크림Ⅰ(독일산), 빵류(전란액(국내산), 밀가루(밀:미국산))], 식물성크림(팜핵경화유(말레이시아산), 쇼트닝(대두경화유(대두:아르헨티나산))], 가공유크림(독일산)"
+  },
+  {
+    "category" :"Cake",
+    "image": "https://www.gffg.co.kr/images/menu/%ED%81%AC%EB%9F%AC%EC%89%AC%EB%93%9C%EC%B4%88%EC%BD%94%EC%BC%80%EC%9D%B4%ED%81%AC-2.jpg",
+    "name": "크러쉬드초코케이크",
+    "price": "18,000",
+    "detail": "빵류[가공유크림Ⅰ(독일산), 빵류(전란액(국내산), 밀가루(밀:미국산))], 식물성크림(팜핵경화유(말레이시아산), 쇼트닝(대두경화유(대두:아르헨티나산))], 가공유크림(독일산)"
+  },
+  {
+    "category" :"Cake",
+    "image": "https://www.gffg.co.kr/images/menu/%ED%95%B4%ED%94%BC%EB%B2%84%EB%8B%88%EC%BC%80%EC%9D%B4%ED%81%AC.jpg",
+    "name": "해피버니케이크",
+    "price": "18,000",
+    "detail": "빵류[가공유크림Ⅰ(독일산), 빵류(전란액(국내산), 밀가루(밀:미국산))], 식물성크림(팜핵경화유(말레이시아산), 쇼트닝(대두경화유(대두:아르헨티나산))], 가공유크림(독일산)"
+  },
+  {
+    "category" :"Cake",
+    "image": "https://www.gffg.co.kr/images/menu/%EB%B8%8C%EB%9D%BC%EC%9A%B4%EB%B2%A0%EC%96%B4%EC%BC%80%EC%9D%B4%ED%81%AC.jpg",
+    "name": "브라운베어케이크",
+    "price": "16,000",
+    "detail": "빵류[가공유크림Ⅰ(독일산), 빵류(전란액(국내산), 밀가루(밀:미국산))], 식물성크림(팜핵경화유(말레이시아산), 쇼트닝(대두경화유(대두:아르헨티나산))], 가공유크림(독일산)"
+  },
+  {
+    "category" :"Cake",
+    "image": "https://www.gffg.co.kr/images/menu/%EC%8A%A4%EB%A7%88%EC%9D%BC%EA%B3%A0%EC%8A%A4%ED%8A%B8%EC%BC%80%EC%9D%B4%ED%81%AC.jpg",
+    "name": "스마일고스트케이크",
+    "price": "18,000",
+    "detail": "빵류[가공유크림Ⅰ(독일산), 빵류(전란액(국내산), 밀가루(밀:미국산))], 식물성크림(팜핵경화유(말레이시아산), 쇼트닝(대두경화유(대두:아르헨티나산))], 가공유크림(독일산)"
+  },
+  {
+    "category" :"Cake",
+    "image": "https://www.gffg.co.kr/images/menu/%EB%B0%94%EC%8A%A4%ED%81%AC%EC%B9%98%EC%A6%88%EC%BC%80%EC%9D%B4%ED%81%AC.jpg",
+    "name": "바스크치즈케이크",
+    "price": "16,000",
+    "detail": "빵류[가공유크림Ⅰ(독일산), 빵류(전란액(국내산), 밀가루(밀:미국산))], 식물성크림(팜핵경화유(말레이시아산), 쇼트닝(대두경화유(대두:아르헨티나산))], 가공유크림(독일산)"
+  },
+  {
+    "category" :"Cake",
+    "image": "https://www.gffg.co.kr/images/menu/%EA%B7%B8%EB%9E%91%EB%AA%BD%EB%B8%94%EB%9E%91.jpg",
+    "name": "그랑몽블랑케이크",
+    "price": "16,000",
+    "detail": "빵류[가공유크림Ⅰ(독일산), 빵류(전란액(국내산), 밀가루(밀:미국산))], 식물성크림(팜핵경화유(말레이시아산), 쇼트닝(대두경화유(대두:아르헨티나산))], 가공유크림(독일산)"
+  },
+  {
+    "category" :"Cake",
+    "image": "https://www.gffg.co.kr/images/menu/%EB%A7%88%EC%8A%A4%EC%B9%B4%ED%8F%AC%EB%84%A4%ED%81%B4%EB%9D%BC%EC%9A%B0%EB%93%9C%EC%BC%80%EC%9D%B4%ED%81%AC.jpg",
+    "name": "마스카포네클라우드케이크",
+    "price": "18,000",
+    "detail": "빵류[가공유크림Ⅰ(독일산), 빵류(전란액(국내산), 밀가루(밀:미국산))], 식물성크림(팜핵경화유(말레이시아산), 쇼트닝(대두경화유(대두:아르헨티나산))], 가공유크림(독일산)"
+  },
+  {
+    "category" :"Cake",
+    "image": "https://www.gffg.co.kr/images/menu/%EB%88%84%EB%A3%BD%EC%A7%80%EC%86%94%ED%8B%B0%EC%B9%B4%EB%9D%BC%EB%A9%9C.jpg",
+    "name": "누룽지솔티카라멜케이크",
+    "price": "5,000",
+    "detail": "빵류[가공유크림Ⅰ(독일산), 빵류(전란액(국내산), 밀가루(밀:미국산))], 식물성크림(팜핵경화유(말레이시아산), 쇼트닝(대두경화유(대두:아르헨티나산))], 가공유크림(독일산)"
+  },
+  {
+    "category" :"Cake",
+    "image": "https://www.gffg.co.kr/images/menu/%EB%B0%94%EB%8B%90%EB%9D%BC%EC%8A%A4%EB%A7%88%EC%9D%BC%EC%BC%80%EC%9D%B4%ED%81%AC.jpg",
+    "name": "바닐라생크림케이크",
+    "price": "13,000",
+    "detail": "빵류[가공유크림Ⅰ(독일산), 빵류(전란액(국내산), 밀가루(밀:미국산))], 식물성크림(팜핵경화유(말레이시아산), 쇼트닝(대두경화유(대두:아르헨티나산))], 가공유크림(독일산)"
+  }
+],
+"Dessert" : [
+  {
+    "category" :"Dessert",
+    "image": "https://www.gffg.co.kr/images/menu/%EB%94%B8%EA%B8%B0%ED%81%AC%EB%A3%A8%EC%95%84%EC%83%81.jpg",
+    "name": "딸기크루아상",
+    "price": "4,500",
+    "detail": "빵류[강력분(밀:미국, 캐나다산), 버터(프랑스산)], 가공유크림(독일산), 기타가공품[우유(국산), 팜유(말레이시아산)], 딸기(국내산)"
+  },
+  {
+    "category" :"Dessert",
+    "image": "https://www.gffg.co.kr/images/menu/%EB%B0%80%ED%82%A4%ED%81%AC%EB%A3%A8%EC%95%84%EC%83%81.jpg",
+    "name": "밀키크루아상",
+    "price": "4,500",
+    "detail": "빵류[강력분(밀:미국,캐나다산), 버터(프랑스산)], 가공유크림(독일산), 기타가공품[우유(국산), 팜유(말레이시아산)]"
+  },
+  {
+    "category" :"Dessert",
+    "image": "https://www.gffg.co.kr/images/menu/%EC%98%A4%EB%A0%88%EC%98%A4%ED%81%AC%EB%A3%A8%EC%95%84%EC%83%81.jpg",
+    "name": "오레오크루아상",
+    "price": "4,500",
+    "detail": "빵류[강력분(밀:미국, 캐나다산), 버터(프랑스산)], 가공유크림Ⅰ(독일산), 가공유크림Ⅱ[유크림(국산), 농축유크림(벨기에산)]"
+  },
+  {
+    "category" :"Dessert",
+    "image": "https://www.gffg.co.kr/images/menu/%EC%B9%B4%EC%95%BC%ED%81%AC%EB%A3%A8%EC%95%84%EC%83%81.jpg",
+    "name": "카야크루아상",
+    "price": "4,300",
+    "detail": "빵류[강력분(밀:미국, 캐나다산), 버터(프랑스산)], 난백액(국내산), 과체가공품(필리핀산)"
+  },
+  {
+    "category" :"Dessert",
+    "image": "https://www.gffg.co.kr/images/menu/%ED%95%9C%EB%9D%BC%EB%B4%89%ED%81%AC%EB%A6%AC%EB%AF%B8.jpg",
+    "name": "한라봉크리미",
+    "price": "4,000",
+    "detail": "가공유크림Ⅰ(독일산), 노티드 도넛 믹스[밀가루(밀: 미국, 캐나다산), 영양강화밀가루(프랑스산)], 가공유크림Ⅱ[유크림(국산), 농축유크림(벨기에산)], 한라봉(귤국)"
+  },
+  {
+    "category" :"Dessert",
+    "image": "https://www.gffg.co.kr/images/menu/%EB%94%B8%EA%B8%B0%ED%81%AC%EB%A6%AC%EB%AF%B8.jpg",
+    "name": "딸기크리미",
+    "price": "4,000",
+    "detail": "가공유크림Ⅰ(독일산), 노티드 도넛 믹스[밀가루(밀: 미국, 캐나다산), 영양강화밀가루(프랑스산)], 가공유크림Ⅱ[유크림(국산), 농축유크림(벨기에산)], 딸기(국내산)"
+  },
+  {
+    "category" :"Dessert",
+    "image": "https://www.gffg.co.kr/images/menu/%EB%B8%94%EB%A3%A8%EB%B2%A0%EB%A6%AC%ED%81%AC%EB%A6%AC%EB%AF%B8.jpg",
+    "name": "블루베리크리미",
+    "price": "4.000",
+    "detail": "가공유크림Ⅰ(독일산), 노티드 도넛 믹스[밀가루(밀: 미국, 캐나다산), 영양강화밀가루(프랑스산)], 가공유크림Ⅱ[유크림(국산), 농축유크림(벨기에산)], 블루베리(국내산)"
+  },
+  {
+    "category" :"Dessert",
+    "image": "https://www.gffg.co.kr/images/menu/%ED%94%BC%EA%B7%B8%EC%9E%A0%EB%B4%89%EB%B5%88%EB%A5%B4.jpg",
+    "name": "피그잠봉뵈르",
+    "price": "4,500",
+    "detail": "빵류[강력분(밀:미국,캐나다산), 버터(프랑스산)], 가공유크림(독일산), 기타가공품[우유(국산), 팜유(말레이시아산)]"
+  },
+  {
+    "category" :"Dessert",
+    "image": "https://www.gffg.co.kr/images/menu/%EB%B0%94%EB%8B%90%EB%9D%BC%ED%91%B8%EB%94%A9%ED%8C%8C%EC%9D%B4.jpg",
+    "name": "바닐라푸딩파이",
+    "price": "2,500",
+    "detail": "빵류[강력분(밀:미국,캐나다산), 버터(프랑스산)], 가공유크림(독일산), 기타가공품[우유(국산), 팜유(말레이시아산)]"
+  },
+  {
+    "category" :"Dessert",
+    "image": "https://www.gffg.co.kr/images/menu/%EB%9D%BC%EC%9D%B4%EC%8A%A4%ED%81%AC%EB%9E%99%EC%B9%98%EC%A6%88%EB%B3%BC.jpg",
+    "name": "라이스크랙치즈볼",
+    "price": "4,000",
+    "detail": "빵류[강력분(밀:미국,캐나다산), 버터(프랑스산)], 가공유크림(독일산), 기타가공품[우유(국산), 팜유(말레이시아산)]"
+  },
+  {
+    "category" :"Dessert",
+    "image": "https://www.gffg.co.kr/images/menu/%EC%9A%B0%EC%9C%A0%EB%8B%88%EC%B9%B4%ED%8E%98%EB%B2%88.jpg",
+    "name": "우유니카페번",
+    "price": "3,800",
+    "detail": "빵류[강력분(밀:미국,캐나다산), 버터(프랑스산)], 가공유크림(독일산), 기타가공품[우유(국산), 팜유(말레이시아산)]"
+  },
+  {
+    "category" :"Dessert",
+    "image": "https://www.gffg.co.kr/images/menu/%EB%A7%90%EB%8F%88%EC%86%8C%EA%B8%88%EB%B9%B5.jpg",
+    "name": "말돈소금빵",
+    "price": "3,500",
+    "detail": "빵류[강력분(밀:미국,캐나다산), 버터(프랑스산)], 가공유크림(독일산), 기타가공품[우유(국산), 팜유(말레이시아산)]"
+  },
+  {
+    "category" :"Dessert",
+    "image": "https://www.gffg.co.kr/images/menu/%EB%9D%BC%EC%9D%B4%EC%8A%A4%EC%B9%98%EC%A6%88%EC%86%8C%EA%B8%88%EB%B9%B5.jpg",
+    "name": "라이스치즈소금빵",
+    "price": "3,500",
+    "detail": "빵류[강력분(밀:미국,캐나다산), 버터(프랑스산)], 가공유크림(독일산), 기타가공품[우유(국산), 팜유(말레이시아산)]"
+  },
+  {
+    "category" :"Dessert",
+    "image": "https://www.gffg.co.kr/images/menu/%EC%97%90%EB%B8%8C%EB%A6%AC%EB%9D%B5%EC%86%8C%EA%B8%88%EB%B9%B5.jpg",
+    "name": "에브리띵소금빵",
+    "price": "3,800",
+    "detail": "빵류[강력분(밀:미국,캐나다산), 버터(프랑스산)], 가공유크림(독일산), 기타가공품[우유(국산), 팜유(말레이시아산)]"
+  },
+  {
+    "category" :"Dessert",
+    "image": "https://www.gffg.co.kr/images/menu/%EB%89%B4%EC%9A%95%EB%B2%84%ED%84%B0%EB%B0%80%ED%81%AC%EC%8A%A4%EC%BD%98.jpg",
+    "name": "뉴욕버터밀크스콘",
+    "price": "3,500",
+    "detail": "영양강화밀가루(프랑스산), 버터(덴마크산), 우유(원유:국산)"
+  },
+  {
+    "category" :"Dessert",
+    "image": "https://www.gffg.co.kr/images/menu/%ED%86%B5%EB%B0%80%ED%94%BC%EC%B9%B8%EC%8A%A4%EC%BD%98.jpg",
+    "name": "통밀피칸스콘",
+    "price": "3,800",
+    "detail": "밀가루(밀:터키산), 로투스비스코프(벨기에산), 버터(프랑스산)"
+  },
+  {
+    "category" :"Dessert",
+    "image": "https://www.gffg.co.kr/images/menu/%EC%B4%88%EC%BD%94%EB%88%84%ED%85%94%EB%9D%BC%EC%8A%A4%EC%BD%98.jpg",
+    "name": "초코누텔라스콘",
+    "price": "4,000",
+    "detail": "밀가루(밀:터키산), 로투스비스코프(벨기에산), 버터(프랑스산)"
+  },
+  {
+    "category" :"Dessert",
+    "image": "https://www.gffg.co.kr/images/menu/%EC%BF%A0%ED%82%A4%EC%95%A4%EC%B4%88%EC%BD%94%ED%8C%8C%EC%9D%B4-2.jpg",
+    "name": "쿠키&초코파이",
+    "price": "2,500",
+    "detail": "밀가루(밀:터키산), 로투스비스코프(벨기에산), 버터(프랑스산)"
+  },
+  {
+    "category" :"Dessert",
+    "image": "https://www.gffg.co.kr/images/menu/%EB%A7%88%EC%8A%A4%EC%B9%B4%ED%8F%AC%EB%84%A4%EC%B4%88%EC%BD%94%EC%B9%A9%EC%B9%B4%EB%86%80%EB%A6%AC.jpg",
+    "name": "마스카포네초코칩카놀리",
+    "price": "4,000",
+    "detail": "밀가루(밀:터키산), 로투스비스코프(벨기에산), 버터(프랑스산)"
+  },
+  {
+    "category" :"Dessert",
+    "image": "https://www.gffg.co.kr/images/menu/%EB%A7%88%EC%8A%A4%EC%B9%B4%ED%8F%AC%EB%84%A4%ED%94%BC%EC%8A%A4%ED%83%80%EC%B9%98%EC%98%A4%EC%B9%B4%EB%86%80%EB%A6%AC.jpg",
+    "name": "마스카포네피스타치오카놀리",
+    "price": "4,000",
+    "detail": "밀가루(밀:터키산), 로투스비스코프(벨기에산), 버터(프랑스산)"
+  },
+  {
+    "category" :"Dessert",
+    "image": "https://www.gffg.co.kr/images/menu/%EC%86%8C%EC%84%B8%EC%A7%80%ED%8E%98%EC%9D%B4%EC%8A%A4%ED%8A%B8%EB%A6%AC.jpg",
+    "name": "소세지페이스트리",
+    "price": "4,500",
+    "detail": "밀가루(밀:터키산), 로투스비스코프(벨기에산), 버터(프랑스산)"
+  },
+  {
+    "category" :"Dessert",
+    "image": "https://www.gffg.co.kr/images/menu/%EC%B9%A0%EB%A6%AC%EC%86%8C%EC%84%B8%EC%A7%80%ED%8E%98%EC%9D%B4%EC%8A%A4%ED%8A%B8%EB%A6%AC.jpg",
+    "name": "칠리소세지페이스트리",
+    "price": "4,500",
+    "detail": "밀가루(밀:터키산), 로투스비스코프(벨기에산), 버터(프랑스산)"
+  },
+  {
+    "category" :"Dessert",
+    "image": "https://www.gffg.co.kr/images/menu/%ED%99%94%EC%9D%B4%ED%8A%B8%EB%B8%8C%EB%9D%BC%EC%9A%B0%EB%8B%88.jpg",
+    "name": "화이트브라우니",
+    "price": "5,200",
+    "detail": "빵류[강력분(밀:미국,캐나다산), 버터(프랑스산)], 가공유크림(독일산), 기타가공품[우유(국산), 팜유(말레이시아산)]"
+  },
+  {
+    "category" :"Dessert",
+    "image": "https://www.gffg.co.kr/images/menu/%EB%8B%A4%ED%81%AC%ED%94%BC%EC%B9%B8%EB%B8%8C%EB%9D%BC%EC%9A%B0%EB%8B%88.jpg",
+    "name": "다크피칸브라우니",
+    "price": "5,200",
+    "detail": "밀가루(밀:터키산), 로투스비스코프(벨기에산), 버터(프랑스산)"
+  }
+],
+"Coffee" : [
+  {
+    "category" :"Coffee",
+    "image": "https://www.gffg.co.kr/images/menu/KN_%EC%97%90%EC%8A%A4%ED%94%84%EB%A0%88%EC%86%8C.jpg",
+    "name": "에스프레소",
+    "price": "3,000",
+    "detail": "밀가루(밀:터키산), 로투스비스코프(벨기에산), 버터(프랑스산)"
+  },
+  {
+    "category" :"Coffee",
+    "image": "https://www.gffg.co.kr/images/menu/H%EC%95%84%EB%A9%94%EB%A6%AC%EC%B9%B4%EB%85%B8.jpg",
+    "name": "아메리카노(HOT)",
+    "price": "4,000",
+    "detail": "밀가루(밀:터키산), 로투스비스코프(벨기에산), 버터(프랑스산)"
+  },
+  {
+    "category" :"Coffee",
+    "image": "https://www.gffg.co.kr/images/menu/KN_I%EC%95%84%EB%A9%94%EB%A6%AC%EC%B9%B4%EB%85%B81.jpg",
+    "name": "아메리카노(ICE)",
+    "price": "4,000",
+    "detail": "밀가루(밀:터키산), 로투스비스코프(벨기에산), 버터(프랑스산)"
+  },
+  {
+    "category" :"Coffee",
+    "image": "https://www.gffg.co.kr/images/menu/KN_H%EB%B0%94%EB%8B%90%EB%9D%BC%EB%9D%BC%EB%96%BC.jpg",
+    "name": "카페라떼(HOT)",
+    "price": "5,000",
+    "detail": "밀가루(밀:터키산), 로투스비스코프(벨기에산), 버터(프랑스산)"
+  },
+  {
+    "category" :"Coffee",
+    "image": "https://www.gffg.co.kr/images/menu/KN_I%EC%B9%B4%ED%8E%98%EB%9D%BC%EB%96%BC2.jpg",
+    "name": "카페라떼(ICE)",
+    "price": "5,000",
+    "detail": "밀가루(밀:터키산), 로투스비스코프(벨기에산), 버터(프랑스산)"
+  },
+  {
+    "category" :"Coffee",
+    "image": "https://www.gffg.co.kr/images/menu/KN_H%ED%94%8C%EB%9E%AB%ED%99%94%EC%9D%B4%ED%8A%B82.jpg",
+    "name": "플랫화이트(HOT)",
+    "price": "4,500",
+    "detail": "밀가루(밀:터키산), 로투스비스코프(벨기에산), 버터(프랑스산)"
+  },
+  {
+    "category" :"Coffee",
+    "image": "https://www.gffg.co.kr/images/menu/KN_H%EB%B0%94%EB%8B%90%EB%9D%BC%EB%9D%BC%EB%96%BC.jpg",
+    "name": "바닐라라떼(HOT)",
+    "price": "5,500",
+    "detail": "밀가루(밀:터키산), 로투스비스코프(벨기에산), 버터(프랑스산)"
+  },
+  {
+    "category" :"Coffee",
+    "image": "https://www.gffg.co.kr/images/menu/KN_I%EB%B0%94%EB%8B%90%EB%9D%BC%EB%9D%BC%EB%96%BC2.jpg",
+    "name": "바닐라라떼(ICE)",
+    "price": "5,500",
+    "detail": "밀가루(밀:터키산), 로투스비스코프(벨기에산), 버터(프랑스산)"
+    
+  },
+  {
+    "category" :"Coffee",
+    "image": "https://www.gffg.co.kr/images/menu/KN_I%EB%85%B8%ED%8B%B0%EB%93%9C%ED%81%AC%EB%A6%BC%EC%BB%A4%ED%94%BC(1).jpg",
+    "name": "노티드크림커피(ICE)",
+    "price": "5,800",
+    "detail": "밀가루(밀:터키산), 로투스비스코프(벨기에산), 버터(프랑스산)"
+  },
+  {
+    "category" :"Coffee",
+    "image": "https://www.gffg.co.kr/images/menu/KN_H%EB%B8%94%EB%9E%99%EC%BB%A4%ED%94%BC(%EB%B2%88).jpg",
+    "name": "노티드데일리브루잉",
+    "price": "4,000",
+    "detail": "밀가루(밀:터키산), 로투스비스코프(벨기에산), 버터(프랑스산)"
+  },
+  {
+    "category" :"Coffee",
+    "image": "https://www.gffg.co.kr/images/menu/KN_H%EB%B8%94%EB%9E%99%EC%BB%A4%ED%94%BC(%EB%B2%88).jpg",
+    "name": "블랙커피(HOT)",
+    "price": "4,000",
+    "detail": "밀가루(밀:터키산), 로투스비스코프(벨기에산), 버터(프랑스산)"
+  },
+  {
+    "category" :"Coffee",
+    "image": "https://www.gffg.co.kr/images/menu/KN_I%EB%B8%94%EB%9E%99%EC%BB%A4%ED%94%BC(%EB%B2%88).jpg",
+    "name": "블랙커피(ICE)",
+    "price": "4,000",
+    "detail": "밀가루(밀:터키산), 로투스비스코프(벨기에산), 버터(프랑스산)"
+  },
+  {
+    "category" :"Coffee",
+    "image": "https://www.gffg.co.kr/images/menu/KN_H%EC%8A%A4%EC%9C%84%ED%8A%B8%EB%B0%80%ED%81%AC%EC%BB%A4%ED%94%BC(%EB%B2%88).jpg",
+    "name": "스위트밀크커피(HOT)",
+    "price": "4,500",
+    "detail": "밀가루(밀:터키산), 로투스비스코프(벨기에산), 버터(프랑스산)"
+  },
+  {
+    "category" :"Coffee",
+    "image": "https://www.gffg.co.kr/images/menu/KN_I%EC%8A%A4%EC%9C%84%ED%8A%B8%EB%B0%80%ED%81%AC%EC%BB%A4%ED%94%BC(%EB%B2%88).jpg",
+    "name": "스위트밀크커피(ICE)",
+    "price": "4,500",
+    "detail": "밀가루(밀:터키산), 로투스비스코프(벨기에산), 버터(프랑스산)"
+  },
+  {
+    "category" :"Coffee",
+    "image": "https://www.gffg.co.kr/images/menu/KN_I%ED%81%AC%EB%A6%BC%EC%BD%9C%EB%93%9C%EB%B8%8C%EB%A3%A8(%EB%B2%88).jpg",
+    "name": "크림콜드브루(ICE)",
+    "price": "5,000",
+    "detail": "밀가루(밀:터키산), 로투스비스코프(벨기에산), 버터(프랑스산)"
+  },
+  {
+    "category" :"Coffee",
+    "image": "https://www.gffg.co.kr/images/menu/KN_I%ED%81%AC%EB%A6%BC%EC%BD%9C%EB%93%9C%EB%B8%8C%EB%A3%A8%EB%B0%80%ED%81%AC(%EB%B2%88).jpg",
+    "name": "크림콜드브루밀크(ICE)",
+    "price": "5,500",
+    "detail": "밀가루(밀:터키산), 로투스비스코프(벨기에산), 버터(프랑스산)"
+  }
+],
+"Tea" : [
+  {
+    "category" :"Tea",
+    "image": "https://www.gffg.co.kr/images/menu/KN_H%EC%8B%9C%EB%82%98%EB%AA%AC%ED%8A%B8%EB%A6%AC%EB%9D%BC%EB%96%BC2.jpg",
+    "name": "시나몬트리라떼(HOT)",
+    "price": "6,000",
+    "detail": "밀가루(밀:터키산), 로투스비스코프(벨기에산), 버터(프랑스산)"
+  },
+  {
+    "category" :"Tea",
+    "image": "https://www.gffg.co.kr/images/menu/KN_H%ED%81%AC%EB%A6%AC%EC%8A%A4%EB%A7%88%EC%8A%A4%EC%9C%A0%EC%9E%90%EB%B1%85%EC%87%BC.jpg",
+    "name": "크리스마스유자뱅쇼(HOT)",
+    "price": "6,300",
+    "detail": "밀가루(밀:터키산), 로투스비스코프(벨기에산), 버터(프랑스산)"
+  },
+  {
+    "category" :"Tea",
+    "image": "https://www.gffg.co.kr/images/menu/KN_I%ED%81%AC%EB%A6%AC%EC%8A%A4%EB%A7%88%EC%8A%A4%EC%9C%A0%EC%9E%90%EB%B1%85%EC%87%BC.jpg",
+    "name": "크리스마스유자뱅쇼(ICE)",
+    "price": "6,300",
+    "detail": "밀가루(밀:터키산), 로투스비스코프(벨기에산), 버터(프랑스산)"
+  },
+  {
+    "category" :"Tea",
+    "image": "https://www.gffg.co.kr/images/menu/KN_H%ED%99%94%EC%9D%B4%ED%8A%B8%EC%B4%88%EC%BD%9C%EB%A6%BF%EB%AF%BC%ED%8A%B8%ED%8B%B0.jpg",
+    "name": "화이트초콜릿민트티(HOT)",
+    "price": "6,300",
+    "detail": "밀가루(밀:터키산), 로투스비스코프(벨기에산), 버터(프랑스산)"
+  },
+  {
+    "category" :"Tea",
+    "image": "https://www.gffg.co.kr/images/menu/KN_I%ED%99%94%EC%9D%B4%ED%8A%B8%EC%B4%88%EC%BD%9C%EB%A6%BF%EB%AF%BC%ED%8A%B8%ED%8B%B0.jpg",
+    "name": "화이트초콜릿민트티(ICE)",
+    "price": "6,300",
+    "detail": "밀가루(밀:터키산), 로투스비스코프(벨기에산), 버터(프랑스산)"
+  },
+  {
+    "category" :"Tea",
+    "image": "https://www.gffg.co.kr/images/menu/KN_%EC%91%A5%EC%91%A5%ED%81%AC%EB%A6%BC%EB%9D%BC%EB%96%BC.jpg",
+    "name": "쑥쑥크림라떼(ICE)",
+    "price": "6,000",
+    "detail": "밀가루(밀:터키산), 로투스비스코프(벨기에산), 버터(프랑스산)"
+  },
+  {
+    "category" :"Tea",
+    "image": "https://www.gffg.co.kr/images/menu/KN_I%EB%85%B8%ED%8B%B0%EB%93%9C%ED%81%AC%EB%A6%BC%EB%A7%90%EC%B0%A8(1).jpg",
+    "name": "노티드크림말차(ICE)",
+    "price": "6,000",
+    "detail": "밀가루(밀:터키산), 로투스비스코프(벨기에산), 버터(프랑스산)"
+  },
+  {
+    "category" :"Tea",
+    "image": "https://www.gffg.co.kr/images/menu/KN_H%EB%A0%88%EB%AA%AC%ED%8B%B01.jpg",
+    "name": "레몬티(HOT)",
+    "price": "5,000",
+    "detail": "밀가루(밀:터키산), 로투스비스코프(벨기에산), 버터(프랑스산)"
+  },
+  {
+    "category" :"Tea",
+    "image": "https://www.gffg.co.kr/images/menu/KN_I%EB%A0%88%EB%AA%AC%EC%97%90%EC%9D%B4%EB%93%9C(%EB%A1%9C%EC%A6%88%EB%A7%88%EB%A6%ACX).jpg",
+    "name": "레몬에이드(ICE)",
+    "price": "5,500",
+    "detail": "밀가루(밀:터키산), 로투스비스코프(벨기에산), 버터(프랑스산)"
+  },
+  {
+    "category" :"Tea",
+    "image": "https://www.gffg.co.kr/images/menu/KN_H%EC%B4%88%EC%BD%9C%EB%A0%9B%EB%93%9C%EB%A7%81%ED%81%AC.jpg",
+    "name": "초콜릿드링크(HOT)",
+    "price": "5,000",
+    "detail": "밀가루(밀:터키산), 로투스비스코프(벨기에산), 버터(프랑스산)"
+  },
+  {
+    "category" :"Tea",
+    "image": "https://www.gffg.co.kr/images/menu/KN_I%EC%B4%88%EC%BD%9C%EB%A0%9B%EB%93%9C%EB%A7%81%ED%81%AC.jpg",
+    "name": "초콜릿드링크(ICE)",
+    "price": "5,000",
+    "detail": "밀가루(밀:터키산), 로투스비스코프(벨기에산), 버터(프랑스산)"
+  },
+  {
+    "category" :"Tea",
+    "image": "https://www.gffg.co.kr/images/menu/KN_H%EB%B0%80%ED%81%AC%ED%8B%B0.jpg",
+    "name": "밀크티(HOT)",
+    "price": "6,000",
+    "detail": "밀가루(밀:터키산), 로투스비스코프(벨기에산), 버터(프랑스산)"
+  },
+  {
+    "category" :"Tea",
+    "image": "https://www.gffg.co.kr/images/menu/KN_I%EB%B0%80%ED%81%AC%ED%8B%B0.jpg",
+    "name": "밀크티(ICE)",
+    "price": "6,000",
+    "detail": "밀가루(밀:터키산), 로투스비스코프(벨기에산), 버터(프랑스산)"
+  },
+  {
+    "category" :"Tea",
+    "image": "https://www.gffg.co.kr/images/menu/KN_H%EC%BA%90%EB%AA%A8%EB%A7%88%EC%9D%BC%EC%95%A0%ED%94%8C%ED%8B%B0(1).jpg",
+    "name": "애플캐모마일티(HOT)",
+    "price": "5,800",
+    "detail": "밀가루(밀:터키산), 로투스비스코프(벨기에산), 버터(프랑스산)"
+  },
+  {
+    "category" :"Tea",
+    "image": "https://www.gffg.co.kr/images/menu/KN_I%EC%BA%90%EB%AA%A8%EB%A7%88%EC%9D%BC%EC%95%A0%ED%94%8C%ED%8B%B0(1).jpg",
+    "name": "애플캐모마일티(ICE)",
+    "price": "5,800",
+    "detail": "밀가루(밀:터키산), 로투스비스코프(벨기에산), 버터(프랑스산)"
+  },
+  {
+    "category" :"Tea",
+    "image": "https://www.gffg.co.kr/images/menu/KN_I%EB%A1%9C%EB%93%9C%EB%B2%A0%EB%A5%B4%EA%B0%80%EB%AA%BB.jpg",
+    "name": "로드베르가못(ICE)",
+    "price": "5,000",
+    "detail": "밀가루(밀:터키산), 로투스비스코프(벨기에산), 버터(프랑스산)"
+  },
+  {
+    "category" :"Tea",
+    "image": "https://www.gffg.co.kr/images/menu/KN_%EB%A0%88%EB%93%9C%EB%84%A5%ED%83%80(HOT).jpg",
+    "name": "레드넥타(HOT)",
+    "price": "5,000",
+    "detail": "밀가루(밀:터키산), 로투스비스코프(벨기에산), 버터(프랑스산)"
+  },
+  {
+    "category" :"Tea",
+    "image": "https://www.gffg.co.kr/images/menu/KN_I%EB%A9%94%EB%8F%84%EC%9A%B0.jpg",
+    "name": "레드넥타(ICE)",
+    "price": "5,000",
+    "detail": "밀가루(밀:터키산), 로투스비스코프(벨기에산), 버터(프랑스산)"
+  },
+  {
+    "category" :"Tea",
+    "image": "https://www.gffg.co.kr/images/menu/KN_H%EB%A9%94%EB%8F%84%EC%9A%B0.jpg",
+    "name": "메도우(HOT)",
+    "price": "5,000",
+    "detail": "밀가루(밀:터키산), 로투스비스코프(벨기에산), 버터(프랑스산)"
+  },
+  {
+    "category" :"Tea",
+    "image": "https://www.gffg.co.kr/images/menu/KN_I%EB%A9%94%EB%8F%84%EC%9A%B0.jpg",
+    "name": "메도우(ICE)",
+    "price": "5,000",
+    "detail": "밀가루(밀:터키산), 로투스비스코프(벨기에산), 버터(프랑스산)"
+  },
+  {
+    "category" :"Tea",
+    "image": "https://www.gffg.co.kr/images/menu/KN_H%EB%A1%9C%EB%93%9C%EB%B2%A0%EB%A5%B4%EA%B0%80%EB%AA%BB.jpg",
+    "name": "로드베르가못(HOT)",
+    "price": "5,000",
+    "detail": "밀가루(밀:터키산), 로투스비스코프(벨기에산), 버터(프랑스산)"
+  }
+]}
+

@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+  <link href="https://hangeul.pstatic.net/hangeul_static/css/nanum-square.css" rel="stylesheet">
+  <link rel="stylesheet" href="./css/detailPage_a.css">
+  <link rel="stylesheet" href="../common(header,footer)/header.css">
+  <title>상품상세페이지</title>
+</head>
+
+<body style="overflow-x:hidden; overflow-y:auto;">
+  <div id="cursor"></div>
+  <script src="./js/mouseCurser.js"></script>
+  <!-- header -->
+  <div id="wrapper">
+    <div id="header">
+      <nav>
+        <div class="logo" data-menuanchor="section1">
+          <a href="../Knotted.html/knotted(fullpage).html">KNOTTED</a>
+        </div>
+        <div class="category">
+          <ul class="menu">
+            <li data-menuanchor="section2" class="none768">
+              <a href="/project/detailPage_a.html">MENU</a>
+            </li>
+            <li data-menuanchor="section4" class="none768">
+              <a href="/project/productDetailPage_c.html">GOODS</a>
+            </li>
+            <li data-menuanchor="section5" class="none768">
+              <a href="http://127.0.0.1:5500/Knotted.html/knotted(fullpage).html#section5">CAFE</a>
+            </li>
+            <li data-menuanchor="section6" class="none768">
+              <a href="http://127.0.0.1:5500/Knotted.html/knotted(fullpage).html#section6">EVENT & PROMOTION</a>
+            </li>
+            <li data-menuanchor="section7" class="none768">
+              <a href="http://127.0.0.1:5500/Knotted.html/knotted(fullpage).html#section7">ABOUT</a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- search form -->
+        <div>
+          <div class="btn hover">
+            <a href="../프로젝트-html-지원/index-login.html">
+              <span class="btn-login">LOG I N</span>
+            </a>
+          </div>
+          <button type='button' id="modal_btn" class="btn-allmenu btn-allmenu1"></button>
+          <div class="black_bg"></div>
+          <div class="modal_wrap">
+            <div class="modal_close"><a href="#"><img src="image1/버튼 호버_창닫기 icon.png"></a></div>
+            <div class="search-div">
+              <form action="" class="search-form">
+                <input type="text" class="search-input" placeholder="what's your favorite?">
+              </form>
+            </div>
+            <!-- 팝업 호버 -->
+            <div class="search-popup">
+              <div class="search-popup-content">
+                <div class="search-popup-content-left float-left">
+                  <div class="search-popup-title"> Popular </div>
+                  <div class="popular-keyword">
+                    <ul class="popular-keyword-list ul">
+                      <li class="popular-keyword-item">
+                        <a href="../project/detailPage_a.html">우유 생크림 도넛</a>
+                      </li>
+                      <li class="popular-keyword-item">
+                        <a href="../project/detailPage_a.html">클래식 바닐라 도넛</a>
+                      </li>
+                      <li class="popular-keyword-item">
+                        <a href="../project/detailPage_a.html">얼그레이 도넛</a>
+                      </li>
+                      <li class="popular-keyword-item">
+                        <a href="../project/detailPage_a.html">민트 초코 도넛</a>
+                      </li>
+                      <li class="popular-keyword-item">
+                        <a href="../project/detailPage_a.html">라즈베리 도넛</a>
+                      </li>
+                      <li class="popular-keyword-item">
+                        <a href="../project/detailPage_a.html">스트로베리 도넛</a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="search-popup-content-right float-right">
+                  <div class="search-popup-title"> Recommended </div>
+                  <div class="collection-box">
+                    <ul class="collection-box-list">
+                      <li class="collection-box-item">
+                        <a href="../project/detailPage_a.html">
+                          <div class="collection-image">
+                            <img src="image1/버튼 호버_생크림 도넛.png" alt="image">
+                          </div>
+                          <div class="collection-name"></div>
+                        </a>
+                      </li>
+                      <li class="collection-box-item">
+                        <a href="../project/productDetailPage_c.html">
+                          <div class="collection-image">
+                            <img src="image1/버튼 호버_노세범.png" alt="image">
+                          </div>
+                          <div class="collection-name"></div>
+                        </a>
+                      </li>
+                      <li class="collection-box-item">
+                        <a href="../project/productDetailPage_c.html">
+                          <div class="collection-image ">
+                            <img src="image1/버튼 호버_노즈워크.png" alt="image">
+                          </div>
+                          <div class="collection-name"></div>
+                        </a>
+                      </li>
+                      <li class="collection-box-item">
+                        <a href="../project/productDetailPage_c.html">
+                          <div class="collection-image collection-top">
+                            <img src="image1/버튼 호버_손세정제.png" alt="image">
+                          </div>
+                          <div class="collection-name"></div>
+                        </a>
+                      </li>
+                      <li class="collection-box-item">
+                        <a href="../project/productDetailPage_c.html">
+                          <div class="collection-image collection-top">
+                            <img src="image1/버튼 호버_슈가베어.png" alt="image">
+                          </div>
+                          <div class="collection-name"></div>
+                        </a>
+                      </li>
+                      <li class="collection-box-item">
+                        <a href="../project/productDetailPage_c.html">
+                          <div class="collection-image collection-top">
+                            <img src="image1/버튼 호버_아이스크림.png" alt="image">
+                          </div>
+                          <div class="collection-name"></div>
+                        </a>
+                      </li>
+                      <li class="collection-box-item">
+                        <a href="../project/productDetailPage_c.html">
+                          <div class="collection-image">
+                            <img src="image1/버튼 호버_버즈(pink).png" alt="image">
+                          </div>
+                          <div class="collection-name"></div>
+                        </a>
+                      </li>
+                      <li class="collection-box-item">
+                        <a href="../project/productDetailPage_c.html">
+                          <div class="collection-image">
+                            <img src="image1/버튼 호버_버즈(blue).png" alt="image">
+                          </div>
+                          <div class="collection-name"></div>
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="innerbox">
+                    <a href="http://127.0.0.1:5500/%E1%84%91%E1%85%B3%E1%84%85%E1%85%A9%E1%84%8C%E1%85%A6%E1%86%A8%E1%84%90%E1%85%B3-html-%E1%84%8C%E1%85%B5%E1%84%8B%E1%85%AF%E1%86%AB/index-login.html"><img src="/Knotted.html/image/free-icon-login-1629081.png" alt="user"class="user-img"></a>
+                        <a href="http://127.0.0.1:5500/%E1%84%91%E1%85%B3%E1%84%85%E1%85%A9%E1%84%8C%E1%85%A6%E1%86%A8%E1%84%90%E1%85%B3-html-%E1%84%8C%E1%85%B5%E1%84%8B%E1%85%AF%E1%86%AB/index-login.html" class="innerbox-login">로그인</a>
+                        <a href="http://127.0.0.1:5500/%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8-html-%EC%A7%80%EC%9B%90/index-mypage.html"><img src="/Knotted.html/image/free-icon-user-747376.png" alt="user"class="user-img"></a>
+                        <a href="http://127.0.0.1:5500/%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8-html-%EC%A7%80%EC%9B%90/index-mypage.html" class="innerbox-login">마이페이지</a>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </div>
+  </div>
+
+  <div id="container">
+    <div class="menulist">
+      <div class="container">
+        <div class="menu-wrap">
+          <div class="inner">
+            <div class="menu-head">
+              <div class="choi">
+                <div data-aos="fade-down" data-aos-duration="1500" class="swiper">
+                  <div class="goods">Goods</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <ul class="menu_container">
+        <!-- <li>
+              <a href="detailPage_b.html">
+                <div class="backgroundImage" style="background-image: url('https://www.gffg.co.kr/images/menu/%E1%84%89%E1%85%B3%E1%84%90%E1%85%A9%E1%84%8C%E1%85%A9%E1%84%90%E1%85%A5%E1%86%B7%E1%84%87%E1%85%B3%E1%86%AF%E1%84%85%E1%85%A5(%E1%84%8B%E1%85%A8%E1%86%AF%E1%84%85%E1%85%A9%E1%84%8B%E1%85%AE_%E1%84%92%E1%85%AA%E1%84%8B%E1%85%B5%E1%84%90%E1%85%B3).png');">
+                </div>
+              </a>
+              <div class="manulistText">
+                <p>스토조텀블러</p>
+                <p>28,000</p>
+              </div>
+        </li>
+        <li>
+              <div class="backgroundImage" style="background-image: url('https://www.gffg.co.kr/images/menu/%E1%84%82%E1%85%A9%E1%84%90%E1%85%B5%E1%84%83%E1%85%B3w%E1%84%80%E1%85%B3%E1%86%AF%E1%84%85%E1%85%A9%E1%84%8A%E1%85%A5%E1%86%B7%E1%84%8B%E1%85%B5%E1%86%AB%E1%84%89%E1%85%A6%E1%86%AB%E1%84%89%E1%85%B3%E1%84%89%E1%85%B3%E1%84%90%E1%85%B5%E1%86%A8+%E1%84%89%E1%85%A5%E1%86%BC%E1%84%82%E1%85%A3%E1%86%BC.png');">
+              </div>
+              <div class="manulistText">
+                <p>글로썸인센스스틱+성냥</p>
+                <p>32,800</p>
+              </div>
+        </li>
+        <li>
+              <div class="backgroundImage" style="background-image: url('https://www.gffg.co.kr/images/menu/%E1%84%82%E1%85%A9%E1%84%90%E1%85%B5%E1%84%83%E1%85%B3%E1%84%86%E1%85%AE%E1%86%AF%E1%84%90%E1%85%B5%E1%84%89%E1%85%B2.png');">
+              </div>
+              <div class="manulistText">
+                <p>물티슈</p>
+                <p>2,400</p>
+              </div>
+        </li>
+        <li>
+              <div class="backgroundImage" style="background-image: url('https://www.gffg.co.kr/images/menu/%E1%84%82%E1%85%A9%E1%84%90%E1%85%B5%E1%84%83%E1%85%B3w%E1%84%80%E1%85%B3%E1%86%AF%E1%84%85%E1%85%A9%E1%84%8A%E1%85%A5%E1%86%B7%E1%84%8B%E1%85%B5%E1%86%AB%E1%84%89%E1%85%A6%E1%86%AB%E1%84%89%E1%85%B3%E1%84%80%E1%85%B5%E1%84%91%E1%85%B3%E1%84%90%E1%85%B3%E1%84%87%E1%85%A1%E1%86%A8%E1%84%89%E1%85%B3.png');">
+              </div>
+              <div class="manulistText">
+                <p>글로썸인센스기프트박스</p>
+                <p>75,800</p>
+              </div>
+        </li>
+        <li>
+              <div class="backgroundImage" style="background-image: url('https://www.gffg.co.kr/images/menu/%E1%84%82%E1%85%A9%E1%84%90%E1%85%B5%E1%84%83%E1%85%B3w%E1%84%80%E1%85%B3%E1%86%AF%E1%84%85%E1%85%A9%E1%84%8A%E1%85%A5%E1%86%B7%E1%84%8B%E1%85%B5%E1%86%AB%E1%84%89%E1%85%A6%E1%86%AB%E1%84%89%E1%85%B3%E1%84%92%E1%85%A9%E1%86%AF%E1%84%83%E1%85%A5.png');">
+              </div>
+              <div class="manulistText">
+                <p>글로썸인센스홀더</p>
+                <p>43,000</p>
+              </div>
+        </li>
+        <li>
+              <div class="backgroundImage" style="background-image: url('https://www.gffg.co.kr/images/menu/%E1%84%82%E1%85%A9%E1%84%90%E1%85%B5%E1%84%83%E1%85%B3w%E1%84%89%E1%85%B3%E1%84%8F%E1%85%B5%E1%86%AB%E1%84%8B%E1%85%A1%E1%86%AF%E1%84%8B%E1%85%A6%E1%86%A8%E1%84%89%E1%85%B3%E1%84%85%E1%85%A2%E1%86%B8%E1%84%89%E1%85%B2%E1%84%80%E1%85%A1%E1%84%85%E1%85%B5%E1%84%8E%E1%85%B5%E1%84%92%E1%85%A2%E1%86%AB%E1%84%83%E1%85%B3%E1%84%87%E1%85%A1%E1%86%B7.png');">
+              </div>
+              <div class="manulistText">
+                <p>스킨알엑스랩핸드밤</p>
+                <p>13,000</p>
+              </div>
+        </li>
+        <li>
+              <div class="backgroundImage" style="background-image: url('https://www.gffg.co.kr/images/menu/%E1%84%82%E1%85%A9%E1%84%90%E1%85%B5%E1%84%83%E1%85%B3w%E1%84%89%E1%85%B3%E1%84%8F%E1%85%B5%E1%86%AB%E1%84%8B%E1%85%A1%E1%86%AF%E1%84%8B%E1%85%A6%E1%86%A8%E1%84%89%E1%85%B3%E1%84%85%E1%85%A2%E1%86%B8%E1%84%89%E1%85%B2%E1%84%80%E1%85%A1%E1%84%85%E1%85%B5%E1%84%8E%E1%85%B5%E1%84%92%E1%85%A2%E1%86%AB%E1%84%83%E1%85%B3%E1%84%8B%E1%85%AF%E1%84%89%E1%85%B5.png');">
+              </div>
+              <div class="manulistText">
+                <p>스킨알엑스랩핸드워시</p>
+                <p>13,000</p>
+              </div>
+        </li>
+        <li>
+              <div class="backgroundImage" style="background-image: url('https://www.gffg.co.kr/images/menu/%E1%84%82%E1%85%A9%E1%84%90%E1%85%B5%E1%84%83%E1%85%B3wPVCS%E1%84%86%E1%85%B5%E1%84%82%E1%85%B5%E1%84%87%E1%85%A5%E1%84%8F%E1%85%B5%E1%86%BA%E1%84%87%E1%85%A2%E1%86%A8.png');">
+              </div>
+              <div class="manulistText">
+                <p>PVCS미니버킷백</p>
+                <p>59,000</p>
+              </div>
+        </li>
+        <li>
+              <div class="backgroundImage" style="background-image: url('https://www.gffg.co.kr/images/menu/%E1%84%82%E1%85%A9%E1%84%90%E1%85%B5%E1%84%83%E1%85%B3wPVCS%E1%84%87%E1%85%A2%E1%86%A8%E1%84%8E%E1%85%A1%E1%86%B7.png');">
+              </div>
+              <div class="manulistText">
+                <p>PVCS백참</p>
+                <p>18,800</p>
+              </div>
+        </li>
+        <li>
+              <div class="backgroundImage" style="background-image: url('https://www.gffg.co.kr/images/menu/%E1%84%89%E1%85%B2%E1%84%80%E1%85%A1%E1%84%87%E1%85%A6%E1%84%8B%E1%85%A5(%E1%84%91%E1%85%B5%E1%86%BC%E1%84%8F%E1%85%B3_%E1%84%8B%E1%85%A8%E1%86%AF%E1%84%85%E1%85%A9%E1%84%8B%E1%85%AE_%E1%84%87%E1%85%B3%E1%84%85%E1%85%A1%E1%84%8B%E1%85%AE%E1%86%AB_%E1%84%85%E1%85%A1%E1%84%87%E1%85%A6%E1%86%AB%E1%84%83%E1%85%A5).png');">
+              </div>
+              <div class="manulistText">
+                <p>슈가베어</p>
+                <p>28,000</p>
+              </div>
+        </li> -->
+      </ul>
+    </div>
+    <div class="paging">
+
+    </div>
+  </div>
+  <section class="section fp-auto-height">
+    <footer class="footer">
+      <div class="footer-container">
+        <!--footer-top -->
+        <div class="footer-top">
+          <!--footer-top-menu -->
+          <div class="footer-top-menu float-left">
+            <ul>
+              <li><a href="#">기업 및 단체구매안내</a></li>
+
+              <li><a href="#">가맹상담신청</a></li>
+              <li><a href="#">사이버신문고</a></li>
+            </ul>
+          </div>
+          <!--footer-top-menu -->
+          <!--footer-top-cs -->
+          <div class="footer-top-cs float-right">
+            <dl>
+              <dt>
+                Address
+              </dt>
+              <dd>
+                서울특별시 강남구 도산대로 51길 16 (강남구 신사동 654-13), GFFG
+              </dd>
+            </dl>
+            <dl>
+              <dt>
+                Customer Center
+              </dt>
+              <dd>
+                <ul>
+                  <li>
+                    고객센터 : 02-545-9377 │ 팩스 : 02-545-9377
+                  </li>
+                </ul>
+              </dd>
+            </dl>
+          </div>
+          <!-- footer-top-cs -->
+        </div>
+        <!-- footer-top -->
+        <!-- footer-bottom -->
+        <div class="footer-bottom">
+          <div class="float-left float-none">
+            <!-- footer-bottom-menu -->
+            <div class="footer-bottom-menu">
+              <ul>
+                <li><a href="#" class="footer-bottom-menu__link">이용약관</a></li>
+                <li><a href="#" class="footer-bottom-menu__link"><strong>개인정보처리방침</strong></a></li>
+                <li><a href="#" class="footer-bottom-menu__link">위치기반서비스
+                    이용약관</a></li>
+                <!-- <li><a href="#" class="footer-bottom-menu__link">사이트맵</a></li> -->
+                <li><a href="#" class="footer-bottom-menu__link modal-button" data-target="modal-popup1">이메일
+                    무단수집거부</a></li>
+                <li><a href="#" class="footer-bottom-menu__link modal-button" data-target="modal-popup2">법적고지</a></li>
+                <li><a href="#" target="_blank" class="footer-bottom-menu__link">사업자정보확인</a></li>
+              </ul>
+            </div>
+            <!-- footer-bottom-menu -->
+            <!-- footer-bottom-info -->
+            <div class="footer-bottom-info">
+              <ul class="footer-bottom-info__address">
+                <li>
+                  서울특별시 강남구 도산대로 51길 16 (강남구 신사동 654-13), GFFG
+                </li>
+                <li>
+                  고객센터 : 1577-4410 <span class="span">|</span> 팩스 : 02-2058-6777
+                </li>
+              </ul>
+              <ul>
+                <li>
+                  대표이사 : 이영상 |
+                </li>
+                <li>
+                  개인정보보호책임자 : 장재호 |
+                </li>
+                <li>
+                  사업자등록번호 : 404-86-01054 |
+                </li>
+              </ul>
+              <ul>
+                <li>
+                  통신판매업종신고증 : 제 2018-서울중구-0353호 |
+                </li>
+                <li>
+                  대표이메일 : helpmaster@twosome.co.kr
+                </li>
+              </ul>
+            </div>
+            <!--footer-bottom-info !-->
+            <div class="footer-bottom-copy">
+              <span>Copyright ⓒ 2021 A TWOSOME PLACE Co., LTD.</span>
+              <span>All Rights Reserved.</span>
+            </div>
+          </div>
+
+          <!-- <footer-bottom-sns -->
+          <div class="footer-bottom-sns float-right">
+            <a href="https://www.facebook.com/cafeknotted.official" class="footer-bottom-sns__link icon" title="새창 열림">
+              <span>페이스북</span>
+            </a>
+            <a href="https://www.instagram.com/cafeknotted/?hl=ko" class="footer-bottom-sns__link icon" title="새창 열림">
+              <span>인스타그램</span>
+            </a>
+            <a href="https://pf.kakao.com/_AUDFj" class="footer-bottom-sns__link icon" title="새창 열림">
+              <span>카카오톡</span>
+            </a>
+          </div>
+        </div>
+
+
+      </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script> AOS.init();  // 초기화 선언 필수</script>
+    <!-- <script src="./json/goods.json"></script> -->
+    <script src="./json/goods_heum.js"></script>
+    <!-- <script src="./js/productDetailPage_c.js"></script> -->
+    <script src="./js/productDetailPage_heum.js"></script>
+    <script src="/common(header,footer)/header.js"></script>
+</body>
+
+</html>
