@@ -1,0 +1,1630 @@
+/* 폰트 */
+
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@300;400;500&family=Noto+Sans+KR:wght@400;500&display=swap');
+
+
+
+/* MAIN */
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #f8f6f5;
+}
+
+main {
+  background-color: #f8f6f5;
+  margin: 0;
+}
+
+/* @upper 키프레임 */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+/* PC (해상도 1024px 이상)*/
+@media all and (min-width:1400px) {
+
+  /* 위로이동 */
+  .upper {
+    position: fixed;
+    bottom: 20px;
+    right: 30px;
+    animation: up-down .35s infinite ease-in-out alternate;
+    width: 75px;
+
+  }
+
+  @keyframes up-down {
+    from {
+      transform: translatey(0px);
+    }
+
+    to {
+      transform: translatey(-7px);
+    }
+  }
+
+
+
+  /* STORE LOCATOR 시작 */
+
+  /* titles*/
+  .title {
+    width: 100%;
+    height: 27.5rem;
+    /* margin: 139px 0 98px 1px; */
+    /* padding: 171px 1274px 53px 173px; */
+    background-color: #73629a;
+    position: relative;
+
+  }
+
+  main .title h1 {
+    font-family: 'Karla', sans-serif;
+    font-weight: 400;
+    font-size: 7.45rem;
+    letter-spacing: -0.4481rem;
+    text-align: left;
+    color: #f8f6f5;
+    position: absolute;
+    top: 18.2rem;
+    padding-left: 10rem;
+  }
+
+
+  .title__two {
+    font-family: 'Karla', sans-serif;
+    font-size: 4.5rem;
+    letter-spacing: -0.27rem;
+    /* padding: 10.9375rem 0 2.375rem 10.9375rem; */
+    padding: 0 0 2.375rem 11rem;
+    color: #64606b;
+  }
+
+  .store-locator__inner {
+    display: grid;
+    grid-template-columns: 2fr 4fr;
+    grid-template-rows: 3.75rem 38.5625rem;
+    overflow: hidden;
+
+    margin: 6.25rem 10.9375rem;
+
+  }
+
+  /*로케이션 검색 */
+
+  .store-locator__search {
+    max-width: 100%;
+    /* width: 34.625rem; */
+    grid-column: 1/2;
+    grid-row: 1/2;
+
+  }
+
+  .pac-target-input {
+    font-family: 'Noto Sans KR', sans-serif;
+    height: 3.75rem;
+    width: 100%;
+    font-weight: 700;
+    font-size: 1.5rem;
+    border: 0;
+    /* padding: .625rem .625rem .875rem 0; */
+    background-color: #f8f6f5;
+
+  }
+
+  /* 로케이션 검색창 */
+
+
+
+  #autocomplete {
+    width: 100%;
+    border-bottom: 1px solid black;
+  }
+
+  #autocomplete:focus {
+    outline: 0;
+
+  }
+
+  #locationField {
+    width: 100%;
+  }
+
+  .hospital-search {
+    display: grid;
+    grid-template-columns: 10fr 1fr;
+  }
+
+
+  /* 도시를 입력하세요 옆 검색 아이콘 */
+
+
+  .ornament {
+    width: 60px;
+    height: 60px;
+    /* border: 0px; */
+    background-color: #64606b;
+  }
+
+  .ornament .fa-sharp {
+    color: #f8f6f5;
+    font-size: 1.6rem;
+  }
+
+
+
+  /*지도 옆 매장 리스트 시작 */
+
+  /* 스크롤바 */
+  #listing {
+    overflow-y: scroll;
+    border-bottom: .0313rem solid #64606b;
+
+  }
+
+  #listing::-webkit-scrollbar {
+    width: 1.25rem;
+    ;
+  }
+
+  #listing::-webkit-scrollbar-track {
+    background-color: #f8f6f5;
+    border-right: .0625rem solid #64606b;
+    border-left: .0625rem solid #64606b;
+    border-bottom: 0;
+
+  }
+
+  #listing::-webkit-scrollbar-thumb {
+    border: 1px solid #64606b;
+    width: .9375rem;
+    background-color: rgb(90, 79, 79, 0.1);
+    /* box-shadow: inset 0 0 6px rgb(194, 194, 194); */
+  }
+
+
+  /* 매장 리스트 (각각)*/
+  #resultsTable {
+    border-collapse: collapse;
+    width: 100%;
+    /* border-top: 0.5px solid #64606b; */
+    border-bottom: 0.5px solid #64606b;
+  }
+
+  .store-locator__left {
+    background-color: #f8f6f5;
+    grid-column: 1/1;
+
+    flex-direction: column;
+    justify-content: flex-start;
+    flex-wrap: nowrap;
+
+  }
+
+  #listing {
+    /* height: 42.56rem; */
+    cursor: default;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    z-index: 10;
+    grid-column: 1/2;
+    grid-row: 2/3;
+
+  }
+
+  #listing #results tr {
+    height: 12.9rem;
+    border-bottom: 0.5px solid #64606b;
+    font-family: NotoSansKR;
+    /* text-transform: uppercase;
+  transition: all 500ms cubic-bezier(0.77, 0, 0.175); */
+
+  }
+
+
+
+
+  /* 리스트 내용 */
+  #listing #results tr h3 {
+    font-size: 2.25rem;
+    font-weight: 700;
+    padding-bottom: 1.8rem;
+  }
+
+  #listing #results tr .vicinity {
+    font-size: 1rem;
+    line-height: 1.31;
+    letter-spacing: -0.05rem;
+    margin-bottom: 1.8rem;
+    font-weight: 500;
+    /* font-family: NotoSansKR; */
+  }
+
+
+
+  /* 리스트 길찾기버튼 .no_button */
+  #listing #results tr .no_button {
+    width: 6.8125rem;
+    height: 1.875rem;
+    font-size: .75rem;
+    padding: .375rem 1.875rem;
+    border: 0.5px solid #64606b;
+    text-align: center;
+    cursor: pointer;
+
+  }
+
+  #listing #results tr i {
+    display: none;
+  }
+
+
+
+  /* 리스트 호버 */
+  #listing #results tr :hover h3 {
+    color: #73629a;
+    transition: all 0.3s;
+  }
+
+  /* 리스트 길찾기버튼 호버 */
+
+  #listing .no_button:hover {
+    color: #f8f6f5;
+    transition: 0.7s;
+    box-shadow: 12.5rem 0 0 0 #73629a inset;
+    border: 0;
+  }
+
+
+
+
+
+
+  /* 지도부분*/
+
+  .store-locator__right {
+    grid-column: 2/3;
+    grid-row: 1/3;
+
+  }
+
+  #map {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+  }
+
+  /* 인포창 */
+  #info-content {
+    background-color: white;
+    color: #73629a;
+    font-family: 'NotoSansKR';
+    letter-spacing: -1px;
+    font-weight: 600;
+  }
+
+  #info-content a {
+    color: #73629a;
+    background-color: white;
+    display: inline-block;
+    margin-bottom: .625rem;
+    font-size: 1.5625rem;
+  }
+
+  #info-content table {
+    margin: .625rem;
+  }
+
+
+  #iw-icon,
+  .iw_attribute_name {
+    display: none;
+  }
+
+
+
+
+
+  /*온라인 호버*/
+  .online__stores {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    border-collapse: separate;
+    height: 21.5625rem;
+    margin: 0 10.9375rem 10.9375rem 10.9375rem;
+    border-top: 1px solid #a39e9a;
+    border-bottom: 1px solid #a39e9a;
+
+    border-spacing: 0;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 2.1rem;
+    font-weight: 500;
+    letter-spacing: -0.1125rem;
+
+  }
+
+  /*.online__stores__name {
+            
+    }*/
+
+  .online__stores__bottom {
+    border-top: 1px solid #a39e9a;
+  }
+
+  .online__stores__name:hover {
+    background-color: #73629a;
+    transition: all 1s;
+  }
+
+  .online__stores__bottom:hover {
+    background-color: #73629a;
+    transition: all 1s;
+  }
+
+  .online__stores a:hover {
+    color: #f8f6f5
+  }
+
+  .online__stores__name:not(#no_right_line) {
+    border-right: 1px solid #a39e9a;
+  }
+
+  .online__stores__bottom:not(#no_right_lines) {
+    border-right: 1px solid #a39e9a;
+  }
+
+  .online__stores a {
+    text-align: center;
+    padding-top: 3.99rem;
+    display: inline-block;
+    margin: 0 auto;
+    height: 100%;
+    width: 100%;
+
+  }
+
+  /*==================*/
+  /*온라인스토어 호버 POP
+    /*==================*/
+
+  @-webkit-keyframes pop-on-hover {
+    50% {
+      -webkit-transform: scale(1.1);
+      transform: scale(1.1);
+    }
+  }
+
+  @keyframes pop-on-hover {
+    50% {
+      -webkit-transform: scale(1.1);
+      transform: scale(1.2\1);
+    }
+  }
+
+  .pop-on-hover {
+    display: inline-block;
+    vertical-align: middle;
+    -webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  }
+
+  .pop-on-hover:hover,
+  .pop-on-hover:focus,
+  .pop-on-hover:active {
+
+    -webkit-animation-name: pop-on-hover;
+    animation-name: pop-on-hover;
+    -webkit-animation-duration: 0.3s;
+    animation-duration: 0.3s;
+    -webkit-animation-timing-function: linear;
+    animation-timing-function: linear;
+    -webkit-animation-iteration-count: 1;
+    animation-iteration-count: 1;
+  }
+
+  /* 온라인 호버 끝 */
+
+
+
+
+
+
+}
+
+
+/* 미디어쿼리 총 3개 */
+
+/* 🚩PC와 태블렛 중간 (해상도 992px ~ 1199px)*/
+@media (min-width:992px) and (max-width:1399px) {
+
+  /* 위로이동 */
+  .upper {
+    position: fixed;
+    bottom: 20px;
+    right: 30px;
+    animation: up-down .35s infinite ease-in-out alternate;
+    width: 70px;
+
+  }
+
+  @keyframes up-down {
+    from {
+      transform: translatey(0px);
+    }
+
+    to {
+      transform: translatey(-7px);
+    }
+  }
+
+
+  .title {
+    width: 100%;
+    /* 높이 좀 줄임 */
+    height: 20rem;
+    /* 타이틀 배경 해더 높이 따라 수정함 */
+    /* 로케이터 수정필요 */
+    background-color: #73629a;
+
+
+  }
+
+  h1 {
+    font-family: 'Karla', sans-serif;
+    font-weight: 400;
+    font-size: 5.5rem;
+    letter-spacing: -0.5rem;
+    text-align: left;
+    color: #f8f6f5;
+    position: absolute;
+    /* 수정 */
+    top: 13rem;
+    /* 수정 */
+    padding-left: 4rem;
+  }
+
+
+  .title__two {
+    font-family: 'Karla', sans-serif;
+    font-size: 4.2rem;
+    letter-spacing: -0.27rem;
+    padding: 0 0 2.375rem 4rem;
+    color: #64606b;
+  }
+
+  .store-locator__inner {
+    display: grid;
+    grid-template-columns: 2fr 4fr;
+    grid-template-rows: 3rem 30rem;
+    overflow: hidden;
+
+    margin: 3.5rem 4rem;
+
+  }
+
+  /*로케이션 검색 */
+
+  .store-locator__search {
+    max-width: 100%;
+
+    /* width: 25rem; */
+    grid-column: 1/2;
+    grid-row: 1/2;
+
+  }
+
+  .pac-target-input {
+    font-family: 'Noto Sans KR', sans-serif;
+    height: 3rem;
+    width: 100%;
+    font-weight: 500;
+    font-size: 1rem;
+    border: 0;
+    background-color: #f8f6f5;
+
+  }
+
+  /* 로케이션 검색창 */
+
+  #autocomplete {
+    width: 100%;
+    height: 3rem;
+    border-bottom: 1px solid black;
+  }
+
+  #autocomplete:focus {
+    outline: 0;
+
+  }
+
+  #locationField {
+    width: 100%;
+  }
+
+  .hospital-search {
+    display: grid;
+    grid-template-columns: 10fr .5fr;
+
+  }
+
+
+  /* 도시를 입력하세요 옆 검색 아이콘 */
+
+
+  .ornament {
+
+    width: 3rem;
+    height: 3rem;
+
+    /* border: 0px; */
+    background-color: #64606b;
+  }
+
+  .ornament .fa-sharp {
+    color: #f8f6f5;
+    font-size: 1.3rem;
+  }
+
+
+
+  /*지도 옆 매장 리스트 시작 */
+
+  /* 스크롤바 */
+  #listing {
+    overflow-y: scroll;
+    border-bottom: .0313rem solid #64606b;
+
+  }
+
+  #listing::-webkit-scrollbar {
+    width: 1.25rem;
+    ;
+  }
+
+  #listing::-webkit-scrollbar-track {
+    background-color: #f8f6f5;
+    border-right: .0625rem solid #64606b;
+    border-left: .0625rem solid #64606b;
+    border-bottom: 0;
+
+  }
+
+  #listing::-webkit-scrollbar-thumb {
+    border: 1px solid #64606b;
+    width: 15px;
+    background-color: rgb(90, 79, 79, 0.1);
+    /* box-shadow: inset 0 0 6px rgb(194, 194, 194); */
+  }
+
+  /* 매장 리스트 (각각)*/
+  #resultsTable {
+    border-collapse: collapse;
+    width: 33.5rem;
+    border-bottom: 0.5px solid #64606b;
+  }
+
+  .store-locator__left {
+    /* height: 800px; */
+    /* width: 450px; */
+    background-color: #f8f6f5;
+    grid-column: 1/1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    flex-wrap: nowrap;
+  }
+
+  #listing {
+    /* height: 42.56rem; */
+    cursor: pointer;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    z-index: 10;
+    grid-column: 1/2;
+    grid-row: 2/3;
+
+  }
+
+  #listing #results tr {
+    height: 10rem;
+    border-bottom: 0.5px solid #64606b;
+    font-family: NotoSansKR;
+    /* text-transform: uppercase;
+  transition: all 500ms cubic-bezier(0.77, 0, 0.175); */
+
+  }
+
+
+
+  /* 리스트 내용 */
+  #listing #results tr h3 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    padding-bottom: 1.2rem;
+  }
+
+  #listing #results tr .vicinity {
+    font-size: 0.8rem;
+    line-height: 1.31;
+    letter-spacing: -0.05rem;
+    margin-bottom: 1.2rem;
+    font-weight: 500;
+    /* font-family: NotoSansKR; */
+  }
+
+
+
+  /* 리스트 길찾기버튼 .no_button */
+  #listing #results tr .no_button {
+    width: 6.8125rem;
+    height: 1.875rem;
+    font-size: .75rem;
+    padding: .375rem 1.875rem;
+    border: 0.5px solid #64606b;
+    text-align: center;
+
+  }
+
+  #listing #results tr i {
+    display: none;
+  }
+
+
+  /* 리스트 호버 */
+  #listing #results tr :hover h3 {
+    color: #73629a;
+    transition: all 0.3s;
+
+  }
+
+  /* 리스트 길찾기버튼 호버 */
+  #listing .no_button:hover {
+    color: #f8f6f5;
+    transition: 0.7s;
+    box-shadow: 12.5rem 0 0 0 #73629a inset;
+    border: 0;
+  }
+
+
+
+  /* 지도부분*/
+
+  .store-locator__right {
+    grid-column: 2/3;
+    grid-row: 1/3;
+
+  }
+
+  #map {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+  }
+
+  /* 인포창 */
+  #info-content {
+    background-color: white;
+    color: #73629a;
+    font-family: 'NotoSansKR';
+    letter-spacing: -1px;
+    font-weight: 600;
+  }
+
+  #info-content a {
+    color: #73629a;
+    background-color: white;
+    display: inline-block;
+    margin-bottom: .625rem;
+    font-size: 1.5625rem;
+  }
+
+  #info-content table {
+    margin: .625rem;
+  }
+
+
+  #iw-icon,
+  .iw_attribute_name {
+    display: none;
+  }
+
+
+
+
+
+
+  /* 온라인 스토어 */
+  .online__stores {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    height: 21.5625rem;
+    margin: 0 4rem 6rem 4rem;
+
+    border-top: 1px solid #a39e9a;
+    border-bottom: 1px solid #a39e9a;
+    border-spacing: 0;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 1.9rem;
+    font-weight: 500;
+    letter-spacing: -0.1125rem;
+
+  }
+
+  .online__stores__bottom {
+    border-top: 1px solid #a39e9a;
+  }
+
+  .online__stores__name:hover {
+    background-color: #73629a;
+    transition: all 1s;
+  }
+
+  .online__stores__bottom:hover {
+    background-color: #73629a;
+    transition: all 1s;
+  }
+
+  .online__stores a:hover {
+    color: #f8f6f5
+  }
+
+  .online__stores__name:not(#no_right_line) {
+    border-right: 1px solid #a39e9a;
+  }
+
+  .online__stores__bottom:not(#no_right_lines) {
+    border-right: 1px solid #a39e9a;
+  }
+
+  .online__stores a {
+    text-align: center;
+    padding-top: 3.8rem;
+    display: inline-block;
+    margin: 0 auto;
+    height: 100%;
+    width: 100%;
+
+  }
+
+  /*==================*/
+  /*온라인스토어 호버 POP
+    /*==================*/
+
+  @-webkit-keyframes pop-on-hover {
+    50% {
+      -webkit-transform: scale(1.1);
+      transform: scale(1.1);
+    }
+  }
+
+  @keyframes pop-on-hover {
+    50% {
+      -webkit-transform: scale(1.1);
+      transform: scale(1.2\1);
+    }
+  }
+
+  .pop-on-hover {
+    display: inline-block;
+    vertical-align: middle;
+    -webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  }
+
+  .pop-on-hover:hover,
+  .pop-on-hover:focus,
+  .pop-on-hover:active {
+
+    -webkit-animation-name: pop-on-hover;
+    animation-name: pop-on-hover;
+    -webkit-animation-duration: 0.3s;
+    animation-duration: 0.3s;
+    -webkit-animation-timing-function: linear;
+    animation-timing-function: linear;
+    -webkit-animation-iteration-count: 1;
+    animation-iteration-count: 1;
+  }
+
+  /* 온라인 호버 끝 */
+}
+
+
+
+
+
+
+
+/*🚩태블릿 미디어쿼리*/
+
+@media (min-width:768px) and (max-width:991px) {
+
+  /* 위로이동 */
+  .upper {
+    position: fixed;
+    bottom: 20px;
+    right: 30px;
+    animation: up-down .35s infinite ease-in-out alternate;
+    width: 65px;
+  }
+
+  @keyframes up-down {
+    from {
+      transform: translatey(0px);
+    }
+
+    to {
+      transform: translatey(-7px);
+    }
+  }
+
+
+  .title {
+    width: 100%;
+    /* 높이 좀 줄임 */
+    height: 19.6rem;
+    /* 타이틀 배경 해더 높이 따라 수정함 */
+    /* 로케이터 수정필요 */
+    background-color: #73629a;
+
+
+  }
+
+  h1 {
+    font-family: 'Karla', sans-serif;
+    font-weight: 400;
+    font-size: 5rem;
+    letter-spacing: -0.4rem;
+    text-align: left;
+    color: #f8f6f5;
+    position: absolute;
+    /* 수정 */
+    top: 13rem;
+    /* 수정 */
+    padding-left: 4rem;
+  }
+
+
+  .title__two {
+    font-family: 'Karla', sans-serif;
+    font-size: 3rem;
+    letter-spacing: -0.2rem;
+    padding: 0 0 2.375rem 4rem;
+    color: #64606b;
+  }
+
+  .store-locator__inner {
+    display: grid;
+    grid-template-columns: 2fr 4fr;
+    /* 로케이터 1번 싸이즈 */
+    grid-template-rows: 3rem 30rem;
+    overflow: hidden;
+
+    margin: 3rem 4rem 4rem 4rem;
+
+  }
+
+  /*로케이션 검색 */
+
+  .store-locator__search {
+    max-width: 100%;
+    /* width: 25rem; */
+    grid-column: 1/2;
+    grid-row: 1/2;
+
+  }
+
+  .pac-target-input {
+    font-family: 'Noto Sans KR', sans-serif;
+    height: 3rem;
+    width: 100%;
+    font-weight: 500;
+    font-size: 1rem;
+    border: 0;
+    background-color: #f8f6f5;
+
+  }
+
+  /* 로케이션 검색창 */
+
+
+  #autocomplete {
+    width: 100%;
+    border-bottom: 1px solid black;
+  }
+
+  #autocomplete:focus {
+    outline: 0;
+
+  }
+
+  #locationField {
+    width: 100%;
+  }
+
+  .hospital-search {
+    display: grid;
+    grid-template-columns: 10fr 1fr;
+  }
+
+  /* 도시를 입력하세요 옆 검색 아이콘 */
+
+
+  .ornament {
+    width: 3rem;
+    /* border: 0px; */
+    background-color: #64606b;
+  }
+
+  .ornament .fa-sharp {
+    color: #f8f6f5;
+    font-size: 1.1rem;
+  }
+
+
+
+  /*지도 옆 매장 리스트 시작 */
+
+  /* 스크롤바 */
+  #listing {
+    overflow-y: scroll;
+    border-bottom: .0313rem solid #64606b;
+
+  }
+
+  #listing::-webkit-scrollbar {
+    width: 1.2rem;
+    ;
+  }
+
+  #listing::-webkit-scrollbar-track {
+    background-color: #f8f6f5;
+    border-right: .0625rem solid #64606b;
+    border-left: .0625rem solid #64606b;
+    border-bottom: 0;
+
+  }
+
+  #listing::-webkit-scrollbar-thumb {
+    border: 1px solid #64606b;
+    width: 10px;
+    background-color: rgb(90, 79, 79, 0.1);
+    /* box-shadow: inset 0 0 6px rgb(194, 194, 194); */
+  }
+
+  /* 매장 리스트 (각각)*/
+  #resultsTable {
+    border-collapse: collapse;
+    width: 100%;
+    /* border-top: 0.5px solid #64606b; */
+    border-bottom: 0.5px solid #64606b;
+  }
+
+  .store-locator__left {
+    /* height: 800px; */
+    /* width: 450px; */
+    background-color: #f8f6f5;
+    grid-column: 1/1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    flex-wrap: nowrap;
+  }
+
+  #listing {
+    cursor: default;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    z-index: 10;
+    grid-column: 1/2;
+    grid-row: 2/3;
+
+  }
+
+  #listing #results tr {
+    height: 10rem;
+    border-bottom: 0.5px solid #64606b;
+    font-family: NotoSansKR;
+    /* text-transform: uppercase;
+   transition: all 500ms cubic-bezier(0.77, 0, 0.175); */
+
+  }
+
+
+
+  /* 리스트 내용 */
+  #listing #results tr h3 {
+    font-size: 1.4rem;
+    font-weight: 600;
+    padding-bottom: 1.3rem;
+  }
+
+  #listing #results tr .vicinity {
+    font-size: 0.8rem;
+    line-height: 1.31;
+    letter-spacing: -0.05rem;
+    margin-bottom: 1.3rem;
+    font-weight: 500;
+    /* font-family: NotoSansKR; */
+  }
+
+
+
+  /* 리스트 길찾기버튼 .no_button */
+  #listing #results tr .no_button {
+    width: 5rem;
+    height: 1.7rem;
+    font-size: .7rem;
+    padding: .28rem 1.3rem;
+    border: 0.5px solid #64606b;
+    text-align: center;
+    cursor: pointer;
+
+  }
+
+  #listing #results tr i {
+    display: none;
+  }
+
+
+  /* 리스트 호버 */
+  #listing #results tr :hover h3 {
+    color: #73629a;
+    transition: all 0.3s;
+
+  }
+
+  /* 리스트 길찾기버튼 호버 */
+
+  #listing .no_button:hover {
+    color: #f8f6f5;
+    transition: 0.7s;
+    box-shadow: 12.5rem 0 0 0 #73629a inset;
+    border: 0;
+  }
+
+
+
+  /* 지도부분*/
+
+  .store-locator__right {
+    grid-column: 2/3;
+    grid-row: 1/3;
+
+  }
+
+  #map {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+  }
+
+  /* 인포창 */
+  #info-content {
+    background-color: white;
+    color: #73629a;
+    font-family: 'NotoSansKR';
+    letter-spacing: -0.0625rem;
+    font-weight: 600;
+  }
+
+  #info-content a {
+    color: #73629a;
+    background-color: white;
+    display: inline-block;
+    margin-bottom: .625rem;
+    font-size: 1.375rem;
+  }
+
+  #info-content table {
+    margin: .625rem;
+  }
+
+
+  #iw-icon,
+  .iw_attribute_name {
+    display: none;
+  }
+
+
+
+
+
+
+  /* 온라인 스토어 */
+  .online__stores {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    height: 16rem;
+    margin: 0 4rem;
+    margin-bottom: 4rem;
+    border-top: 1px solid #a39e9a;
+    border-bottom: 1px solid #a39e9a;
+    border-spacing: 0;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 500;
+    letter-spacing: -0.1125rem;
+
+  }
+
+  .online__stores__bottom {
+    border-top: 1px solid #a39e9a;
+  }
+
+  .online__stores__name:hover {
+    background-color: #73629a;
+    transition: all 1s;
+  }
+
+  .online__stores__bottom:hover {
+    background-color: #73629a;
+    transition: all 1s;
+  }
+
+  .online__stores a:hover {
+    color: #f8f6f5
+  }
+
+  .online__stores__name:not(#no_right_line) {
+    border-right: 1px solid #a39e9a;
+  }
+
+  .online__stores__bottom:not(#no_right_lines) {
+    border-right: 1px solid #a39e9a;
+  }
+
+  .online__stores a {
+    text-align: center;
+    padding-top: 3rem;
+    display: inline-block;
+    margin: 0 auto;
+    height: 100%;
+    width: 100%;
+
+  }
+
+  /*==================*/
+  /*온라인스토어 호버 POP
+     /*==================*/
+
+  @-webkit-keyframes pop-on-hover {
+    50% {
+      -webkit-transform: scale(1.1);
+      transform: scale(1.1);
+    }
+  }
+
+  @keyframes pop-on-hover {
+    50% {
+      -webkit-transform: scale(1.1);
+      transform: scale(1.2\1);
+    }
+  }
+
+  .pop-on-hover {
+    display: inline-block;
+    vertical-align: middle;
+    -webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  }
+
+  .pop-on-hover:hover,
+  .pop-on-hover:focus,
+  .pop-on-hover:active {
+
+    -webkit-animation-name: pop-on-hover;
+    animation-name: pop-on-hover;
+    -webkit-animation-duration: 0.3s;
+    animation-duration: 0.3s;
+    -webkit-animation-timing-function: linear;
+    animation-timing-function: linear;
+    -webkit-animation-iteration-count: 1;
+    animation-iteration-count: 1;
+  }
+
+  /* 온라인 호버 끝 */
+
+
+}
+
+
+
+
+/* 🚩모바일 미디어쿼리 */
+
+@media screen and (max-width:767px) {
+
+  .upper {
+    display: none;
+  }
+
+  .title {
+    width: 100%;
+    /* 높이 좀 줄임 */
+    height: 15rem;
+    /* 타이틀 배경 해더 높이 따라 수정함 */
+    /* 로케이터 수정필요 */
+    background-color: #73629a;
+
+
+  }
+
+  h1 {
+    font-family: 'Karla', sans-serif;
+    font-weight: 400;
+    font-size: 3.3rem;
+    letter-spacing: -0.28rem;
+    text-align: left;
+    color: #f8f6f5;
+    position: absolute;
+    /* 수정 */
+    top: 9.6rem;
+    /* 수정 */
+    padding-left: 2rem;
+  }
+
+
+  .title__two {
+    font-family: 'Karla', sans-serif;
+    font-size: 2.2rem;
+    letter-spacing: -0.2rem;
+    padding: 0 0 2rem 2rem;
+    color: #64606b;
+  }
+
+  .store-locator__inner {
+    display: grid;
+    height: 41rem;
+    grid-template-columns: 1fr;
+    /* 로케이터 1번 싸이즈 */
+    grid-template-rows: .5fr 5fr 6fr;
+    overflow: hidden;
+    margin: 2rem 2rem 4rem 2rem;
+
+  }
+
+  /*로케이션 검색 */
+
+  .store-locator__search {
+    max-width: 100%;
+    /* width: 25rem; */
+    grid-column: 1/1;
+    grid-row: 1/2;
+
+  }
+
+  .pac-target-input {
+    font-family: 'Noto Sans KR', sans-serif;
+    height: 3rem;
+    width: 100%;
+    font-weight: 500;
+    font-size: 1rem;
+    border: 0;
+    background-color: #f8f6f5;
+
+  }
+
+  /* 로케이션 검색창 */
+
+
+  #autocomplete {
+    width: 100%;
+    border-bottom: 1px solid black;
+    font-size: 1rem;
+  }
+
+  #autocomplete:focus {
+    outline: 0;
+
+  }
+
+  #locationField {
+    width: 100%;
+  }
+
+  .hospital-search {
+    display: grid;
+    grid-template-columns: 1fr 3rem;
+  }
+
+  /* 도시를 입력하세요 옆 검색 아이콘 */
+
+
+  .ornament {
+    width: 3rem;
+    height: 3rem;
+    /* border: 0px; */
+    background-color: #64606b;
+  }
+
+  .ornament .fa-sharp {
+    color: #f8f6f5;
+    font-size: 1.1rem;
+  }
+
+
+
+  /*지도 옆 매장 리스트 시작 */
+
+  /* 스크롤바 */
+  #listing {
+    overflow-y: scroll;
+    /* border-bottom: .0313rem solid #64606b; */
+
+  }
+
+  #listing::-webkit-scrollbar {
+    width: 1rem;
+    /* display: none; */
+  }
+
+  #listing::-webkit-scrollbar-track {
+    background-color: #f8f6f5;
+    border-right: .0625rem solid #64606b;
+    border-left: .0625rem solid #64606b;
+    border-bottom: .0625rem solid #64606b;
+
+  }
+
+  #listing::-webkit-scrollbar-thumb {
+    border: 1px solid #64606b;
+    width: 5px;
+    background-color: rgb(90, 79, 79, 0.1);
+    /* box-shadow: inset 0 0 6px rgb(194, 194, 194); */
+  }
+
+  /* 매장 리스트 (각각)*/
+  #resultsTable {
+    border-collapse: collapse;
+    width: 100%;
+    border-bottom: 0.5px solid #64606b;
+  }
+
+  .store-locator__left {
+    background-color: #f8f6f5;
+    grid-column: 1/1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    flex-wrap: nowrap;
+  }
+
+  #listing {
+    cursor: default;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    z-index: 10;
+    grid-row: 2/3;
+    font-family: 'NotoSansKR';
+  }
+
+  #listing #results tr {
+    height: 4.3rem;
+    border-bottom: 0.5px solid #64606b;
+
+  }
+
+  #listing #results tr td {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    /* 길찾기 50px */
+    padding: 1.3rem 3rem 1.3rem 0;
+  }
+
+
+
+  /* 리스트 내용 */
+  #listing #results tr h3 {
+    font-size: 1.1rem;
+    font-weight: 400;
+    /* padding-bottom: 1rem; */
+  }
+
+  #listing #results tr .vicinity {
+    display: none;
+  }
+
+
+
+  /* 리스트 길찾기버튼 .no_button */
+  #listing #results tr .no_button {
+    /* width: 6rem; */
+    /* height: 1.8rem; */
+    font-size: .88rem;
+    letter-spacing: -1px;
+    /* font-family: NotoSansKR; */
+    padding: .14rem .8rem;
+    border-bottom: 1px solid #64606b;
+    text-align: center;
+    cursor: pointer;
+
+  }
+
+  #listing #results tr i {
+    margin-left: .3125rem;
+  }
+
+
+  /* 리스트 호버 */
+  #listing #results tr :hover h3 {
+    color: #73629a;
+    transition: all 1s;
+
+
+  }
+
+  /* 리스트 길찾기버튼 호버 */
+
+  #listing .no_button:hover {
+    color: #f8f6f5;
+    transition: 0.7s;
+    padding: 1px 1rem;
+    box-shadow: 12.5rem 0 0 0 #73629a inset;
+    border: 0;
+  }
+
+
+
+  /* 지도부분*/
+
+  .store-locator__right {
+    grid-column: 2/3;
+    grid-row: 1/3;
+
+  }
+
+  .store-locator__right {
+    grid-row: 3/4;
+    grid-column: 1/2;
+  }
+
+  #map {
+    /* display: none; */
+    height: 100%;
+    width: 100%;
+    margin: 0;
+  }
+
+  /* 인포창 */
+  #info-content {
+    background-color: white;
+    color: #73629a;
+    font-family: 'NotoSansKR';
+    letter-spacing: -0.0625rem;
+    font-weight: 600;
+  }
+
+  #info-content a {
+    color: #73629a;
+    background-color: white;
+    display: inline-block;
+    margin-bottom: .625rem;
+    font-size: 1.1rem;
+  }
+
+  #info-content table {
+    margin: .4rem;
+  }
+
+
+  #iw-icon,
+  .iw_attribute_name {
+    display: none;
+  }
+
+
+
+
+
+
+  /* 온라인 스토어 */
+  .online__stores {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    height: 12rem;
+    margin: 0 2rem;
+    margin-bottom: 4rem;
+    border-top: 1px solid #a39e9a;
+    border-bottom: 1px solid #a39e9a;
+    border-spacing: 0;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 1.1rem;
+    font-weight: 500;
+    letter-spacing: -0.1125rem;
+
+  }
+
+  .online__stores__bottom {
+    border-top: 1px solid #a39e9a;
+  }
+
+  .online__stores__name:hover {
+    background-color: #73629a;
+    transition: all 1s;
+  }
+
+  .online__stores__bottom:hover {
+    background-color: #73629a;
+    transition: all 1s;
+  }
+
+  .online__stores a:hover {
+    color: #f8f6f5
+  }
+
+  .online__stores__name:not(#no_right_line) {
+    border-right: 1px solid #a39e9a;
+  }
+
+  .online__stores__bottom:not(#no_right_lines) {
+    border-right: 1px solid #a39e9a;
+  }
+
+  .online__stores a {
+    text-align: center;
+    padding-top: 2.29rem;
+    display: inline-block;
+    margin: 0 auto;
+    height: 100%;
+    width: 100%;
+
+  }
+
+  /*==================*/
+  /*온라인스토어 호버 POP
+    /*==================*/
+
+  @-webkit-keyframes pop-on-hover {
+    50% {
+      -webkit-transform: scale(1.1);
+      transform: scale(1.1);
+    }
+  }
+
+  @keyframes pop-on-hover {
+    50% {
+      -webkit-transform: scale(1.1);
+      transform: scale(1.2\1);
+    }
+  }
+
+  .pop-on-hover {
+    display: inline-block;
+    vertical-align: middle;
+    -webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  }
+
+  .pop-on-hover:hover,
+  .pop-on-hover:focus,
+  .pop-on-hover:active {
+
+    -webkit-animation-name: pop-on-hover;
+    animation-name: pop-on-hover;
+    -webkit-animation-duration: 0.3s;
+    animation-duration: 0.3s;
+    -webkit-animation-timing-function: linear;
+    animation-timing-function: linear;
+    -webkit-animation-iteration-count: 1;
+    animation-iteration-count: 1;
+  }
+
+  /* 온라인 호버 끝 */
+
+
+}
