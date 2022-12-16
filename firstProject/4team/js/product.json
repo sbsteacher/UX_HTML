@@ -1,0 +1,141 @@
+[
+  {
+    "img_picture": "img/pendant/01.png",
+    "img_overEffect": "img/hover/01.png",
+    "designer_name": "Poul Henningsen",
+    "product_name": "PH 3½-3 Pale Rose Brass Pendant",
+    "price": "₩2.624.000",
+    "href" : "detail.html"
+  },
+  {
+    "img_picture": "img/pendant/02.png",
+    "img_overEffect": "img/hover/02.png",
+    "designer_name": "Poul Henningsen",
+    "product_name": "PH 5",
+    "price": "₩1,412,000",
+    "href" : "detail.html"
+  },
+  {
+    "img_picture": "img/pendant/03.png",
+    "img_overEffect": "img/hover/03.png",
+    "designer_name": "Vilhelm Lauritzen",
+    "product_name": "VL Ring Crown 3-5-7",
+    "price": "₩6,520,000",
+    "href" : "detail.html",
+    "wide" : true    
+  },
+  {
+    "img_picture": "img/pendant/04.png",
+    "img_overEffect": "img/hover/04.png",
+    "designer_name": "Poul Henningsen",
+    "product_name": "PH 3½-3 Pendant",
+    "price": "₩1,600,000",
+    "href" : "detail.html"
+  },
+  {
+    "img_picture": "img/pendant/05.png",
+    "img_overEffect": "img/hover/05.png",
+    "designer_name": "Poul Henningsen",
+    "product_name": "PH 4/3 Pendel",
+    "price": "₩93,000",
+    "href" : "detail.html"
+  },
+  {
+    "img_picture": "img/pendant/06.png",
+    "img_overEffect": "img/hover/06.png",
+    "designer_name": "Øivind Slaatto",
+    "product_name": "Patera Oval",
+    "price": "₩1,910,000",
+    "href" : "detail.html"
+  },
+  {
+    "img_picture": "img/pendant/07.png",
+    "img_overEffect": "img/hover/07.png",
+    "designer_name": "Poul Henningsen",
+    "product_name": "PH 2/3 Pendant",
+    "price": "₩1,320,000",
+    "href" : "detail.html",
+    "wide": false
+},
+  {
+    "img_picture": "img/pendant/08.png",
+    "img_overEffect": "img/hover/08.png",
+    "designer_name": "Poul Henningsen",
+    "product_name": "PH 2/1 Stammekrone",
+    "price": "₩3,100,000",
+    "href" : "detail.html",
+    "wide" : true
+  },
+  {
+    "img_picture": "img/pendant/09.png",
+    "img_overEffect": "img/hover/09.png",
+    "designer_name": "Poul Henningsen",
+    "product_name": "PH 3/3 Brass Opal Glass Pendant",
+    "price": "₩3,150,000",
+    "href" : "detail.html"
+  },
+  {
+    "img_picture": "img/pendant/10.png",
+    "img_overEffect": "img/hover/10.png",
+    "designer_name": "Poul Henningsen",
+    "product_name": "PH 5-4½ & PH 6½-6",
+    "price": "₩3,900,000",
+    "href" : "detail.html"
+  },
+  {
+    "img_picture": "img/pendant/11.png",
+    "img_overEffect": "img/hover/11.png",
+    "designer_name": "Clara von Zweigbergk",
+    "product_name": "Cirque",
+    "price": "₩850,000",
+    "href" : "detail.html"
+  },
+  {
+    "img_picture": "img/pendant/12.png",
+    "img_overEffect": "img/hover/12.png",
+    "designer_name": "Poul Henningsen",
+    "product_name": "Enigma 545",
+    "price": "₩2,300,000",
+    "href" : "detail.html"
+  },
+  {
+    "img_picture": "img/pendant/13.png",
+    "img_overEffect": "img/hover/13.png",
+    "designer_name": "Vilhelm Lauritzen",
+    "product_name": "VL Ring Crown 1",
+    "price": "₩850,000",
+    "href" : "detail.html"
+  },
+  {
+    "img_picture": "img/pendant/14.png",
+    "img_overEffect": "img/hover/14.png",
+    "designer_name": "Poul Henningsen",
+    "product_name": "PH Snowball",
+    "price": "₩5,600,000",
+    "href" : "detail.html"
+  },
+  {
+    "img_picture": "img/pendant/15.png",
+    "img_overEffect": "img/hover/15.png",
+    "designer_name": "Poul Henningsen",
+    "product_name": "PH Artichoke",
+    "price": "₩19,000,000",
+    "href" : "detail.html"
+  },
+  {
+    "img_picture": "img/pendant/16.png",
+    "img_overEffect": "img/hover/16.png",
+    "designer_name": "Poul Henningsen",
+    "product_name": "PH Septima",
+    "price": "₩19,900,000",
+    "href" : "detail.html"
+  },
+  {
+    "img_picture": "img/pendant/17.png",
+    "img_overEffect": "img/hover/17.png",
+    "designer_name": "Øivind Slaatto",
+    "product_name": "Patera",
+    "price": "₩1,900,000",
+    "href" : "detail.html"
+  }
+]
