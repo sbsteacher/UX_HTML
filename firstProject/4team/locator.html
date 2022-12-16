@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- 아이콘 -->
+    <script src="https://kit.fontawesome.com/366b35783b.js" crossorigin="anonymous"></script>
+
+    <!-- 폰트 -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Karla:wght@200;300;400;500;600;700;800&family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap"
+      rel="stylesheet">
+
+    <!-- 파비콘 -->
+    <link rel="shortcut icon" sizes="16x16" href="img/favicon.png" type="image/x-icon">
+    <link rel="icon" href="img/logo.png" type="image/x-icon">
+    
+    <!-- css -->
+    <link rel="stylesheet" href="css/y-common.css">
+    <link rel="stylesheet" href="css/locator.css">
+
+    <meta name="author" content="yerikim">
+    <title>Store locator</title>
+</head>
+
+
+
+<body style="overflow-x: hidden">
+
+  <!-- 헤더(정원) -->
+  <div id="header">
+    <div class="cart_overlay"></div>
+    <!-- <aside>
+        <a href="https://brand.naver.com/louispoulsen" target="_blank">
+            <p>첫번째 브랜드 스토어 오픈</p>
+        </a>
+            <button type="button">
+                <img src="img/etc/topLinkBar-button-x.svg" alt="">
+        </button>
+    </aside> -->
+
+    <header>
+        <div class="logo">
+            <a href="main.html">
+                <img src="img/header/louispoulsen-logo.png" alt="루이스폴센 로고" id="logo_img">
+            </a>
+            <a href="main.html">
+                <img src="img/header/louispoulsen-logo-mini.png" alt="루이스폴센 로고" id="logo_img_mini">
+            </a>
+        </div>
+        <div class="main_menu">
+            <nav class="main_nav">
+                <a href="">PRODUCTS</a>
+                <a href="">DESIGNERS</a>
+            </nav>
+            <nav class="main_service">
+                <a href="">About</a>
+                <a href="">Professional</a>
+                <a href="">Location</a>
+            </nav>
+            <div class="main_icon">
+                <button>
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <img src="img/header/header-xBtn.svg" class="header_xBtn" >
+                </button>
+                <button><i class="fa-solid fa-cart-shopping"></i></button>
+                <button id="mobile_btn">
+                    <i class="fa-solid fa-bars"></i>
+                    <!-- <i class="fa-solid fa-xmark"></i> -->
+                </button>
+                
+            </div>
+        </div>
+    </header>
+
+    <form id="search_bar" onsubmit="return false;" class="search_close">
+        <input type="search" placeholder="Search" type="text" >
+        <button>
+            <i class="fa-solid fa-magnifying-glass"></i>
+        </button>
+    </form>
+
+    <section id="cart">
+        <div>
+            <div id="cart_title">
+                <h1>Shopping Cart</h1>
+                <button>
+                    <img src="img/etc/cart-xBtn.svg" alt="">
+                </button>
+            </div>
+            <div id="cart_list">
+                <img src="img/etc/cart-product.png" alt="">
+                <div id="cart_list_info">
+                    <div id="cart_text">
+                        <div>
+                            <h2>PH 5</h2>
+                            <p>
+                                Monochrome Copper, 
+                                1x22W A-21/medium, -
+                            </p>
+                        </div>
+                        <button>
+                            <i class="fa-solid fa-xmark"></i>
+                        </button>
+                    </div>
+                    <div id="cart_list_cnt">
+                        <div id="cart_list_btn">
+                            <button id="increase">
+                                <i class="fa-solid fa-plus"></i>
+                            </button>
+                            <span id="counter">1</span>
+                            <button id="decrease">
+                                <i class="fa-solid fa-minus"></i>
+                            </button>
+                        </div>
+                        <p id="list_total">2,624,000<small>원</small></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="cart_buy">
+            <div id="cart_buy_info">
+                <h2>합계 금액</h2>
+                <p>2,624,000<small>원</small></p>
+            </div>
+            <button>구매하기</button>
+        </div>
+    </section>
+
+    <section id="mobile_menu">
+        <nav class="mobile_nav">
+            <a href=""><span>PRODUCTS</span></a>
+            <a href=""><span>DESIGNERS</span></a>
+        </nav>
+        <nav class="mobile_service">
+            <a href=""><span>About</span></a>
+            <a href=""><span>Professional</span></a>
+            <a href=""><span>Location</span></a>
+        </nav>
+    </section>
+</div>
+
+
+  <!-- 지도 페이지 내용 시작 -->
+  <main>
+    <div class="title">
+      <h1>STORE LOCATOR</h1>
+    </div>
+
+    <div class="store-locator__inner">
+      <div class="store-locator__left">
+        <!-- <div class="store-locator__search"> -->
+        <div id="MAPID">
+          <div class="hospital-search">
+            <div id="locationField">
+              <input id="autocomplete" placeholder="도시를 입력하세요." type="text">
+            </div>
+            <button class="ornament"><i class="fa-sharp fa-solid fa-magnifying-glass"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+      <div id="controls" style="display: none;">
+        <select id="country">
+          <!-- 코드생략 -->
+          <option value="kr" selected>Korea</option>
+        </select>
+      </div>
+
+
+      <!-- 매장 목록 -->
+      <div id="listing">
+        <table id="resultsTable">
+          <tbody id="results"></tbody>
+        </table>
+
+        <!-- 지도 인포창 -->
+        <div style="display: none; ">
+          <div id="info-content">
+            <table>
+              <tr id="iw-url-row" class="iw_table_row">
+                <td id="iw-icon" class="iw_table_icon"></td>
+                <td id="iw-url"></td>
+              </tr>
+              <tr id="iw-address-row" class="iw_table_row">
+                <td class="iw_attribute_name"></td>
+                <td id="iw-address"></td>
+              </tr>
+              <tr id="iw-phone-row" class="iw_table_row">
+                <td class="iw_attribute_name">T</td>
+                <td id="iw-phone"></td>
+              </tr>
+              <!-- <tr id="iw-rating-row" class="iw_table_row">
+                  <td class="iw_attribute_name">Rating:</td>
+                  <td id="iw-rating"></td> -->
+
+              </tr>
+              <tr id="iw-website-row" class="iw_table_row">
+                <td class="iw_attribute_name">E</td>
+                <td id="iw-website"></td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </div>
+
+
+      <!-- 지도 리스트 끝 -->
+
+      <!-- 지도 -->
+      <div class="store-locator__right">
+        <!-- MAP -->
+        <div id="map"></div>
+      </div>
+    </div>
+
+
+    <!-- ONLINE STORE -->
+    <div class="title__two">ONLINE STORE</div>
+
+    <div class="online__stores">
+
+
+      <div class="online__stores__name"> <a
+          href="https://trdst.com/goods/goods_list.php?page=9&brandCd=468012&utm_source=brand_banner"
+          class="link pop-on-hover" target="_blank">TRADST</a></div>
+
+      <div class="online__stores__name"><a href="https://laperta.co.kr/LAPERTA/?idx=37" class="link pop-on-hover"
+          target="_blank">LAPERTA</a>
+      </div>
+      <div class="online__stores__name"><a
+          href="https://department.ssg.com/disp/brandShop.ssg?brandId=3000033249&ctgId=6000018659"
+          class="link pop-on-hover" target="_blank">ssg</a></div>
+      <div class="online__stores__name" id="no_right_line"><a
+          href="https://www.croket.co.kr/market?inputText=%EB%A3%A8%EC%9D%B4%EC%8A%A4%ED%8F%B4%EC%84%BC&yg_type=web_search&yg_method=%EB%A3%A8%EC%9D%B4%EC%8A%A4%ED%8F%B4%EC%84%BC"
+          class="link pop-on-hover" target="_blank">croket</a></div>
+      <div class="online__stores__bottom"><a href="https://www.benufe.com/product/list.html?cate_no=538"
+          class="link pop-on-hover" target="_blank">BENUFE</a></div>
+      <div class="online__stores__bottom"><a
+          href="https://www.leweekend.co.kr/goods/goods_search.php?keyword=%EB%A3%A8%EC%9D%B4%EC%8A%A4%ED%8F%B4%EC%84%BC"
+          class="link pop-on-hover" target="_blank">Le Weekend</a></div>
+      <div class="online__stores__bottom"><a
+          href="https://inartshop.com/goods/search?osearchtext=%EB%A3%A8%EC%9D%B4%EC%8A%A4%ED%8F%B4%EC%84%BC&page=1&searchMode=search&per=40"
+          class="link pop-on-hover" target="_blank">inartshop</a></div>
+      <div class="online__stores__bottom" id="no_right_lines"><a href="http://" class="link pop-on-hover"
+          target="_blank">잇츠라이팅</a>
+      </div>
+
+    </div>
+
+
+
+  </main>
+
+
+  <!-- 푸터(정원)  -->
+  <footer>
+    <section class="f_row" id="f_row_top">
+      <div id="newsletter">
+        <h2>조명에 대한 영감을 주는 <br>
+          뉴스레터가 필요하신가요?
+        </h2>
+        <div>
+          <div class="email_wrapper">
+            <input type="email" placeholder="What's your email?">
+            <button type="button">
+              <i class="fa-solid fa-arrow-right"></i>
+            </button>
+          </div>
+          <p id="email_submit">Thanks for submitting!</p>
+        </div>
+      </div>
+      <div id="footer_links">
+        <ul id="f_follow">
+          <h3>Follow us</h3>
+          <li><a href="">Facebook</a></li>
+          <li><a href="">Instagram</a></li>
+          <li><a href="">LinkedIn</a></li>
+          <li><a href="">Pinterest</a></li>
+          <li><a href="">YouTube</a></li>
+        </ul>
+        <ul id="f_about">
+          <h3>About us</h3>
+          <li><a href="">루이스폴센 소개</a></li>
+          <li><a href="">문의처</a></li>
+          <li><a href="">디자인 및 조명 철학</a></li>
+          <li><a href="">언론</a></li>
+          <li><a href="">채용</a></li>
+          <li><a href="">Quality Policy</a></li>
+        </ul>
+        <ul id="f_quick">
+          <h3>Quick links</h3>
+          <li><a href="">판매처 찾기</a></li>
+          <li><a href="">지원 및 FAQ</a></li>
+          <li><a href="">마운팅 지침</a></li>
+          <li><a href="">제품 등록</a></li>
+          <li><a href="">뉴스레터</a></li>
+          <li><a href="">Sustainability report</a></li>
+        </ul>
+      </div>
+    </section>
+    <section class="f_row" id="f_low_bottom">
+      <div id="f_small">
+        <a href=""><span>개인정보 보호 정책</span></a>
+        <a href=""><span>쿠키 정책</span></a>
+        <a href=""><span>문의 양식 - GDPR</span></a>
+        <a href=""><span>연례 보고서</span></a>
+      </div>
+      <span>빛의 형태를 디자인하다</span>
+    </section>
+  </footer>
+
+
+  <!-- 위로가기 -->
+  <div class="upper">
+    <a href="#top"><img src="./designer-pic/상단으로_보라.png" alt=""></a></div>
+
+  <!-- 스크립트  -->
+  <script src="js/map.js"></script>
+  <script src="js/main.js"></script>
+  <script
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAid87rRXLk0Cpt-Vr_W0IVTizHcpg6nD0&callback=initMap&libraries=places&v=weekly&radius=5000">
+  </script>
+
+</body>
+
+</html>
