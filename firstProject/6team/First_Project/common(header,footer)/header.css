@@ -1,0 +1,693 @@
+* {
+    margin: 0;
+    padding: 0;
+    /* box-sizing: border-box; */
+}
+
+body {
+    background-color: rgba(253, 250, 243);
+    font-family: 'GangwonEduPowerExtraBoldA';
+    /* transition: all .3s cubic-bezier(0.16, 0.04, 0.03, 0.95); */
+}
+
+
+a {
+    color: inherit;
+    text-decoration: inherit;
+}
+
+li {
+    list-style-type: none;
+}
+
+/* p {
+    font-family: 'NanumSquare', sans-serif;
+    line-height: 30px;
+} */
+
+
+@media (min-width: 961px) {
+nav {
+    max-width: 1440px;
+}
+}
+
+
+/* 헤더-돋보기-박스-로그인-마이페이지 */
+.innerbox {
+    position: relative;
+    float: right;
+    top: 180px;
+    right: 50px;
+}
+
+.user-img {
+    width: 26px;
+    margin: 0 10px 0 10px;
+}
+
+
+
+@import url('https://cdn.rawgit.com/moonspam/NanumSquare/master/nanumsquare.css');
+@import url('https://fonts.googleapis.com/css?family=Black+Han+Sans:400');
+@import url('https://fonts.googleapis.com/css?family=Black+Han+Sans&display=swap&subset=korean');
+
+
+@font-face {
+    font-family: 'SuseongDotum';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2205@1.0/SuseongDotum.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'GangwonEduPowerExtraBoldA';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2201-2@1.0/GangwonEduPowerExtraBoldA.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+#wrapper {
+    position: relative;
+}
+
+#header {
+    background: transparent;
+    backdrop-filter: none;
+    position: relative;
+    justify-content: space-between;
+    width: 100%;
+    height: 100px;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    transition: all .3s cubic-bezier(0.16, 0.04, 0.03, 0.95);
+}
+
+#header .logo {
+    float: left;
+    width: 216px;
+    height: 93px;
+    margin: 20px 0 0 30px;
+    transition: all .3s cubic-bezier(0.16, 0.04, 0.03, 0.95);
+}
+
+
+#header .logo a {
+    display: block;
+    height: 93px;
+    text-indent: -9999em;
+    background-image: url(./image/knotted_mainLogo.png);
+    width: 80%;
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    background-size: 100% auto;
+}
+
+@media screen and (max-width:1500px) {
+    #header ul .none768 {
+        display: none;
+        transition: all .3s cubic-bezier(0.16, 0.04, 0.03, 0.95);
+    }
+
+    #header .logo a {
+        margin-left: 200px;
+        transition: all .3s cubic-bezier(0.16, 0.04, 0.03, 0.95);
+    }
+}
+
+@media screen and (max-width:1024px) {
+    #header ul .none768 {
+        display: none;
+        transition: all .3s cubic-bezier(0.16, 0.04, 0.03, 0.95);
+    }
+
+    #header .logo a {
+        margin-left: 400px;
+        transition: all .3s cubic-bezier(0.16, 0.04, 0.03, 0.95);
+    }
+}
+
+@media screen and (max-width:768px) {
+    #header .logo a {
+        margin-left: 200px;
+        transition: all .3s cubic-bezier(0.16, 0.04, 0.03, 0.95);
+    }
+}
+
+/* search css */
+
+#modal_btn {
+    float: right;
+}
+
+.modal_wrap {
+    position: fixed;
+    display: none;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    background-color: rgba(253, 250, 243, 0.9);
+    z-index: 2;
+}
+
+.modal_close {
+    float: right;
+}
+
+.modal_close img {
+    margin: 20px;
+    width: 25px;
+}
+
+
+/* search form */
+
+.search-form {
+    padding: 3px;
+    margin-top: 20px;
+    width: 600px;
+    height: 45px;
+    box-sizing: border-box;
+    border: 1px solid #000;
+    border-radius: 30px;
+    overflow: hidden;
+    transition: width 0.6s ease;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    margin-bottom: 15px;
+    transform: translateX(-50%);
+    transition: all 0.6s ease;
+}
+
+@media screen and (max-width:768px) {
+    .search-form {
+        width: 420px;
+        transform: translateX(-64%);
+    }
+
+    .search-popup-content {
+        padding-top: 75px;
+    }
+
+    .search-popup-title {
+        margin-top: 50px;
+        margin-bottom: 24px;
+    }
+}
+
+.search-input {
+    font-size: 20px;
+    width: 100%;
+    height: 38px;
+    line-height: 32px;
+    border: none !important;
+    text-indent: 15px;
+    transition: all 0.6s ease;
+}
+
+
+input:focus {
+    outline: none;
+}
+
+
+
+ul li {
+    list-style: none;
+}
+
+ul li a {
+    text-decoration: none;
+}
+
+
+
+
+/* 팝업 호버 */
+
+.search-popup {
+    transition: all 0.6s ease;
+}
+
+
+.search-popup-content {
+    transition-delay: 0.4s;
+    max-width: 680px;
+    width: 100%;
+    margin: 0 auto;
+    padding-top: 60px;
+    padding-left: 70px;
+    transition: all .5s;
+}
+
+.search-popup_-content-left {
+    min-width: 171px;
+    max-width: 200px;
+}
+
+.search-popup-content-right {
+    width: 367px;
+}
+
+.float-left {
+    float: left;
+}
+
+.float-right {
+    float: right;
+}
+
+.search-popup-title {
+    font-size: 26px;
+    color: #acacac;
+    line-height: 17px;
+    margin-top: 40px;
+    margin-bottom: 24px;
+}
+
+.popular-keyword {
+    padding-top: 11px;
+}
+
+.popular-keyword.list {
+    margin-bottom: 13px;
+    transition: 0.3s ease;
+}
+
+.popular-keyword-item {
+    margin-bottom: 13px;
+}
+
+.search-popup-content a {
+    font-size: 17px;
+    font-family: 'SuseongDotum';
+    font-weight: lighter;
+    color: black;
+}
+
+.search-popup-content a:hover {
+    color: #343434;
+    font-size: larger;
+}
+
+.collection-box-list a:hover {
+    transform: scale(1.4);
+}
+
+
+.collection-box-list li {
+    margin-top: 20px;
+    margin-right: 20px;
+    float: left;
+}
+
+.collection-box-list img {
+    width: 65px;
+}
+
+.collection-name {
+    font-size: 11px;
+}
+
+.collection-top {
+    margin-top: -10px;
+}
+
+
+
+
+#header .category {
+    height: 100px;
+    background: transparent;
+    transition: all .3s cubic-bezier(0.16, 0.04, 0.03, 0.95);
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+    text-align: center;
+    overflow: hidden;
+    z-index: -1;
+    /* backdrop-filter: blur(4px) saturate(80%); */
+}
+
+#header .category .menu {
+    display: flex;
+    justify-content: center;
+}
+
+#header .category .menu>li {
+    float: left;
+    margin: 40px 50px;
+}
+
+
+#header .category .menu>li>a {
+    font-size: 20px;
+    line-height: 27px;
+    font-weight: 700;
+    padding: 37px 0;
+    margin-top: 40px;
+    transition: all .3s cubic-bezier(0.16, 0.04, 0.03, 0.95);
+}
+
+/* button */
+.btn {
+    display: flex;
+    float: right;
+    margin: 45px -380px 10px 0;
+}
+
+button {
+    font-family: inherit;
+    border: 0;
+    cursor: pointer;
+    padding: 0;
+    background-color: transparent;
+}
+
+
+#header .btn-allmenu {
+    position: relative;
+    top: 41px;
+    right: -280px;
+    width: 24px;
+    height: 24px;
+    background-image: url(./image/header_돋보기.svg);
+    background-repeat: no-repeat;
+    background-position: 0 0;
+}
+
+
+@media screen and (max-width:1500px) {
+    .btn {
+        display: flex;
+        float: right;
+        margin: 45px 453px 10px 0;
+    }
+
+
+    .btn-login {
+        display: none;
+    }
+
+    .login-1 {
+        display: none;
+    }
+
+
+    #header .btn-allmenu {
+        margin-top: -1px;
+        margin-right: -85px;
+        width: 24px;
+        height: 24px;
+        background-image: url(./image/header_햄버거.svg);
+    }
+
+}
+
+@media screen and (max-width:768px) {
+    .btn {
+        display: flex;
+        float: right;
+        margin: 45px 453px 10px 0;
+    }
+
+
+    .login-1 {
+        display: none;
+    }
+    .btn-login{
+        display: none;
+    }
+
+    #header .btn-allmenu {
+        margin-top: -106px;
+        margin-right: -130px;
+        width: 24px;
+        height: 24px;
+        background-image: url(./image/header_햄버거.svg);
+    } 
+}
+
+
+.btn:hover {
+    cursor: pointer;
+    transition: all .5s;
+    transform: translateY(-80%);
+    transition: all 0.9s, color 0.3;
+}
+
+
+
+
+
+/* header 로그인 */
+#header .btn-login {
+    width: 70px;
+    font-size: 20px;
+    letter-spacing: -1.3px;
+    margin-top: -20px;
+    margin-left: -30px;
+}
+
+#header .login-1 {
+    width: 70px;
+    font-size: 20px;
+    letter-spacing: -1.3px;
+    margin-top: -20px;
+    margin-left: -30px;
+}
+
+
+#header span:hover {
+    cursor: pointer;
+    transition: all .5s;
+    transform: translateY(-80%);
+    transition: all 0.9s, color 0.3;
+}
+
+
+
+
+/* footer */
+
+.footer-container {
+    box-sizing: border-box;
+    display: flex;
+    position: relative;
+    margin-left: 75px;
+    padding: 0 200px;
+}
+
+.main-section-footer #footer {
+    margin-top: 10px;
+}
+
+.footer {
+    padding: 48px 0;
+    background-color: rgb(215, 230, 223);
+    color: black;
+    transition: all .3s cubic-bezier(0.16, 0.04, 0.03, 0.95);
+}
+
+.section .footer-container {
+    display: inline-block;
+    width: 100%;
+    text-align: left;
+}
+
+.footer .footer-container {
+    display: block;
+    position: relative;
+    margin: 0 auto;
+    padding: 0 48px;
+    max-width: 1500px;
+}
+
+.footer-bottom {
+    margin-top: 48px;
+    padding-top: 48px;
+    border-top: 1px solid black;
+    transition: all .3s cubic-bezier(0.16, 0.04, 0.03, 0.95);
+}
+
+.float-left {
+    float: left;
+}
+
+.float-right {
+    float: right;
+}
+
+ul {
+    list-style-position: inside;
+}
+
+#footer li {
+    list-style: none;
+}
+
+.footer-top-menu li:first-child {
+    margin-top: 0;
+}
+
+.footer-top-menu a {
+    display: block;
+    font-size: 24px;
+    font-weight: 600;
+    color: black;
+    transition: all .3s cubic-bezier(0.16, 0.04, 0.03, 0.95);
+}
+
+.footer-top-menu li {
+    display: block;
+    margin-top: 16px;
+    transition: all .3s cubic-bezier(0.16, 0.04, 0.03, 0.95);
+}
+
+.footer-top-cs dl:first-child {
+    margin-top: 0;
+}
+
+.footer-top-cs dl {
+    display: block;
+    transition: all .3s cubic-bezier(0.16, 0.04, 0.03, 0.95);
+}
+
+.footer-top-cs dl {
+    display: block;
+    margin-top: 34px;
+    transition: all .3s cubic-bezier(0.16, 0.04, 0.03, 0.95);
+}
+
+@media screen and (max-width:1024px) {
+    .footer-top-cs {
+        display: none;
+    }
+
+    .float-left {
+        line-height: 17px;
+        transition: all .3s cubic-bezier(0.16, 0.04, 0.03, 0.95);
+    }
+
+    .footer-bottom-menu {
+        display: flex;
+        margin-top: -3vh;
+        font-size: 24px;
+        font-weight: 600;
+        color: black;
+        transition: all .3s cubic-bezier(0.16, 0.04, 0.03, 0.95);
+    }
+}
+
+
+.footer-top::after {
+    clear: both;
+    content: " ";
+    display: table;
+}
+
+*::after {
+    box-sizing: inherit;
+}
+
+.float-none {
+    float: none !important;
+}
+
+.footer-bottom {
+    margin-top: 48px;
+    padding-top: 48px;
+    border-top: 1px solid #000;
+    transition: all .3s cubic-bezier(0.16, 0.04, 0.03, 0.95);
+}
+
+.footer-bottom-info li {
+    display: inline-block;
+}
+
+a {
+    color: inherit;
+    text-decoration: inherit;
+}
+
+.footer-bottom-menu {
+    margin-bottom: 20px;
+    transition: all .3s cubic-bezier(0.16, 0.04, 0.03, 0.95);
+}
+
+.footer-bottom-menu li {
+    display: inline-block;
+    margin-right: 40px;
+    transition: all .3s cubic-bezier(0.16, 0.04, 0.03, 0.95);
+}
+
+.footer-bottom-menu a {
+    font-size: 14px;
+    font-weight: 600;
+    color: black;
+    transition: all .3s cubic-bezier(0.16, 0.04, 0.03, 0.95);
+}
+
+a {
+
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+
+.footer-bottom-info {
+    font-size: 14px;
+    font-weight: 400;
+    color: #777;
+    transition: all .3s cubic-bezier(0.16, 0.04, 0.03, 0.95);
+}
+
+.footer-bottom-info {
+    font-size: 14px;
+    font-weight: 400;
+    color: #777;
+    transition: all .3s cubic-bezier(0.16, 0.04, 0.03, 0.95);
+}
+
+.footer-bottom-info ul {
+    margin-bottom: 8px;
+    transition: all .3s cubic-bezier(0.16, 0.04, 0.03, 0.95);
+}
+
+
+.footer-bottom-copy {
+    display: block;
+    margin-top: 16px;
+    margin-bottom: 24px;
+    font-family: "Mark Pro";
+    font-size: 12px;
+    font-weight: 400;
+    color: #777;
+    transition: all .3s cubic-bezier(0.16, 0.04, 0.03, 0.95);
+}
+
+.footer-bottom-copy span {
+    display: inline-block;
+    margin-right: 4px;
+    transition: all .3s cubic-bezier(0.16, 0.04, 0.03, 0.95);
+}
+
+
+.footer-bottom-sns__link:first-child {
+    margin-left: 0;
+}
+
+.footer-bottom-sns__link {
+    display: inline-block;
+    margin-left: 14px;
+    transition: all .3s cubic-bezier(0.16, 0.04, 0.03, 0.95);
+}
+
+.footer-bottom-sns__link {
+    display: inline-block;
+    margin-left: 14px;
+    transition: all .3s cubic-bezier(0.16, 0.04, 0.03, 0.95);
+}
