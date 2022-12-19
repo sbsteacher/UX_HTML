@@ -14,15 +14,14 @@
 		});
 		
 		swiperObjList.push(swiper);
-		
-		let beforeIdx = null;
-		swiper.on('touchEnd', function() {
-			console.log(swiper);
-			if((beforeIdx === null && swiper.activeIndex === 0) || swiper.activeIndex === beforeIdx) {
+				
+		let isTouch = false;
+		swiper.on('slideChange', function() {
+			if(!isTouch) {
+				isTouch = false;
 				return;
 			}
-			beforeIdx = swiper.activeIndex;
-
+			isTouch = false;			
 			swiperObjList.forEach(obj => {
 				if(swiper !== obj) {					
 					if(swiper.swipeDirection === 'prev') {
@@ -31,8 +30,11 @@
 						obj.slideNext();
 					}
 				}
-			})		
-			
+			});
+		});
+		
+		swiper.on('touchEnd', function() {
+			isTouch = true;			
 		});
 	});
 
