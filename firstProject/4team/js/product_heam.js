@@ -1,4 +1,9 @@
     'use strict'
+   
+
+    Number.prototype.printPrice = function() {
+      return `₩ ${this.toLocaleString('ko-KR')}`;
+    }
 
     const swiper = new Swiper('.swiper_01', {
         direction: 'horizontal',
@@ -11,8 +16,7 @@
          autoplay: {
             delay: 2500,
             disableOnInteraction: false,
-        },
-      
+        },      
     });
 
     new Swiper('.swiper_02', {
@@ -54,29 +58,24 @@
       $bottomBtn.onclick = () => {
       window.scrollTo({ top: document.body.scrollHeight-1000, behavior: "smooth" });
     };
+   
 
-    //필터 드롭다운//
-    function dp_menu_02(){
-      let click = document.getElementById("drop-content_sort");
-      if(click.style.display === "none"){
-          click.style.display = "block";
-          document.getElementById(this.id + '-toggle').textContent = '+';
-      }else{
-          click.style.display = "none";
-          document.getElementById(this.id + '-toggle').textContent = '-';
-      }
-    }
     //items.forEach(item => item.addEventListener('click', dp_menu_02));
     const $divFilter = document.querySelector('#drop-content_filter');
     const $filterItemList = $divFilter.querySelectorAll('li');
-    
+    const $btnFilter = document.querySelector('.filter_container #btn_filter');
+
     $filterItemList.forEach(item => {
       item.addEventListener('click', e => {
+        console.log(e.target.textContent);
+        //$btnFilter.value = e.target.textContent;
+        const str = e.target.textContent;
+        $btnFilter.textContent = `${str.substring(3)} ▼`;    
         dp_menu_01();
       });
     });
 
-    function dp_menu_01(){      
+    function dp_menu_01() {      
       if($divFilter.style.display === "none"){
         $divFilter.style.display = "block";
       } else {
@@ -84,7 +83,61 @@
       }
     }
 
+    const $divSort = document.querySelector('#drop-content_sort');
+    const $sortItemList = $divSort.querySelectorAll('li');
+    const $btnSort = document.querySelector('.filter_container #btn_sort');
+
+    $sortItemList.forEach(item => {
+      item.addEventListener('click', e => {
+
+        dp_menu_02();
+        if($btnFilter.textContent === 'Filter ▼') {
+          alert('필터를 선택해 주세요.');
+          return;
+        }
+        $btnSort.textContent = `${e.target.textContent} ▼`;
+                
+        switch($btnFilter.textContent) {         
+          case 'designer ▼':
+            lampList.sort((a, b) => { //오름차순
+              let leftVal = a.designer_name;
+              let rightVal = b.designer_name;
+              if($btnSort.textContent === '내림차순 ▼') {
+                leftVal = b.designer_name;
+                rightVal = a.designer_name;
+              }
+              if(leftVal > rightVal) { return 1; }
+              if(leftVal < rightVal) { return -1; }
+            });            
+            break;
+          case 'price ▼':
+            lampList.sort((a, b) => {
+              let leftVal = a.price;
+              let rightVal = b.price;
+              if($btnSort.textContent === '내림차순 ▼') {
+                leftVal = b.price;
+                rightVal = a.price;
+              }
+              return leftVal - rightVal;
+            })
+            break;
+        }
+        makeList(lampList);
+      });
+    });
+
+    //정렬 드롭다운//
+    function dp_menu_02() {      
+      if($divSort.style.display === "none"){
+        $divSort.style.display = "block";        
+      }else{
+        $divSort.style.display = "none";        
+      }
+    }
+
     let catalogItem = null;
+    let lampList = null; 
+
     function getData() {
       fetch('js/catalog.json')
       .then(res => res.json())
@@ -95,12 +148,14 @@
       fetch('js/product.json')
       .then(res => res.json())
       .then(result => {
+        lampList = result;
         console.log(result);
         makeList(result);
       });
     }
 
     function makeList(items) {
+      $gridContainer.innerHTML = null;
       items.forEach((item, idx) => {
         if(idx === 8) {
           const catalogResult = makeCatalog(catalogItem);
@@ -156,7 +211,7 @@
           <div class="${divProductClass}">
             <div class="designer_name">${item.designer_name}</div>
             <div class="product_name">${item.product_name}</div>
-            <div class="price">${item.price}</div>
+            <div class="price">${item.price.printPrice()}</div>
           </div>
         </a>
       `;

@@ -4,7 +4,7 @@
     "img_overEffect": "img/hover/01.png",
     "designer_name": "Poul Henningsen",
     "product_name": "PH 3½-3 Pale Rose Brass Pendant",
-    "price": "₩2.624.000",
+    "price": 2624000,
     "href" : "detail.html"
   },
   {
@@ -12,7 +12,7 @@
     "img_overEffect": "img/hover/02.png",
     "designer_name": "Poul Henningsen",
     "product_name": "PH 5",
-    "price": "₩1,412,000",
+    "price": 1412000,
     "href" : "detail.html"
   },
   {
@@ -20,7 +20,7 @@
     "img_overEffect": "img/hover/03.png",
     "designer_name": "Vilhelm Lauritzen",
     "product_name": "VL Ring Crown 3-5-7",
-    "price": "₩6,520,000",
+    "price": 6520000,
     "href" : "detail.html",
     "wide" : true    
   },
@@ -29,7 +29,7 @@
     "img_overEffect": "img/hover/04.png",
     "designer_name": "Poul Henningsen",
     "product_name": "PH 3½-3 Pendant",
-    "price": "₩1,600,000",
+    "price": 1600000,
     "href" : "detail.html"
   },
   {
@@ -37,7 +37,7 @@
     "img_overEffect": "img/hover/05.png",
     "designer_name": "Poul Henningsen",
     "product_name": "PH 4/3 Pendel",
-    "price": "₩93,000",
+    "price": 93000,
     "href" : "detail.html"
   },
   {
@@ -45,7 +45,7 @@
     "img_overEffect": "img/hover/06.png",
     "designer_name": "Øivind Slaatto",
     "product_name": "Patera Oval",
-    "price": "₩1,910,000",
+    "price": 1910000,
     "href" : "detail.html"
   },
   {
@@ -53,7 +53,7 @@
     "img_overEffect": "img/hover/07.png",
     "designer_name": "Poul Henningsen",
     "product_name": "PH 2/3 Pendant",
-    "price": "₩1,320,000",
+    "price": 1320000,
     "href" : "detail.html",
     "wide": false
 },
@@ -62,7 +62,7 @@
     "img_overEffect": "img/hover/08.png",
     "designer_name": "Poul Henningsen",
     "product_name": "PH 2/1 Stammekrone",
-    "price": "₩3,100,000",
+    "price": 3100000,
     "href" : "detail.html",
     "wide" : true
   },
@@ -71,7 +71,7 @@
     "img_overEffect": "img/hover/09.png",
     "designer_name": "Poul Henningsen",
     "product_name": "PH 3/3 Brass Opal Glass Pendant",
-    "price": "₩3,150,000",
+    "price": 3150000,
     "href" : "detail.html"
   },
   {
@@ -79,7 +79,7 @@
     "img_overEffect": "img/hover/10.png",
     "designer_name": "Poul Henningsen",
     "product_name": "PH 5-4½ & PH 6½-6",
-    "price": "₩3,900,000",
+    "price": 3900000,
     "href" : "detail.html"
   },
   {
@@ -87,7 +87,7 @@
     "img_overEffect": "img/hover/11.png",
     "designer_name": "Clara von Zweigbergk",
     "product_name": "Cirque",
-    "price": "₩850,000",
+    "price": 850000,
     "href" : "detail.html"
   },
   {
@@ -95,7 +95,7 @@
     "img_overEffect": "img/hover/12.png",
     "designer_name": "Poul Henningsen",
     "product_name": "Enigma 545",
-    "price": "₩2,300,000",
+    "price": 2300000,
     "href" : "detail.html"
   },
   {
@@ -103,7 +103,7 @@
     "img_overEffect": "img/hover/13.png",
     "designer_name": "Vilhelm Lauritzen",
     "product_name": "VL Ring Crown 1",
-    "price": "₩850,000",
+    "price": 850000,
     "href" : "detail.html"
   },
   {
@@ -111,7 +111,7 @@
     "img_overEffect": "img/hover/14.png",
     "designer_name": "Poul Henningsen",
     "product_name": "PH Snowball",
-    "price": "₩5,600,000",
+    "price": 5600000,
     "href" : "detail.html"
   },
   {
@@ -119,7 +119,7 @@
     "img_overEffect": "img/hover/15.png",
     "designer_name": "Poul Henningsen",
     "product_name": "PH Artichoke",
-    "price": "₩19,000,000",
+    "price": 19000000,
     "href" : "detail.html"
   },
   {
@@ -127,7 +127,7 @@
     "img_overEffect": "img/hover/16.png",
     "designer_name": "Poul Henningsen",
     "product_name": "PH Septima",
-    "price": "₩19,900,000",
+    "price": 19900000,
     "href" : "detail.html"
   },
   {
@@ -135,7 +135,7 @@
     "img_overEffect": "img/hover/17.png",
     "designer_name": "Øivind Slaatto",
     "product_name": "Patera",
-    "price": "₩1,900,000",
+    "price": 1900000,
     "href" : "detail.html"
   }
 ]
