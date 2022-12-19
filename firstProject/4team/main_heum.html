@@ -1,0 +1,581 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- 아이콘 -->
+    <script src = "https://kit.fontawesome.com/77ad8525ff.js" crossorigin="anonymous"></script>
+
+    <!-- 폰트 -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Karla:wght@200;300;400;500;600;700;800&family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+
+    <!-- 파비콘 -->
+    <link rel="shortcut icon" sizes="16x16" href="img/logo.png" type="image/x-icon">
+    <link rel="icon" href="img/logo.png" type="image/x-icon">
+
+    <!-- 슬라이드 -->
+    <link rel="stylesheet" href="css/swiper.css">
+    <link rel="stylesheet" href="css/common.css">
+
+    <link rel="stylesheet" media="screen and (max-width:1024px)" href="css/mq-1024.css">
+    <link rel="stylesheet" media="screen and (max-width:768px)" href="css/mq-768.css">
+    <title>louis poulsen</title>
+</head>
+<body>
+    <div id="header">
+        <div class="cart_overlay"></div>
+        <aside>
+            <a href="https://brand.naver.com/louispoulsen" target="_blank">
+                <p>첫번째 브랜드 스토어 오픈</p>
+            </a>
+                <button type="button">
+                    <img src="img/etc/topLinkBar-button-x.svg" alt="">
+            </button>
+        </aside>
+
+        <header>
+            <div class="logo">
+                <a href="main.html">
+                    <img src="img/header/louispoulsen-logo.png" alt="루이스폴센 로고" id="logo_img">
+                </a>
+                <a href="main.html">
+                    <img src="img/header/louispoulsen-logo-mini.png" alt="루이스폴센 로고" id="logo_img_mini">
+                </a>
+            </div>
+            <div class="main_menu">
+                <nav class="main_nav">
+                    <a href="product.html">PRODUCTS</a>
+                    <a href="designer.html">DESIGNERS</a>
+                </nav>
+                <nav class="main_service">
+                    <a href="main.html">About</a>
+                    <a href="main.html">Professional</a>
+                    <a href="locator.html">Location</a>
+                </nav>
+                <div class="main_icon">
+                    <button>
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                        <img src="img/header/header-xBtn.svg" class="header_xBtn" >
+                    </button>
+                    <button><i class="fa-solid fa-cart-shopping"></i></button>
+                    <button id="mobile_btn">
+                        <i class="fa-solid fa-bars"></i>
+                        <!-- <i class="fa-solid fa-xmark"></i> -->
+                    </button>
+                    
+                </div>
+            </div>
+        </header>
+
+        <form id="search_bar" onsubmit="return false;" class="search_close">
+            <input type="search" placeholder="Search" type="text" >
+            <button>
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </button>
+        </form>
+
+        <section id="cart">
+            <div>
+                <div id="cart_title">
+                    <h1>Shopping Cart</h1>
+                    <button>
+                        <img src="img/etc/cart-xBtn.svg" alt="">
+                    </button>
+                </div>
+                <div id="cart_list">
+                    <img src="img/etc/cart-product.png" alt="">
+                    <div id="cart_list_info">
+                        <div id="cart_text">
+                            <div>
+                                <h2>PH 5</h2>
+                                <p>
+                                    Monochrome Copper, 
+                                    1x22W A-21/medium, -
+                                </p>
+                            </div>
+                            <button>
+                                <i class="fa-solid fa-xmark"></i>
+                            </button>
+                        </div>
+                        <div id="cart_list_cnt">
+                            <div id="cart_list_btn">
+                                <button id="increase">
+                                    <i class="fa-solid fa-plus"></i>
+                                </button>
+                                <span id="counter">1</span>
+                                <button id="decrease">
+                                    <i class="fa-solid fa-minus"></i>
+                                </button>
+                            </div>
+                            <p id="list_total">2,624,000<small>원</small></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="cart_buy">
+                <div id="cart_buy_info">
+                    <h2>합계 금액</h2>
+                    <p>2,624,000<small>원</small></p>
+                </div>
+                <button>구매하기</button>
+            </div>
+        </section>
+
+        <section id="mobile_menu">
+            <nav class="mobile_nav">
+                <a href="product.html"><span>PRODUCTS</span></a>
+                <a href="designer.html"><span>DESIGNERS</span></a>
+            </nav>
+            <nav class="mobile_service">
+                <a href="main.html"><span>About</span></a>
+                <a href="main.html"><span>Professional</span></a>
+                <a href="locator.html"><span>Location</span></a>
+            </nav>
+        </section>
+    </div>
+    <main>
+        <section id="main_con">
+            <div class="main_title">
+                <div class="title_row">
+                    <div class="main_title_text">
+                        <span>Design</span>
+                        <span id="to">to</span>
+                    </div>
+                    <span>
+                        Once you have experienced good lighting,<br>
+                        life is filled with new values
+                    </span>
+                </div>
+                <div class="title_row">
+                    <a href="#con1">
+                        <img src="img/main/main-arrow.svg" alt="">
+                    </a>
+                    <div class="main_title_text">
+                        <span id="shape">Shape </span>
+                        <span>Light</span>
+                    </div>
+                </div>
+            </div>
+            <div id="main_png">
+                <img src="img/main/main-01.png" alt="">
+            </div>
+            <span id="title_mobile">
+                Once you have experienced good lighting,<br>
+                life is filled with new values
+            </span>
+        </section>
+        <section id="con1">
+            <p>
+                훌륭한 조명을 경험하고 나면, <br>
+                삶에 새로운 가치가 가득차게 된다.
+            </p>
+        </section>
+        <section id="con2">
+            <div class="con2_img_wrapper">
+                <div class="con2_imgIn main_swiper" id="con2_img_1">
+                    <div class="con2_imgIn_img swiper-container">
+                        <div class="con2_img_silde  swiper-wrapper">
+                            <a href="detail.html" class="swiper-slide">
+                                <img src="img/con2/con2-palerose-1.jpg" alt="">
+                            </a>
+                            <a href="detail.html" class="swiper-slide">
+                                <img src="img/con2/con2-panthella-1.jpg" alt="">
+                            </a>
+                            <a href="detail.html" class="swiper-slide">
+                                <img src="img/con2/con2-ph-limited-1.jpg" alt="">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="con2_imgIn sub_swiper2" id="con2_img_2" >
+                    <div class="con2_imgIn_img swiper-container">
+                        <div class="con2_img_silde  swiper-wrapper">
+                            <a href="detail.html" class="swiper-slide">
+                                <img src="img/con2/con2-palerose-2.jpg" alt="">
+                            </a>
+                            <a href="detail.html" class="swiper-slide">
+                                <img src="img/con2/con2-panthella-2.jpg" alt="">
+                            </a>
+                            <a href="detail.html" class="swiper-slide">
+                                <img src="img/con2/con2-ph-limited-2.jpg" alt="">
+                            </a>
+                            
+                        </div>
+                    </div>
+                </div>
+                <div class="con2_imgIn sub_swiper3" id="con2_img_3">
+                    <div class="con2_imgIn_img  swiper-container">
+                        <div class="con2_img_silde  swiper-wrapper">
+                            <a href="detail.html" class="swiper-slide">
+                                <img src="img/con2/con2-palerose-3.jpg" alt="">
+                            </a>
+                            <a href="detail.html" class="swiper-slide">
+                                <img src="img/con2/con2-panthella-3.jpg" alt="">
+                            </a>
+                            <a href="detail.html" class="swiper-slide">
+                                <img src="img/con2/con2-ph-limited-3.jpg" alt="">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="con2_imgIn sub_swiper4" id="con2_img_4">
+                    <div class="con2_imgIn_img  swiper-container">
+                        <div class="con2_img_silde  swiper-wrapper">
+                            <a href="detail.html" class="swiper-slide">
+                                <img src="img/con2/con2-palerose-4.jpg" alt="">
+                            </a>
+                            <a href="detail.html" class="swiper-slide">
+                                <img src="img/con2/con2-panthella-4.jpg" alt="">
+                            </a>
+                            <a href="detail.html" class="swiper-slide">
+                                <img src="img/con2/con2-ph-limited-4.jpg" alt="">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="con2_imgIn sub_swiper5" id="con2_img_5">
+                    <div class="con2_imgIn_img  swiper-container">
+                        <div class="con2_img_silde  swiper-wrapper">
+                            <a href="detail.html" class="swiper-slide">
+                                <img src="img/con2/con2-palerose-5.jpg" alt="">
+                            </a>
+                            <a href="detail.html" class="swiper-slide">
+                                <img src="img/con2/con2-panthella-5.jpg" alt="">
+                            </a>
+                            <a href="detail.html" class="swiper-slide">
+                                <img src="img/con2/con2-ph-limited-5.jpg" alt="">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="con2_slogan">
+                <h2>here, there,<br>
+                    anywhere
+                </h2>
+            </div>
+            <div id="con2_productNm">
+                <div class="swiper-container">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <a href="detail.html">Exclusive PH Pale Rose</a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="detail.html">The Panthella Family</a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="detail.html">PH Limited Edition 2022</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button class="swiper-button-prev" id="con2_prev" type="button">
+                <p>prev</p>
+                <img src="img/con2/con2-prev-arrow.svg" alt="">
+                <i class="fa-solid fa-chevron-left"></i>
+            </button>
+            <button class="swiper-button-next" id="con2_next" type="button">
+                <p>next</p>
+                <img src="img/con2/con2-next-arrow.svg" alt="">
+                <i class="fa-solid fa-chevron-right"></i>
+            </button>
+        </section>
+        <section id="con3">
+            <div id="con3_text">
+                <h1>
+                    Explore <br>
+                    our <br> 
+                    categories
+                </h1>
+                <ul>
+                    <a href="product.html" id="con3_li_1"><li><span>팬던트</span></li></a>
+                    <a href="product.html" id="con3_li_2"><li><span>플로어 램프</span></li></a>
+                    <a href="product.html" id="con3_li_3"><li><span>테이블 램프</span></li></a>
+                    <a href="product.html" id="con3_li_4"><li><span>월 램프</span></li></a>
+                    <a href="product.html" id="con3_li_5"><li><span>야외 램프</span></li></a>
+                    <a href="product.html" id="con3_li_6"><li><span>예비 부품 찾기</span></li></a>
+                </ul>
+            </div>
+            <div class="con3_product">
+                <div id="con3_product_left">
+                    <div class="con3_product">
+                        <img src="img/con3/con3-01-01.png" alt="">
+                        <div class="con3_desc">
+                            <p id="con3_name_left">PH 3½-3 Pale Rose Brass Pendant</p>
+                            <p id="con3_price_left">₩ 2,624,000</p>
+                        </div>
+                    </div>
+
+                </div>
+                <div id="con3_product_right">
+                    <div class="con3_product">
+                        <img src="img/con3/con3-01-02.png" alt="">
+                        <div class="con3_desc">
+                            <p id="con3_name_right">PH Artichoke</p>
+                            <p id="con3_price_right">₩ 19,900,000</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+        <section id="con4">
+            <div class="con4_art" id="con4_art_1">
+                <h2>
+                    당신의 오피스에<br>
+                    완벽하게 어울릴 조명
+                </h2>
+                <p>
+                    집 안에 근사한 업무 공간을 만들 수 있습니다. 루이스폴센의 근사한 책상 램프와 테이블 조명을 사용하여 완벽한 홈 오피스 조명 환경을 만드는 방법을 살펴보세요. 내 집에서 편안하게 작업하면서 생산성과 집중력을 높여 원하는 일을 제대로 해 낼 수 있습니다.
+                </p>
+                <button type="button"><a href="product.html">오피스 조명 더 보러가기</a></button>
+                <img src="img/con4/con4-01.jpg" alt="#">
+            </div>
+            <div class="con4_art" id="con4_art_2">
+                <img src="img/con4/con4-02.jpg" alt="#">
+                <div>
+                    <h2>
+                        거실 조명에 추천하고픈<br>
+                        클래식한 조명
+                    </h2>
+                    <p>
+                        루이스폴센은 사람들과 공간을 아름답게 만들어주는 최고의 분위기를 자아내기 위해 노력합니다. 현대의 램프 덕분에 자연광이 얼마나 들어오느냐에 관계 없이 완벽한 분위기와 아름다운 생활을 연출합니다.
+                    </p>
+                    <button type="button"><a href="product.html">더 보러가기</a></button>
+                </div>
+            </div>
+        </section>
+        <section id="con5">
+            <div id="con5_text">
+                <h2>
+                    New arrivals <br>
+                    from <br>
+                    Louis Poulsen
+                </h2>
+                <ul>
+                    <li id="con5_li_1">
+                        <a href="detail.html">PH 2/1 Pale Rose Brass Table</a><small>Exclusive</small>
+                    </li>
+                    <li id="con5_li_2">
+                        <a href="detail.html">Panthella Portable V2</a><small>New Color</small>
+                    </li>
+                    <li id="con5_li_3">
+                        <a href="detail.html">NJP Mini</a><small>Limitied Edition</small>
+                    </li>
+                    <li id="con5_li_4">
+                        <a href="detail.html">Moonsetter</a><small>New</small>
+                    </li>
+                    <li id="con5_li_5">
+                        <a href="detail.html">VL Studio Wall</a><small>New Color</small>
+                    </li>
+                </ul>
+            </div>
+            <div class="con5_img_wrapper">
+                <img src="img/con5/con5-01.jpg" alt="" id="con5_img_1">
+            </div>
+        </section>
+        <section id="con6">
+            <div>
+                <video src="img/con6/con6-video.mp4" autoplay loop muted></video>
+            </div>
+            <h2>
+                Let light <br>
+                create <br>
+                memories
+            </h2>
+        </section>
+        <section id="con7">
+            <h3>our store</h3>
+            <div id="con7_store">
+                <a href="locator.html"><span>gangnam,</span></a>
+                <a href="locator.html"><span>pangyo,</span></a>
+                <a href="locator.html"><span>seongsu,</span></a>
+                <a href="locator.html"><span>seocho,</span></a>
+                <a href="locator.html"><span>yeouido</span></a>
+            </div>
+        </section>
+        <section id="con8">
+            <h3>
+                our<br>
+                designers
+            </h3>
+            <a  href="designer.html" class="con8_designers"><img src="img-designer/verner-panton-overview-800x1066.jpg" alt=""></a>
+            <a  href="designer.html" class="con8_designers"><img src="img-designer/anu-moser-overview-550x750.jpg" alt=""></a>
+            <a  href="designer.html" class="con8_designers"><img src="img-designer/vilhelm-wohlert-overview-550x750.jpg" alt=""></a>
+            <a  href="designer.html" class="con8_designers"><img src="img-designer/arne-jacobsen-overview-1000x1400.jpg" alt=""></a>
+            <a  href="designer.html" class="con8_designers"><img src="img-designer/shoichi-uchiyama-overview-1400x1400.-sh.jpg" alt=""></a>
+            <a  href="designer.html" class="con8_designers"><img src="img-designer/gamfratesi-overview-1920x1080.jpg" alt=""></a>
+            <a id="con8_more">
+                <span>more</span>
+                <img src="img/con8/con8-arrow.svg" alt="">
+                <!-- <img id="con8_arrow_stroke" src="img/con8/Shape 3.svg" alt=""> -->
+                <!-- <img id="con8_arrow_head" src="img/con8/Shape 4.svg" alt=""> -->
+            </a>
+        </section>
+        <section id="con9">
+            <div id="con9_video_wrapper">
+                <div id="con9_title">
+                    <img src="img/con9/con9-title.svg" alt="">
+                </div>
+                <div id="video_bg">
+                    <video src="img/con9/con9-video-cut.mp4" autoplay loop muted></video>
+                </div>
+            </div>
+            <div id="con9_article_wrap">
+                <div>
+                    <a href="">
+                        <img src="img/con9/con9-01.png" alt="">
+                        <h2>
+                            우리는 유엔의 지속 가능한 <br>
+                            개발 목표를 지지합니다.
+                        </h2>
+                        <div class="con9_art_contents">
+                            <p>
+                                이러한 부정적 영향을 최소화하는 방식으로 기업을 운영하는 것이 우리의 책임이라고 생각합니다.
+                                혁신과 순환에 더욱 초점을 맞춤으로써 우리는 환경 및 기후에 미치는 부정적인 영향을 최소화하는 방법을 지속적으로 모색하는 것은 물론, 지속 가능한 개발에 대한 긍정적인 기여를 계속 강화해 나갈 것입니다.
+                            </p>
+                            <a href="" id="con9_more">자세히 보기</a>
+                        </div>
+                    </a>
+                </div>
+                <div>
+                    <a href="">
+                        <img src="img/con9/con9-02.png" alt="">
+                        <h2>기존 제품의 수명 연장</h2>
+                        <div class="con9_art_contents">
+                            <p>
+                                제품이 매장에서 출고되었다고 해서 제품에 대한 책임이 끝나는 것은 아닙니다. 우리는 전체 제품 수명 주기를 책임집니다. 어떻게 하면 루이스폴센이 판매 제품에 대해 가장 지속 가능한 방식으로 책임질 수 있는지를 검토하는 것이 우리의 목표입니다.
+                            </p>
+                            <a href="" id="con9_more">자세히 보기</a>
+                        </div>
+                    </a>
+                </div>
+                <div>
+                    <a href="">
+                        <img src="img/con9/con9-03.png" alt="">
+                        <h2>낮은 에너지 소비</h2>
+                        <div class="con9_art_contents">
+                            <p>
+                                루이스폴센의 조명 기구와 램프에는 LED 기술이 적용되어 있습니다. 에너지 리트로핏을 통해 기존의 설비를 쉽게 업데이트 할 수 있습니다. 루이스폴센의 램프와 조명 기구는 에너지 소비량의 절감과 지구온난화의 해결에 기여합니다.
+                            </p>
+                            <a href="" id="con9_more">자세히 보기</a>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </section>
+        <section id="con10">
+            <div id="con10_title">
+                <h2>news</h2>
+            </div>
+            <div id="post">
+                <div class="post_row">
+                    <a href="">
+                        <span>01</span>
+                        <h3>루이스폴센 신입/경력직 채용</h3>
+                        <span>Notice</span>
+                        <img src="img/con8/con8-arrow.svg" alt="">
+                    </a>
+                </div>
+                <div class="post_row">
+                    <a href="">
+                        <span>02</span>
+                        <h3>Dining Room Inspiration</h3>
+                        <span>Aritcle - Inspiration - Design</span>
+                        <img src="img/con8/con8-arrow.svg" alt="">
+                    </a>
+                </div>
+                <div class="post_row">
+                    <a href="">
+                        <span>03</span>
+                        <h3>Case : Aarhus School of Architecture</h3>
+                        <span>Report - Sustainability</span>
+                        <img src="img/con8/con8-arrow.svg" alt="">
+                    </a>
+                </div>
+                <div class="post_row">
+                    <a href="">
+                        <span>04</span>
+                        <h3>탄소 상쇄 프로젝트</h3>
+                        <span>Aritcle - Sustainability</span>
+                        <img src="img/con8/con8-arrow.svg" alt="">
+                    </a>
+                </div>
+                <div class="post_row">
+                    <a href="">
+                        <span>05</span>
+                        <h3>Poul Henningsen, 빛의 거장</h3>
+                        <span>Aritcle - Inspiration - Design</span>
+                        <img src="img/con8/con8-arrow.svg" alt="">
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <section class="f_row" id="f_row_top">
+            <div id="newsletter">
+                <h1>조명에 대한 영감을 주는 <br>
+                    뉴스레터가 필요하신가요?
+                </h1>
+                <div>
+                    <div class="email_wrapper">
+                        <input type="email" placeholder="What's your email?">
+                        <button type="button">
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </button>
+                    </div>
+                    <p id="email_submit">Thanks for submitting!</p>
+                </div>
+            </div>
+            <div id="footer_links">
+                <ul id="f_follow">
+                    <h3>Follow us</h3>
+                    <li><a href="https://www.facebook.com/Louis.Poulsen.Lighting/" target="_blank">Facebook</a></li>
+                    <li><a href="https://www.instagram.com/louispoulsen/" target="_blank">Instagram</a></li>
+                    <li><a href="https://www.linkedin.com/company/louis-poulsen-lighting/" target="_blank">LinkedIn</a></li>
+                    <li><a href="https://www.pinterest.dk/louispoulsen/" target="_blank">Pinterest</a></li>
+                    <li><a href="https://www.youtube.com/user/LouisPoulsenLighting" target="_blank">YouTube</a></li>
+                </ul>
+                <ul id="f_about">
+                    <h3>About us</h3>
+                    <li><a href="">루이스폴센 소개</a></li>
+                    <li><a href="">문의처</a></li>
+                    <li><a href="">디자인 및 조명 철학</a></li>
+                    <li><a href="">언론</a></li>
+                    <li><a href="">채용</a></li>
+                    <li><a href="">Quality Policy</a></li>
+                </ul>
+                <ul id="f_quick">
+                    <h3>Quick links</h3>
+                    <li><a href="">판매처 찾기</a></li>
+                    <li><a href="">지원 및 FAQ</a></li>
+                    <li><a href="">마운팅 지침</a></li>
+                    <li><a href="">제품 등록</a></li>
+                    <li><a href="">뉴스레터</a></li>
+                    <li><a href="">Sustainability report</a></li>
+                </ul>
+            </div>
+        </section>
+        <section class="f_row" id="f_low_bottom">
+            <div id="f_small">
+                <a href=""><span>개인정보 보호 정책</span></a>
+                <a href=""><span>쿠키 정책</span></a>
+                <a href=""><span>문의 양식 - GDPR</span></a>
+                <a href=""><span>연례 보고서</span></a>
+            </div>
+            <span>빛의 형태를 디자인하다</span>
+        </section>
+    </footer>
+
+    <!-- jQuery cdn -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/5.4.5/js/swiper.js"></script>
+
+    <script src="js/con2-swiper_heum.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
