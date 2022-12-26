@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/common.css">
+    <title>Document</title>
+</head>
+<body>
+    <div id="container">
+        <div class="header"></div>
+        <div class="main">
+            <h1>일별 박스오피스</h1>
+            <div>
+                <form id="searchFrm">
+                    <div>
+                        날짜: <input type="date" name="targetDt">
+                        <!-- <input type="button" value="검색"> -->
+                        <button type="button" name="search">검색</button>
+                    </div>
+                </form>
+            </div>
+            <div class="main__body">
+                <div class="listing-card">                    
+                    <ul class="listing-card__list"></ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="loading" class="child_center display_none">
+        <img src="img/loading.gif" alt="loading">
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.4/moment-with-locales.min.js" integrity="sha512-42PE0rd+wZ2hNXftlM78BSehIGzezNeQuzihiBCvUEB3CVxHvsShF86wBWwQORNxNINlBPuq7rG4WWhNiTVHFg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="./js/searchDailyBoxOfficeList.js?ver=1"></script>
+    <script src="js/common.js"></script>
+</body>
+</html>

@@ -1,0 +1,98 @@
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+body {
+  background-color: #fff;
+}
+
+.child_center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+}
+
+.display_none {
+  display: none;
+}
+
+#container {
+  display: grid;
+  grid-template-columns: 200px minmax(420px, 1fr);
+  grid-template-rows: 1fr;
+}
+#container .header {
+  background-color: #ff3b49;
+  color: #fff;
+  min-height: 100vh;
+}
+#container .header .logo {
+  margin: 40px 0 50px;
+  font-size: 27px;
+  text-align: center;
+}
+#container .header .nav__title {
+  display: block;
+  margin-bottom: 12px;
+  font-size: 80%;
+  background-color: #ff5662;
+  padding: 8px 20px;
+}
+#container .header .nav__list {
+  font-size: 1rem;
+  padding: 0 20px;
+}
+#container .header .nav__item {
+  margin-bottom: 10px;
+}
+#container .header .nav__item .nav__link {
+  color: #fff;
+}
+#container .main {
+  padding: 30px;
+}
+#container .main .main__body {
+  margin-top: 30px;
+}
+#container .main .listing-card {
+  max-width: 1600px;
+  margin: 30px auto 60px;
+  padding: 0 20px;
+}
+#container .main .listing-card__list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 30px;
+}
+#container .main .listing-card__item {
+  width: 100%;
+  background-color: #fff;
+  border: 1px solid #f0f0f0;
+  border-radius: 10px;
+  padding: 20px;
+}
+#container .listing-card__name {
+  font-size: 18px;
+}
+#container .listing-card__date {
+  margin-top: 6px;
+  color: #333;
+}
+#container .listing-card__audiCnt {
+  color: #ccc;
+  font-size: 10px;
+}
+
+/*# sourceMappingURL=common.css.map */
