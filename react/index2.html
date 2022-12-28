@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>2.1 Before React</h1>
+    <span>Total Clicks: 0</span>
+    <button id="btn">Click me</button>
+</body>
+<script>
+    const $btn = document.querySelector('#btn');
+    const $span = document.querySelector('span');
+
+    let count = 0;
+    function handleClick() {
+        $span.textContent = `Total Clicks: ${++count}`;
+    }
+
+    $btn.addEventListener('click', handleClick);
+</script>
+</html>
