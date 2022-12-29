@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    function calc(cb, n1, n2) {
+        cb(n1, n2);
+    }
+
+    function sum(n1, n2) {
+        console.log('sum!!')
+        console.log(n1 + n2);
+    }
+
+    //sum(11, 22);
+    calc(sum, 1, 4);
+
+    /*
+    const cb = sum;
+    cb(1, 4);
+    sum(1, 4);
+    */
+</script>
+</html>

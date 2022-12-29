@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    function forEach(cb) {
+        const arr = [2, 3, 6, 8, 10];
+        for(let i=0; i<arr.length; i++) {
+            const val = arr[i];
+            cb(val, i);
+        }
+    }
+
+    function print(a, b) {
+        console.log(`val: ${a}, index: ${b}`);
+    }
+
+    //forEach(print);
+    // print(2, 0);
+    // print(3, 1);
+    // print(6, 2);
+    // print(8, 3);
+    // print(10, 4);
+
+
+    //forEach 호출, val값이 짝수인 값만 출력 
+    //2
+    //6
+    //8
+    //10
+    function evenPrint(val) {
+        if(val % 2 === 0) {
+            console.log(val);
+        }
+    }
+    forEach(evenPrint);
+
+    // evenPrint(2, 0);
+    // evenPrint(3, 1);
+    // evenPrint(6, 2);
+    // evenPrint(8, 3);
+    // evenPrint(10, 4);
+
+    //forEach를 호출,  [2, 3, 6, 8, 10] 저 값을 전부 더해주세요.
+    //그리고 콘솔에 sum : 값 출력해주세요. 딱 한번
+    console.log('---------');
+    let sum = 0;
+    function eachSum(val, i) {
+        sum = sum + val;
+    }
+    forEach(eachSum);
+    console.log(sum);
+    
+
+</script>
+</html>

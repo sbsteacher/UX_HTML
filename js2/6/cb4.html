@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    const arr = [2, 3, 6, 8, 10, 11, 12, 100];
+    //val: 2, index: 0
+    //val: 3, index: 1
+    //val: 6, index: 2
+    //...
+
+    function print(a, b) {
+        console.log(`val: ${a}, index: ${b}`);
+    }
+    arr.forEach(print);
+
+    //홀수 값만 출력. 이번에는 익명함수로 처리
+    arr.forEach(function(val, idx) {
+        if(val % 2) {
+            console.log(val);
+        }
+    });
+
+    //arr 배열이 가지고 있는 값 전부 더한 값을 출력한다.
+    //익명 함수로 처리
+    console.log('----');
+    let sum = 0;
+    arr.forEach(function(val, idx) {
+        sum += val;
+    });
+    console.log(sum);
+
+    console.log('----');
+    let sum2 = 0;
+    arr.forEach(val => {
+        sum2 += val;
+    });
+    console.log(sum2);
+</script>
+</html>

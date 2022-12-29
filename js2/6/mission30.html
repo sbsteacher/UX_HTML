@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="btn_minus">-</button>
+    <span>0</span>
+    <button id="btn_plus">+</button>
+</body>
+<script>
+    //마이너스는 0미만이 되지 않는다.
+    //플러스는 10초과가 되지 않는다.
+    const $btnMinus = document.querySelector('#btn_minus');
+    const $btnPlus = document.querySelector('#btn_plus');
+    const $span = document.querySelector('span');
+    let count = 0;
+
+    $btnMinus.addEventListener('click', e => {
+        if(count > 0) {
+            $span.textContent = --count;
+        }
+    });
+
+    $btnPlus.addEventListener('click', e => {
+        if(count < 10) {
+            $span.textContent = ++count;
+        }
+    });
+
+</script>
+</html>
