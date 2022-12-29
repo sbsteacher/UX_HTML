@@ -1,0 +1,141 @@
+/* Variables */
+:root {
+  --black: rgba(0, 0, 0, 1);
+  --caribbean-green: rgba(10, 207, 131, 1);
+  --colorgeneralgreyscale100: rgba(34, 34, 34, 1);
+  --colorgeneralgreyscale60: rgba(51, 51, 51, 1);
+  --colorgeneralgreyscale20: rgba(153, 153, 153, 1);
+  --colorbuttonsolidsub: rgba(162, 90, 255, 1);
+  --colorbuttonsolidmain: rgba(255, 106, 89, 1);
+  --white: rgba(255, 255, 255, 1);
+  --font-size-s: 10px;
+  --font-size-m: 13px;
+  --font-size-l: 16px;
+  --font-size-xl: 18px;
+  --font-size-xxl: 19px;
+  --font-size-l2: 150px;
+  --font-size-m2: 60px;
+  --font-size-xxl2: 20px;
+  --font-family-inter: "Inter";
+  --font-family-inter-bold: "Inter-Bold";
+  --font-family-lato: "Lato";
+  --font-family-lato-black: "Lato-Black";
+  --font-family-lato-regular: "Lato-Regular";
+  --font-family-malgun_gothic-regular: "Malgun Gothic-Regular";
+  --font-family-noto_sans_kr: "Noto Sans KR";
+  --font-family-noto_sans_kr-bold: "Noto Sans KR-Bold";
+  --font-family-noto_sans_kr-medium: "Noto Sans KR-Medium";
+  --font-family-noto_sans_kr-regular: "Noto Sans KR-Regular";
+  --font-family-roboto_mono: "Roboto Mono";
+  --font-family-roboto_mono-regular: "Roboto Mono-Regular";
+} /* Classes */
+.notosanskr-medium-black-13px {
+  color: var(--black);
+  font-family: var(--font-family-noto_sans_kr);
+  font-size: var(--font-size-m);
+  font-weight: 500;
+  font-style: normal;
+}
+.notosanskr-normal-mountain-mist-13px {
+  color: var(--colorgeneralgreyscale20);
+  font-family: var(--font-family-noto_sans_kr);
+  font-size: var(--font-size-m);
+  font-weight: 400;
+  font-style: normal;
+}
+.notosanskr-regular-normal-mountain-mist-13px {
+  color: var(--colorgeneralgreyscale20);
+  font-family: var(--font-family-noto_sans_kr-regular);
+  font-size: var(--font-size-m);
+  font-weight: 400;
+  font-style: normal;
+}
+.notosanskr-medium-black-13px {
+  color: var(--black);
+  font-family: var(--font-family-noto_sans_kr-medium);
+  font-size: var(--font-size-m);
+  font-weight: 500;
+  font-style: normal;
+}
+.malgungothic-regular-normal-black-19px {
+  color: var(--black);
+  font-family: var(--font-family-malgun_gothic-regular);
+  font-size: var(--font-size-xxl);
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Malgun Gothic-Regular";
+  font-style: normal;
+  font-weight: 400;
+  src: url("https://fonts.animaapp.com/MalgunGothic-Regular") format("truetype");
+}
+.container {
+  align-items: flex-start;
+  background-color: var(--white);
+  border: 1px none;
+  display: flex;
+  flex-direction: column;
+  height: 1080px;
+  width: 1920px;
+}
+.hidden,
+.hidden * {
+  pointer-events: none;
+  visibility: hidden;
+}
+.body {
+  align-items: flex-start;
+  display: flex;
+  gap: 55px;
+  height: 817px;
+  margin-top: 2px;
+  padding: 74px 82px;
+  width: 1920px;
+}
+.card {
+  align-items: flex-start;
+  background-color: var(--white);
+  box-shadow: 6px 11px 8px 4px #0000001a;
+  display: flex;
+  height: 296px;
+  padding: 37px 34px;
+  width: 238px;
+}
+.text {
+  letter-spacing: 0;
+  line-height: 24px;
+  white-space: nowrap;
+}
+.footer {
+  align-items: flex-start;
+  background-color: #777474;
+  display: flex;
+  height: 191px;
+  padding: 41px 37px;
+  width: 1920px;
+}
+.text-1 {
+  color: var(--white);
+  font-family: var(--font-family-malgun_gothic-regular);
+  font-size: var(--font-size-xxl);
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 24px;
+  white-space: nowrap;
+}
+.header {
+  align-items: flex-start;
+  background-color: #f8b3b3;
+  display: flex;
+  height: 70px;
+  padding: 22px 899px;
+  width: 1920px;
+}
+.text-4 {
+  letter-spacing: 0;
+  line-height: 24px;
+  margin-left: 1px;
+  white-space: nowrap;
+}
