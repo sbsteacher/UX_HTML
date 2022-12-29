@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    // 인자 2개 (콜백함수)(초기값) 사용 reduce
+    const arr = [3, 6, 8, 10, 13, 16, 22, 29];
+    function proc(acc, cur, i) {
+        console.log(`acc: ${acc}, cur: ${cur}, i:${i}`);
+        return acc + cur;
+    }
+    const result = arr.reduce(proc, 0);
+    console.log(`result: ${result}`);
+</script>
+</html>

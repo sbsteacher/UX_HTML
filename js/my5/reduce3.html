@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    // reduce를 map처럼 사용하기
+    const arr = [3, 6, 8, 10, 13, 16, 22, 29];
+
+    //map - 배열복사.
+    //1.원본 length, 크기가 같다.
+    //2. item 값을 수정할 수 있다.
+
+    const arr2 = arr.map(function(item, i) {
+        return item + 2;
+    });
+        
+    console.log(arr);
+    console.log(arr2);
+    //아이템 + 2 된 새로운 배열을 만들어 주세요. with map
+
+
+    //짝수만 * 2, 홀수 원본값 그대로인 새로운 배열을 만든다.
+    const arr3 = arr.map(function(item) {
+        return item % 2 ? item : item * 2;
+    });
+    console.log(arr3);
+
+    const arr4 = arr.map(  item => item % 2 ? item : item * 2  );
+    console.log(arr4);
+
+    //reduce
+    const arr5 = arr.reduce(function(acc, cur, i) {
+        acc.push(cur + 2);        
+        return acc;
+    }, []);
+    console.log(arr5);
+    
+    //짝수만 * 2, 홀수 원본값 그대로인 새로운 배열을 만든다.
+    const arr6 = arr.reduce(function(acc, cur) {
+        acc.push(cur % 2 ? cur : cur * 2);
+        return acc;
+    }, []);
+    console.log(arr6);
+</script>
+</html>
