@@ -9,28 +9,36 @@
 <body>    
     <div id="root"></div>
 </body>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/react/18.2.0/umd/react.production.min.js" integrity="sha512-8Q6Y9XnTbOE+JNvjBQwJ2H8S+UV4uA6hiRykhdtIyDYZ2TprdNmWOUaKdGzOhyr4dCyk287OejbPvwl7lrfqrQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/react-dom/18.2.0/umd/react-dom.production.min.js" integrity="sha512-MOCpqoRoisCTwJ8vQQiciZv0qcpROCidek3GTFS6KTk2+y7munJIlKCVkFCYY+p3ErYFXCjmFjnfTTRSC1OHWQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://unpkg.com/react@18.2.0/umd/react.development.js"></script>
+<script src="https://unpkg.com/react-dom@18.2.0/umd/react-dom.development.js"></script>
+<script src="https://unpkg.com/prop-types@15.8.1/prop-types.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/7.20.11/babel.min.js" integrity="sha512-IApuVfIDFro2vyERRyRgOa2TruCtteN5T2m6KOJvjQuteZ5HWMoUXeReD/qAaM1UN2oJRZn+12ZK3P3uykRF8Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/prop-types/15.8.1/prop-types.min.js" integrity="sha512-M1OTu9xD1JPdXo2cOeJI+Z/f8P6E/pqK9ug3G8PRNLw1caUePewEmpFYKSYh4LEz483qnyB/UTlgX1Q4VCEsKg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <script type="text/babel">
     const $root = document.querySelector('#root');
-    const MyBtn = (props) => {
-        console.log(props);
+    const MyBtn = ({ title, click, backgroundColor, alertMsg, fontSize = 10 }) => {
+                
         return (
             <button
-                onClick={props.click}
-                alert_msg={props.alertMsg}
+                onClick={click}
+                alert_msg={alertMsg}
                 style={{
-                    backgroundColor: props.backgroundColor,
+                    backgroundColor: backgroundColor,
                     color: 'white',
                     padding: '10px 20px',
                     border: 0,
-                    borderRadius: 10
+                    borderRadius: 10,
+                    fontSize
                 }}>
-                { props.title }
+                { title }
             </button>
         );
+    }    
+    MyBtn.propTypes = {
+        title: PropTypes.string.isRequired,
+        click: PropTypes.func.isRequired,
+        backgroundColor: PropTypes.string.isRequired,
+        alertMsg: PropTypes.string.isRequired,
+        fontSize: PropTypes.number
     }
    
     const clickEvent = e => {        
@@ -43,11 +51,12 @@
     function App() {
         return (
             <div>
-                <h1 className="dd">Props-4</h1>
+                <h1 className="dd">Props-6</h1>
                 <MyBtn title="Save"
                         alertMsg="저장했습니다."
                         backgroundColor="green" 
-                        click={clickEvent} />
+                        click={clickEvent}
+                        fontSize={20} />
                 <MyBtn title="Cancel" 
                         alertMsg="취소했습니다."
                         backgroundColor="black"
@@ -55,6 +64,7 @@
             </div>
         );
     }
-    ReactDOM.render(<App />, $root);
+    ReactDOM.createRoot($root)
+            .render(<App />);
 </script>
 </html>
