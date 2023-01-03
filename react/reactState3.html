@@ -14,30 +14,41 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/7.20.11/babel.min.js" integrity="sha512-IApuVfIDFro2vyERRyRgOa2TruCtteN5T2m6KOJvjQuteZ5HWMoUXeReD/qAaM1UN2oJRZn+12ZK3P3uykRF8Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <script type="text/babel">    
     const $root = document.querySelector('#root');
-    function Title() {
-        return (
-            <h3 id="title" onMouseEnter={() => console.log('mouse enter')}>
-                Hello I'm a title
-            </h3>
-        );
-    } 
-
-    const Button = () =>
-    (
-        <button 
-            style={{ backgroundColor: 'tomato'}} 
-            onClick={ () => console.log('clicked!!') }>
-            Click me
-        </button>
-    );
-        
-    const Div = () => (
-        <div>
-            <Title/>
-            <Button />
-        </div>
-    );        
+    let counter = 0;
     
-    ReactDOM.render(<Div/>, $root);
+    function render() {
+        ReactDOM.render((
+            <div>
+                <Div/>                             
+            </div>
+        )
+        , $root);
+    }    
+    const Title = () => (
+        <h1>3.0 State 3</h1>
+    );
+       
+    const Div = () => {
+        const data = React.useState(0);
+        const [ counter, setCounter ] = data;
+
+        console.log(data);
+        const countUp = () => {
+            //setCounter(counter + 1);
+            setCounter(function(val) {
+                return val + 1;
+            });
+        }
+        return (
+            <div>
+                <Title />
+                <div>
+                    <span>Total Clicks: {counter}</span> 
+                    <button onClick={countUp}>Click Me</button>
+                </div>
+            </div>
+        ); 
+    }
+    render();
 </script>
 </html>

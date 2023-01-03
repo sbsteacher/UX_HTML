@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>JSX-4</h1>
+    <div id="root"></div>
+</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/react/18.2.0/umd/react.production.min.js" integrity="sha512-8Q6Y9XnTbOE+JNvjBQwJ2H8S+UV4uA6hiRykhdtIyDYZ2TprdNmWOUaKdGzOhyr4dCyk287OejbPvwl7lrfqrQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/react-dom/18.2.0/umd/react-dom.production.min.js" integrity="sha512-MOCpqoRoisCTwJ8vQQiciZv0qcpROCidek3GTFS6KTk2+y7munJIlKCVkFCYY+p3ErYFXCjmFjnfTTRSC1OHWQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/7.20.11/babel.min.js" integrity="sha512-IApuVfIDFro2vyERRyRgOa2TruCtteN5T2m6KOJvjQuteZ5HWMoUXeReD/qAaM1UN2oJRZn+12ZK3P3uykRF8Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script type="text/babel">
+    const $root = document.querySelector('#root');
+    function App() {
+        const [ minutes, setMinutes ] = React.useState(10);
+        const [ flipped, setFlipped ] = React.useState(false);
+        
+        const onMinutesChange = event => {            
+            setMinutes(event.target.value);
+        }
+        const reset = e => setMinutes(0);
+        const flip = e => setFlipped(val => !val);
+        return (
+            <div>
+                <h1 className="bold">Super Converter</h1>
+                <label>
+                    Minutes: 
+                    <input type="number" 
+                            placeholder="Minutes" 
+                            onChange={onMinutesChange} 
+                            value={minutes}
+                            disabled={flipped} /> 
+                </label>                
+                <br/>
+                <div>
+                    <label htmlFor="hours">Hours</label>
+                    <input type="number" 
+                            id="hours" 
+                            placeholder="Hours" 
+                            value={Math.round(minutes / 60)}
+                            disabled={!flipped} />                        
+                </div>
+                <button onClick={reset}>reset</button>
+                <button onClick={flip}>flip</button>
+            </div>
+        );
+    }
+    ReactDOM.render(<App />, $root);
+</script>
+</html>
