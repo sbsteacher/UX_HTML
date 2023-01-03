@@ -7,7 +7,7 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>JSX-5</h1>
+    <h1>JSX-6 (#3.9)</h1>
     <div id="root"></div>
 </body>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/react/18.2.0/umd/react.production.min.js" integrity="sha512-8Q6Y9XnTbOE+JNvjBQwJ2H8S+UV4uA6hiRykhdtIyDYZ2TprdNmWOUaKdGzOhyr4dCyk287OejbPvwl7lrfqrQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
@@ -15,7 +15,8 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/7.20.11/babel.min.js" integrity="sha512-IApuVfIDFro2vyERRyRgOa2TruCtteN5T2m6KOJvjQuteZ5HWMoUXeReD/qAaM1UN2oJRZn+12ZK3P3uykRF8Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <script type="text/babel">
     const $root = document.querySelector('#root');
-    function App() {
+    
+    function MinutesToHours() {
         const [ amount, setAmount ] = React.useState(10);
         const [ flipped, setFlipped ] = React.useState(false);
         
@@ -30,8 +31,8 @@
             });            
         }
         return (
-            <div>
-                <h1 className="bold">Super Converter</h1>
+            <div>  
+                <h3>Minutes To Hours</h3>         
                 <label>
                     Minutes: 
                     <input type="number" 
@@ -52,6 +53,35 @@
                 </div>
                 <button onClick={reset}>reset</button>
                 <button onClick={flip}>flip</button>
+            </div>
+        );
+    }
+
+    function KmToMiles() {
+        return (
+            <div>
+                <h3>Km To Miles</h3>
+            </div>
+        )
+    }
+    function App() {
+        const [ index, setIndex ] = React.useState("x");
+        const changeSelect = e => {
+            setIndex(e.target.value);
+            console.log(e.target.value);
+        };
+        return (
+            <div>
+                <h1 className="bold">Super Converter</h1>
+                <select value={index} onChange={changeSelect}>
+                    <option value="x">--선택하세요--</option>
+                    <option value="0">Minutes To Hours</option>
+                    <option value="1">Km To Miles</option>
+                </select>
+                <hr />
+                { index === 'x' && <div>Please select your units</div> }
+                { index === '0' && <MinutesToHours />  }
+                { index === '1' && <KmToMiles />  }
             </div>
         );
     }
