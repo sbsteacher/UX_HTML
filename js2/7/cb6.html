@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>    
+</body>
+<script>
+    const arr = [2, 3, 6, 8, 10, 11, 12, 100];
+
+    //index 값이 홀수면 값 X 2 출력
+    //index 값이 짝수면 값 / 2 출력
+
+    //값 > 홀수 > 결과값(X , /)
+
+    function cb1(val, idx) {
+        const r1 = val % 2 ? '홀수' : '짝수';
+        const r2 = idx % 2 ? val * 2 : val * 0.5;
+        console.log(`${val} > ${r1} > ${r2}`);
+    }
+
+    function cb2(val, idx) {
+        let r1 = '';
+        if(val % 2) {
+            r1 = '홀수';
+        } else {
+            r1 = '짝수';
+        }
+
+        let r2 = 0;
+        if(idx % 2) {
+            r2 = val * 2;
+        } else {
+            r2 = val * 0.5;
+        }
+        console.log(`${val} > ${r1} > ${r2}`);
+    }
+
+    arr.forEach(cb1);
+</script>
+</html>

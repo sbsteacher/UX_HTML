@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>    
+</body>
+<script>
+    const arr = [2, 3, 6, 8, 10, 11, 12, 100];
+
+
+    //값이 짝수 값만 출력해 주세요.
+    arr.forEach(function(val, idx) {
+        if(val % 2 === 0) {
+            console.log(val);
+        }
+    });
+
+    console.log('--------');
+
+    //값이 10이하면 값 * 2, 10 초과면 값 그대로 출력
+    arr.forEach(val => {
+        if(val <= 10) {
+            console.log(val * 2);
+        } else {
+            console.log(val);
+        }
+    });
+
+    console.log('--------');
+    //짝수값 다 더한 값, 홀수값 다 더한 값 출력.
+    //짝수 : 몇
+    //홀수 : 몇
+    let oddSum = 0;
+    let evenSum = 0;
+    arr.forEach(val => {
+        if(val % 2) {
+            oddSum += val;
+        } else {
+            evenSum += val;
+        }
+    });
+    console.log(`짝수Total : ${evenSum}`);
+    console.log(`홀수Total : ${oddSum}`);
+
+</script>
+</html>

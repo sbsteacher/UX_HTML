@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>    
+</body>
+<script>
+    const arr = [2, 3, 6, 8, 10, 11, 12, 15, 100];
+    
+    //use forEach
+    //짝수는 0, 홀수는 그대로인 새로운 배열을 만들어 주세요.
+    
+    const arr2 = [];
+    arr.forEach(function(val, idx) {
+        arr2[idx] = val % 2 ? val : 0;
+    });
+    console.log(arr2);
+
+    //use forEach 
+    //홀수만 뽑아서 새로운 배열을 만들어 주세요.
+    const arr3 = [];
+    arr.forEach(function(val) {
+        if(val % 2) {            
+            arr3.push(val);
+        }
+    });
+    console.log(arr3);
+    
+</script>
+</html>
