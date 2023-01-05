@@ -8,7 +8,7 @@ function App2() {
   const countUp = () => {   
     setValue(prev => prev + 1);
   }
-  console.log('App2');
+  console.log('Test');
 
   const runOnlyOnce = () => {
     console.log('Once - 통신');
@@ -19,7 +19,12 @@ function App2() {
   useEffect(runOnlyOnce, []);
   useEffect(() => {
     console.log('키워드 검색');
-  }, [ keyword ])
+  }, [ keyword ]);
+
+  useEffect(() => {
+    console.log('keyword or counter 변경');
+  }, [ keyword, counter ]);
+  
   return (
     <div>
       <h1>Counter</h1>

@@ -2,6 +2,7 @@ import { useState } from 'react';
 
 export default 
 function App2() {
+  let sum = 0;
   const [ counter, setValue ] = useState(0);
 
   const countUp = () => {
