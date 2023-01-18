@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    const myArr = {
+        0: 2,
+        1: 3,
+        2: 6,
+        3: 8,
+        4: 10,
+        5: 11,
+        6: 12,
+        7: 100,
+        length: 8,
+        forEach: function(cb) {  
+            cb(2);          
+        },
+        filter: function() {}
+    }
+
+    const anotherArr = myArr;
+    anotherArr[1] = 100;
+    console.log(myArr[1]);
+    console.log(anotherArr[1]);
+    
+    const arr = [2, 3, 6, 8, 10, 11, 12, 100];
+
+    function myCallBack(p1) {
+        console.log('나는 콜백!');
+        console.log(p1);
+    }
+
+    myArr.forEach(myCallBack);
+    myArr.filter();
+
+</script>
+</html>

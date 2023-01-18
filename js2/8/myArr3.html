@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    const myArr = {
+        0: 2,
+        1: 3,
+        2: 6,
+        3: 8,
+        4: 10,
+        5: 11,
+        6: 12,
+        7: 100,
+        length: 8,
+        forEach: function(cb) {  
+            cb(this.length);           
+        },
+        filter: function() {}
+    }    
+    const arr = [2, 3, 6, 8, 10, 11, 12, 100];
+
+    function printt2(len) {
+        console.log(len);
+    }
+    myArr.forEach(printt2);
+
+    printt2(3000);
+    const dd = printt2;
+    dd(5000);
+</script>
+</html>
