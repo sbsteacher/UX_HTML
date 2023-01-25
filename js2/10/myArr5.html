@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    const myArr = {
+        0: 10,
+        1: 12,
+        2: 14,
+        3: 16,
+        4: 17,
+        5: 19,
+        6: 20,
+        length: 7,
+        getTotalSum: function() {
+            let sum = 0;    
+            for(let i=0; i<this.length; i++) {
+                sum += this[i];
+            }             
+            return sum;
+        },
+        getEvenTotalSum: function() { //값이 짝수값들만 전부 더해서 리턴
+            let sum = 0;    
+            for(let i=0; i<this.length; i++) {
+                if(this[i] % 2 === 0) {
+                    sum += this[i];
+                }
+            }             
+            return sum;
+        },
+        getOddTotalSum: function() { //값이 홀수값들만 전부 더해서 리턴
+            let sum = 0;    
+            for(let i=0; i<this.length; i++) {
+                if(this[i] % 2) {
+                    sum += this[i];
+                }
+            }             
+            return sum;
+        },
+        sum: function(n1, n2) {
+            return n1 + n2;
+        }
+    };
+    
+    const result = myArr.sum(10, 20);
+    console.log(result);
+
+
+</script>
+</html>
