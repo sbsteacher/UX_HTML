@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box { height: 2000px; background-color: aqua; }
+    </style>
+</head>
+<body>
+    <input type="text" id="txt">
+    <div class="box"></div>
+</body>
+<script>
+    const $txt = document.querySelector('#txt');
+    
+
+    let debTxtTimer = null;
+    $txt.addEventListener('input', e => {
+        if(debTxtTimer) {
+            clearTimeout(debTxtTimer);
+        }
+        debTxtTimer = setTimeout(() => {
+            console.log('Ajax 요청!');
+        }, 300)
+    });
+
+    let thrScrollTimer = null;
+    window.addEventListener('scroll', e => {
+        if(!thrScrollTimer) {
+            thrScrollTimer = setTimeout(() => {
+                thrScrollTimer = null;
+                console.log('스크롤 멈춤!');
+            }, 400);
+        }
+    })
+</script>
+</html>

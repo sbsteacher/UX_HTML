@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    const arr = {
+        0: 10,
+        1: 11,
+        2: 12,
+        3: 13,
+        4: 14,
+        5: 15,
+        length: 6,
+        push: function(val) {
+            this[this.length] = val;
+            this.length++;
+        },      
+        pop: function() {            
+            const delVal = this[--this.length];
+            delete this[this.length];
+            return delVal;
+        }  
+    }
+/*
+    console.log(arr[0]);
+    delete arr[0];
+    console.log(arr[0]);
+*/
+    const val = arr.pop();
+    console.log(val); //15
+    console.log(arr[5]); //undefined
+</script>
+</html>

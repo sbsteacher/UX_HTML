@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    //배열
+    const arr = [10, 24, 30, 40];
+    console.log(   arr.length    ); //0, 3
+    //console.log(   arr.map()   )
+    console.log( arr[1] );
+    arr[1] = 26;
+    console.log( arr[1] );
+    console.log( arr[3] );
+    console.log( arr['3']);
+   
+
+    //객체
+    const obj = {
+        name: '홍길동222',
+        0: 100,
+        1: 200,
+        2: 300,
+        length: 3,
+        get: function(idx) {
+            return this[idx];
+        },   
+        varVal : 1111    
+    };
+    //const myName = obj["홍길동"];
+    const myName = obj.name;
+    console.log(myName);
+    obj.name = '신사임당';
+    console.log(obj.name);
+    console.log(obj[0]); //0, 1, 2, 3, 4: 리터럴
+    console.log(obj['0']);
+    console.log(obj['length']);
+
+    let varVal = 'length';
+    console.log( obj[varVal] );
+    console.log( obj.varVal );
+
+    const valIdx0 = obj.get(2);
+    console.log(`valIdx0 : ${valIdx0}`) 
+   
+    //fn
+    const fn1 = obj.get;
+    const valIdx1 = fn1(1);
+    //const valIdx1 = obj.get(1);
+</script>
+</html>
