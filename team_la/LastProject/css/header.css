@@ -1,0 +1,183 @@
+/* 1. Mobile First CSS */
+header{
+  width: 100%;
+  margin:0;padding:0;
+  box-sizing: border-box;  
+  height: auto;
+  position: relative;
+}
+.header__logo img{
+  width: 16vw;
+}
+.header_container{
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  margin-top: 5vw;
+}
+.header__icons{
+  text-align: center;
+  display: flex;
+  align-items: flex-end;
+  margin-right: 5vw;
+  display: none;
+}
+.header__icons .search{
+  display: none;
+}
+.header__logo img{
+  margin-left: 5vw;
+}
+#menuBtn{
+  cursor: pointer;
+  width: 4.688vw;
+  transition: all 0.3s ease-in-out;
+}
+.desk_search{
+  display: none;
+}
+/* 가로해상도가 768px이상 _tablet */
+@media (min-width:768px){ 
+  .header_container{
+    margin-top: 3vh;
+    align-items: flex-end;
+  }
+  .header__logo img{
+    width: 9.1146vw;
+  }
+  .header__logo{
+    width: 160px;
+  }
+  .header__icons{
+    display: block;
+    margin-right: 20px;
+  }
+  .header__icons i{
+    font-size:30px;
+  }
+
+}
+
+/* 가로해상도 1024px 이상_Desktop */
+@media (min-width:1024px){
+  .header_container{
+    margin-top: 3vh;
+  }
+  .header__logo img{
+    width: 7.8125vw;
+  }
+  .header__icons i{
+    font-size:40px;
+  }
+  .search_input{
+    font-size: 20px;
+    width: 300px;
+  }
+  .search_input{
+    width: calc(100% - 150px);
+    height: 50px;
+    background: transparent;  
+    margin-bottom: 4vh;
+    margin-top:4vh;  
+    padding-left: 5vw;
+  }
+  .search_input::placeholder{
+    font-size: 24px;
+  }
+}
+@media (min-width:1280px){
+  .header_container{
+    margin-top: 3vh;
+  }
+  .header__logo{
+    width: auto;
+  }
+  
+  .header__logo img{
+    margin-left: 2vw;
+    width: 6.8125vw;
+  }
+  .header__icons{
+    display: flex
+  }
+  .header__icons .search{
+    display: block;
+  }
+  .header__icons div i{
+    font-size: 40px;
+  }
+  #menuBtn_pc{
+    margin-left: 1.5vw;
+  }
+
+  .desk_search{
+    width: 100vw;
+    display: none;
+  }
+  .search_input{
+    width: calc(100% - 90px);
+    height: 50px;
+    border-top: none; border-left: none; border-right: none;
+    border-bottom:none;
+    background: transparent;  
+    margin-bottom: 1.5vh;
+    margin-top: 1.5vh;  
+    padding-left: 2vw;
+    text-align: center;
+  }
+  .search_input::placeholder{
+    font-size: 25px;
+    font-weight: 500;
+    color: rgb(46, 46, 46);
+    text-align: center;
+  }
+  .search_input:focus{
+    outline: none;
+  }
+  .search__slide{
+    margin-top: 2vh;
+    width: 100%;
+    border-top: 4px solid #000;
+  }
+  .active_search{
+    display: block;
+  }
+
+  .slide_container button{
+    min-width: 80px;
+    height: 40px;
+    font-size: 20px;
+    font-weight: 800;
+    border-radius: 20px;
+    background: #fff;
+    border:3px solid #000;
+    cursor: pointer;
+  }
+  .slide_container button:hover{
+    background: #000;
+    color: white;
+    transition: .52s;
+  }
+  .slide_container{
+    border-bottom: 4px solid #000;
+  }
+  .slide_tag_container{
+    margin-top: 10px;
+  }
+  .slide_tag_container ul{
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+    font-size: 25px;
+  }
+  .slide_tag_container ul li{
+    background: var(--main-orange);
+    border-radius: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 10px;padding-bottom: 10px;
+    color: #000;
+    cursor: pointer;
+    margin-right: 2vw;
+  }
+}
